@@ -5,7 +5,7 @@
 //  Created by Roman Kerimov on 2018-11-17.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for LinguisticKit.
 FOUNDATION_EXPORT double LinguisticKitVersionNumber;
