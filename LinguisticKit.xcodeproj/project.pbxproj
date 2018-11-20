@@ -10,6 +10,9 @@
 		9618A39821A0667C008029E4 /* LinguisticKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9618A38E21A0667C008029E4 /* LinguisticKit.framework */; };
 		9618A39D21A0667C008029E4 /* LinguisticKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618A39C21A0667C008029E4 /* LinguisticKitTests.swift */; };
 		9618A39F21A0667C008029E4 /* LinguisticKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9618A39121A0667C008029E4 /* LinguisticKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BB63DE21A185A6000CF401 /* ScriptTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB63DD21A185A6000CF401 /* ScriptTableTests.swift */; };
+		96BB63E221A18C1E000CF401 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB63E121A18C1E000CF401 /* Script.swift */; };
+		96BB63E421A18C8E000CF401 /* ScriptTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB63E321A18C8E000CF401 /* ScriptTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		9618A39721A0667C008029E4 /* LinguisticKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinguisticKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9618A39C21A0667C008029E4 /* LinguisticKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguisticKitTests.swift; sourceTree = "<group>"; };
 		9618A39E21A0667C008029E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BB63DD21A185A6000CF401 /* ScriptTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTableTests.swift; sourceTree = "<group>"; };
+		96BB63E121A18C1E000CF401 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
+		96BB63E321A18C8E000CF401 /* ScriptTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,8 @@
 			children = (
 				9618A39121A0667C008029E4 /* LinguisticKit.h */,
 				9618A39221A0667C008029E4 /* Info.plist */,
+				96BB63E121A18C1E000CF401 /* Script.swift */,
+				96BB63E321A18C8E000CF401 /* ScriptTable.swift */,
 			);
 			path = LinguisticKit;
 			sourceTree = "<group>";
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				9618A39C21A0667C008029E4 /* LinguisticKitTests.swift */,
+				96BB63DD21A185A6000CF401 /* ScriptTableTests.swift */,
 				9618A39E21A0667C008029E4 /* Info.plist */,
 			);
 			path = LinguisticKitTests;
@@ -147,6 +156,7 @@
 				TargetAttributes = {
 					9618A38D21A0667C008029E4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					9618A39621A0667C008029E4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -193,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BB63E421A18C8E000CF401 /* ScriptTable.swift in Sources */,
+				96BB63E221A18C1E000CF401 /* Script.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BB63DE21A185A6000CF401 /* ScriptTableTests.swift in Sources */,
 				9618A39D21A0667C008029E4 /* LinguisticKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +318,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = LinguisticKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -375,6 +393,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = LinguisticKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = RomanKerimov.LinguisticKit;
@@ -391,6 +414,7 @@
 		9618A3A421A0667C008029E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -458,6 +482,7 @@
 		9618A3A521A0667C008029E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
