@@ -88,12 +88,15 @@ public extension ScriptTable {
     
     public static let ru: ScriptTable = .init { () -> ScriptTable.RAWScriptTable in
         
-        let vowelLetters: RAWScriptTable = [
+        let baseVowelLetters: RAWScriptTable = [
             [.Latn: "a", .Cyrl: "а"],
             [.Latn: "e", .Cyrl: "э"],
             [.Latn: "i", .Cyrl: "и"],
             [.Latn: "o", .Cyrl: "о"],
             [.Latn: "u", .Cyrl: "у"],
+        ]
+        
+        let otherVowelLetters: RAWScriptTable = [
             [.Latn: "ya", .Cyrl: "я"],
             [.Latn: "ye", .Cyrl: "е"],
             [.Latn: "yi", .Cyrl: "ы"],
@@ -126,9 +129,11 @@ public extension ScriptTable {
             [.Latn: "zh", .Cyrl: "ж"],
         ]
         
-        var elements = vowelLetters + consonantLetters
+        var elements = baseVowelLetters + otherVowelLetters + consonantLetters
         
         elements.append([.Latn: "y", .Cyrl: "ъ"])
+        elements += baseVowelLetters.map {[.Latn: "yʼ" + $0[.Latn]! , .Cyrl: "ъ" + $0[.Cyrl]!]}
+        
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь"]}
         
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е"]}
