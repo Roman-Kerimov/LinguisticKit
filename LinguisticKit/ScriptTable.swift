@@ -88,7 +88,7 @@ public extension ScriptTable {
     
     public static let ru: ScriptTable = .init { () -> ScriptTable.RAWScriptTable in
         
-        var vowelLetters: RAWScriptTable = [
+        let vowelLetters: RAWScriptTable = [
             [.Latn: "a", .Cyrl: "а"],
             [.Latn: "e", .Cyrl: "э"],
             [.Latn: "i", .Cyrl: "и"],
@@ -101,7 +101,7 @@ public extension ScriptTable {
             [.Latn: "yu", .Cyrl: "ю"],
         ]
         
-        var consonantLetters: RAWScriptTable = [
+        let consonantLetters: RAWScriptTable = [
             [.Latn: "b", .Cyrl: "б"],
             [.Latn: "c", .Cyrl: "ц"],
             [.Latn: "ch", .Cyrl: "ч"],
@@ -126,15 +126,14 @@ public extension ScriptTable {
             [.Latn: "zh", .Cyrl: "ж"],
         ]
         
-        var otherLetters: RAWScriptTable = [
-            [.Latn: "y", .Cyrl: "ъ"],
-        ]
-        otherLetters += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь"]}
+        var elements = vowelLetters + consonantLetters
         
-        vowelLetters += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е"]}
-        vowelLetters += consonantLetters.map {[.Latn: $0[.Latn]! + "ye", .Cyrl: $0[.Cyrl]! + "э"]}
+        elements.append([.Latn: "y", .Cyrl: "ъ"])
+        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь"]}
         
-        var elements = vowelLetters + consonantLetters + otherLetters
+        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е"]}
+        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "ye", .Cyrl: $0[.Cyrl]! + "э"]}
+        
         
         elements += elements.map {[.Latn: $0[.Latn]!.capitalized, .Cyrl: $0[.Cyrl]!.capitalized]}
         
