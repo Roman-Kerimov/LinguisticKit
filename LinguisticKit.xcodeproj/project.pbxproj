@@ -10,6 +10,7 @@
 		9618A39821A0667C008029E4 /* LinguisticKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9618A38E21A0667C008029E4 /* LinguisticKit.framework */; };
 		9618A39D21A0667C008029E4 /* LinguisticKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618A39C21A0667C008029E4 /* LinguisticKitTests.swift */; };
 		9618A39F21A0667C008029E4 /* LinguisticKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9618A39121A0667C008029E4 /* LinguisticKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		961CE60C21A6233100ADC860 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CE60B21A6233100ADC860 /* Character.swift */; };
 		96BB63DE21A185A6000CF401 /* ScriptTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB63DD21A185A6000CF401 /* ScriptTableTests.swift */; };
 		96BB63E221A18C1E000CF401 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB63E121A18C1E000CF401 /* Script.swift */; };
 		96BB63E421A18C8E000CF401 /* ScriptTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB63E321A18C8E000CF401 /* ScriptTable.swift */; };
@@ -32,6 +33,7 @@
 		9618A39721A0667C008029E4 /* LinguisticKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinguisticKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9618A39C21A0667C008029E4 /* LinguisticKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguisticKitTests.swift; sourceTree = "<group>"; };
 		9618A39E21A0667C008029E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961CE60B21A6233100ADC860 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		96BB63DD21A185A6000CF401 /* ScriptTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTableTests.swift; sourceTree = "<group>"; };
 		96BB63E121A18C1E000CF401 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		96BB63E321A18C8E000CF401 /* ScriptTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTable.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				9618A39221A0667C008029E4 /* Info.plist */,
 				96BB63E121A18C1E000CF401 /* Script.swift */,
 				96BB63E321A18C8E000CF401 /* ScriptTable.swift */,
+				961CE60B21A6233100ADC860 /* Character.swift */,
 			);
 			path = LinguisticKit;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961CE60C21A6233100ADC860 /* Character.swift in Sources */,
 				96BB63E421A18C8E000CF401 /* ScriptTable.swift in Sources */,
 				96BB63E221A18C1E000CF401 /* Script.swift in Sources */,
 			);
