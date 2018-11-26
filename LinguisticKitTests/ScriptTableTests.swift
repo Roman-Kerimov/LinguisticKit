@@ -61,6 +61,10 @@ class ScriptTableTests: XCTestCase {
              [.Cyrl: "Ю. Я. Петров", .Latn: "Yu. Ya. Petrov"],
              [.Cyrl: "ПЕТРОВ Ю. Я.", .Latn: "PETROV YU. YA."],
              [.Cyrl: "Ю. Я. ПЕТРОВ", .Latn: "YU. YA. PETROV"],
+             
+             [.Cyrl: "о̀колозе́мный", .Latn: "òkolozémnyij"],
+             [.Cyrl: "у̀зкоспециализи́рованный", .Latn: "ùzkospecializírovannyij"],
+             [.Cyrl: "ю̀жнославя́нский", .Latn: "yùzhnoslavyánskij"],
         ]
         
         for testCell in testTable {

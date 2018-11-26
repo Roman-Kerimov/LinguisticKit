@@ -230,15 +230,22 @@ public extension ScriptTable {
             [.Latn: "zjh", .Cyrl: "җ"],
         ]
         
-        var elements = baseVowelLetters + otherVowelLetters + consonantLetters
+        var vowelElements = baseVowelLetters + otherVowelLetters
+        
+        vowelElements += baseVowelLetters.map {[.Latn: "yʼ" + $0[.Latn]! , .Cyrl: "ъ" + $0[.Cyrl]!]}
+        
+        vowelElements += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е"]}
+        vowelElements += consonantLetters.map {[.Latn: $0[.Latn]! + "ye", .Cyrl: $0[.Cyrl]! + "э"]}
+        
+        vowelElements += vowelElements.map {[.Latn: $0[.Latn]! + "́", .Cyrl: $0[.Cyrl]! + "́"]}
+        vowelElements += vowelElements.map {[.Latn: $0[.Latn]! + "̀", .Cyrl: $0[.Cyrl]! + "̀"]}
+        
+        
+        var elements = vowelElements + consonantLetters
         
         elements.append([.Latn: "y", .Cyrl: "ъ"])
-        elements += baseVowelLetters.map {[.Latn: "yʼ" + $0[.Latn]! , .Cyrl: "ъ" + $0[.Cyrl]!]}
-        
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь"]}
         
-        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е"]}
-        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "ye", .Cyrl: $0[.Cyrl]! + "э"]}
         
         return elements
     }
