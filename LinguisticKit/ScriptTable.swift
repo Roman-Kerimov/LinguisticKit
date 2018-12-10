@@ -208,7 +208,6 @@ public extension ScriptTable {
             [.Latn: "g", .Cyrl: "г"],
             [.Latn: "gh", .Cyrl: "ғ"],
             [.Latn: "h", .Cyrl: "һ"],
-            [.Latn: "j", .Cyrl: "й"],
             [.Latn: "k", .Cyrl: "к"],
             [.Latn: "l", .Cyrl: "л"],
             [.Latn: "m", .Cyrl: "м"],
@@ -242,6 +241,8 @@ public extension ScriptTable {
         
         
         var elements = vowelElements + consonantLetters
+        
+        elements.append([.Latn: "j", .Cyrl: "й"])
         
         elements.append([.Latn: "y", .Cyrl: "ъ"])
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь"]}
