@@ -37,6 +37,8 @@ class ScriptTableTests: XCTestCase {
             [.Cyrl: "пэнъю", .Latn: "pyenyyu"],
             [.Cyrl: "секвойе", .Latn: "sekvojye"],
             [.Cyrl: "Йемен", .Latn: "Jyemen"],
+            [.Cyrl: "трансйеменский", .Latn: "transyjyemenskij"],
+            [.Cyrl: "безйодовый", .Latn: "bezyjodovyij"],
             
             
             [.Cyrl: "МКС", .Latn: "MKS"],

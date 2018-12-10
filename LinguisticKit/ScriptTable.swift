@@ -246,6 +246,7 @@ public extension ScriptTable {
         
         elements.append([.Latn: "y", .Cyrl: "ъ"])
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь"]}
+        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "yj", .Cyrl: $0[.Cyrl]! + "й"]}
         
         
         return elements
