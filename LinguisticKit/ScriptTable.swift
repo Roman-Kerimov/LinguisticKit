@@ -8,15 +8,15 @@
 public struct ScriptTable {
     internal typealias RAWScriptTableCell = [Script: String]
     internal typealias RAWScriptTable = [RAWScriptTableCell]
-    internal typealias RAWScriptDictionary = [String: RAWScriptTableCell]
+    internal typealias IndexedScriptTable = [String: RAWScriptTableCell]
     
     
     private let table: RAWScriptTable
     
     private lazy var scriptSet = table.map {$0.keys} .reduce(Set.init(Script.allCases)) {$0.intersection($1)}
-    private lazy var a: [Script: RAWScriptDictionary] = Dictionary.init(
-        uniqueKeysWithValues: scriptSet.map { (script) -> (Script, RAWScriptDictionary) in
-            return (script, RAWScriptDictionary.init(uniqueKeysWithValues: table.map { ($0[script]!, $0) } ))
+    private lazy var idexedScriptTables: [Script: IndexedScriptTable] = Dictionary.init(
+        uniqueKeysWithValues: scriptSet.map { (script) -> (Script, IndexedScriptTable) in
+            return (script, IndexedScriptTable.init(uniqueKeysWithValues: table.map { ($0[script]!, $0) } ))
         }
     )
     
@@ -26,21 +26,21 @@ public struct ScriptTable {
     
     internal mutating func maxElementLength(forScript script: Script) -> Int {
         
-        return a[script]?.keys.map {$0.count} .max() ?? 0
+        return idexedScriptTables[script]?.keys.map {$0.count} .max() ?? 0
     }
     
     internal mutating func element(of targetScript: Script, from sourceElement: String, of sourceScript: Script) -> String? {
         
         
-        guard a.keys.contains(sourceScript) else {
+        guard idexedScriptTables.keys.contains(sourceScript) else {
             fatalError("The script table donʼt support \(String.init(describing: sourceScript)) source script!")
         }
         
-        guard a.keys.contains(targetScript) else {
+        guard idexedScriptTables.keys.contains(targetScript) else {
             fatalError("The script table donʼt support \(String.init(describing: targetScript)) target script!")
         }
         
-        guard let element = a[sourceScript]?[sourceElement]?[targetScript] else {
+        guard let element = idexedScriptTables[sourceScript]?[sourceElement]?[targetScript] else {
             return nil
         }
         
