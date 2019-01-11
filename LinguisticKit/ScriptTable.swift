@@ -231,7 +231,7 @@ public extension ScriptTable {
         
         var vowelElements = baseVowelLetters + otherVowelLetters
         
-        vowelElements += baseVowelLetters.map {[.Latn: "yʼ" + $0[.Latn]! , .Cyrl: "ъ" + $0[.Cyrl]!]}
+        vowelElements += baseVowelLetters.map {[.Latn: "yh" + $0[.Latn]! , .Cyrl: "ъ" + $0[.Cyrl]!]}
         
         vowelElements += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е"]}
         vowelElements += consonantLetters.map {[.Latn: $0[.Latn]! + "ye", .Cyrl: $0[.Cyrl]! + "э"]}
