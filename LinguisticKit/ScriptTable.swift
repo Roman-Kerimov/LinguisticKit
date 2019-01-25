@@ -80,7 +80,7 @@ public extension String {
         }
     }
     
-    public func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
+    func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
         
         var scriptTable = scriptTable
         
@@ -180,7 +180,7 @@ public extension String {
 
 public extension ScriptTable {
     
-    public static let ru: ScriptTable = .init { () -> ScriptTable.RAWScriptTable in
+    static let ru: ScriptTable = .init { () -> ScriptTable.RAWScriptTable in
         
         let baseVowelLetters: RAWScriptTable = [
             [.Latn: "a", .Cyrl: "а"],
