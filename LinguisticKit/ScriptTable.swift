@@ -49,11 +49,11 @@ public struct ScriptTable {
     
 }
 
-public extension String {
-    
-    private enum Case {
-        case lowercased, uppercased, capitalized, uppercasedOrCapitalized, uncased
-    }
+private enum Case {
+    case lowercased, uppercased, capitalized, uppercasedOrCapitalized, uncased
+}
+
+public extension StringProtocol {
     
     private var `case`: Case {
         guard let firstCharacter = first else {
@@ -175,6 +175,20 @@ public extension String {
         }
         
         return elements.map {$0.target} .joined()
+    }
+    
+    func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String {
+        
+        return self.components(separatedBy: escapeSequence + escapeSequence).map({ (segment) -> String in
+            
+            return segment.components(separatedBy: escapeSequence).enumerated().map ({ (offset, element) -> String in
+                
+                let escapedLetters = offset == 0 ? .init() : element.prefix(while: {$0.isLetter} ).description
+                let escapedPrefix = offset == 0 ? .init() : escapedLetters.isEmpty ? escapeSequence : escapedLetters
+                return escapedPrefix + element.dropFirst(escapedLetters.count).translating(from: sourceScript, to: targetScript, withTable: scriptTable)
+                
+            }).joined()
+        }).joined(separator: escapeSequence)
     }
 }
 
