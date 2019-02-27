@@ -1,1 +1,4 @@
-LinguisticKit.xcodeproj/xcuserdata
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
