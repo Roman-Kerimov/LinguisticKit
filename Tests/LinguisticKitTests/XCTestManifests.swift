@@ -26,6 +26,7 @@ extension StringProtocolTests {
     // to regenerate.
     static let __allTests__StringProtocolTests = [
         ("testEscaping", testEscaping),
+        ("testTranslateByTargetScriptCode", testTranslateByTargetScriptCode),
     ]
 }
 
