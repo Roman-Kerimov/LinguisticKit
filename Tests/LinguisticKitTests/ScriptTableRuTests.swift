@@ -74,13 +74,24 @@ class ScriptTableRuTests: XCTestCase {
         
         for testCell in testTable {
             
-            let latin = testCell[.Latn]!
-            let cyrillic = testCell[.Cyrl]!
+            let translatingPairs = testCell.keys.flatMap { (sourceScript) -> [(Script, Script)] in
+                return testCell.keys.compactMap { (targetScript) -> (Script, Script)? in
+                    if sourceScript == targetScript {
+                        return nil
+                    }
+                    else {
+                        return (sourceScript, targetScript)
+                    }
+                }
+            }
             
-            XCTAssertEqual(latin.translating(from: .Latn, to: .Cyrl, withTable: .ru), cyrillic)
-            XCTAssertEqual(cyrillic.translating(from: .Cyrl, to: .Latn, withTable: .ru), latin)
+            for (sourceScript, targetScript) in translatingPairs {
+                let sourceString = testCell[sourceScript]!
+                let targetString = testCell[targetScript]!
+                
+                XCTAssertEqual(sourceString.translating(from: sourceScript, to: targetScript, withTable: .ru), targetString)
+            }
         }
-        
-        
     }
+    
 }
