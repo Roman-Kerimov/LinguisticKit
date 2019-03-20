@@ -32,4 +32,13 @@ class StringProtocolTests: XCTestCase {
             "`абц xyz ` опр ` "
         )
     }
+    
+    func testTranslateByTargetScriptCode() {
+        
+        XCTAssertEqual("stroka ru".translationByTargetScriptCode()?.translatedString, "строка")
+        XCTAssertEqual("stroka\nstroka ru".translationByTargetScriptCode()?.translatedString, "строка")
+        XCTAssertEqual("stroka\nstroka ru".translationByTargetScriptCode()?.sourceString, "stroka ru")
+        XCTAssertNil("stroka".translationByTargetScriptCode())
+        
+    }
 }

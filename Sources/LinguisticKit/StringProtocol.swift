@@ -38,8 +38,6 @@ public extension StringProtocol {
     
     func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
         
-        var scriptTable = scriptTable
-        
         var index = 0
         var elements: [(source: String, target: String)] = .init()
         
@@ -145,5 +143,37 @@ public extension StringProtocol {
                 
             }).joined()
         }).joined(separator: escapeSequence)
+    }
+    
+    func translationByTargetScriptCode() -> (translatedString: String, sourceString: String)? {
+        
+        let scriptTranslationTargetCode = self.components(separatedBy: .whitespaces).last ?? .init()
+        
+        guard let scriptTranslationTarget = scriptTraslationTargetCodes[scriptTranslationTargetCode] else {
+            return nil
+        }
+        
+        let sourceString = self.components(separatedBy: .newlines).last?.trimmingCharacters(in: .whitespaces) ?? .init()
+        
+        
+        let sourceStringWithoutTranslationTargetCode = sourceString.dropLast(scriptTranslationTargetCode.count + 1)
+        
+        var sourceScript: Script? = nil
+        
+        for character in sourceStringWithoutTranslationTargetCode.reversed() {
+            if let script = scriptTranslationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character) && $0.key != scriptTranslationTarget.targetScript}).first?.key {
+                sourceScript = script
+                break
+            }
+        }
+        
+        if let sourceScript = sourceScript {
+            let translatedString = sourceStringWithoutTranslationTargetCode.translating(from: sourceScript, to: scriptTranslationTarget.targetScript, withTable: scriptTranslationTarget.scriptTable, withEscapeSequence: "`")
+            
+            return (translatedString, sourceString)
+        }
+        else {
+            return ("", sourceString)
+        }
     }
 }
