@@ -7,5 +7,6 @@
 
 public enum Script: CaseIterable {
     case Cyrl
+    case Glag
     case Latn
 }
