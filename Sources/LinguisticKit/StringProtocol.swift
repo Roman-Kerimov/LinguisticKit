@@ -161,7 +161,7 @@ public extension StringProtocol {
         var sourceScript: Script? = nil
         
         for character in sourceStringWithoutTranslationTargetCode.reversed() {
-            if let script = scriptTranslationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character) && $0.key != scriptTranslationTarget.targetScript}).first?.key {
+            if let script = scriptTranslationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().first ?? character) && $0.key != scriptTranslationTarget.targetScript}).first?.key {
                 sourceScript = script
                 break
             }
