@@ -72,6 +72,10 @@ class ScriptTableRuTests: XCTestCase {
              [.Cyrl: "о̀колозе́мный", .Glag: "ⱁ̀ⰽⱁⰾⱁⰸⰵ́ⰿⱀⱏⰹⰻ", .Latn: "òkolozémnyij"],
              [.Cyrl: "у̀зкоспециализи́рованный", .Glag: "ⱆ̀ⰸⰽⱁⱄⱂⰵⱌⰹⰰⰾⰹⰸⰹ́ⱃⱁⰲⰰⱀⱀⱏⰹⰻ", .Latn: "ùzkospecializírovannyij"],
              [.Cyrl: "ю̀жнославя́нский", .Glag: "ⱓ̀ⰶⱀⱁⱄⰾⰰⰲⱑ́ⱀⱄⰽⰹⰻ", .Latn: "yùzhnoslavyánskij"],
+             
+             [.Cyrl: "ь ъ ѵ",
+              .Glag: "ⱐ ⱏ ⱛ",
+              .Latn: "hj hy y"],
         ]
         
         for testCell in testTable {

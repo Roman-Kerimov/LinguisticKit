@@ -56,23 +56,58 @@ public extension ScriptTable {
             [.Latn: "zjh", .Cyrl: "җ", .Glag: "җ"],
         ]
         
+        let otherLetters: RAWScriptTable = [
+            [.Latn: "hj", .Cyrl: "ь", .Glag: "ⱐ"],
+            [.Latn: "hy", .Cyrl: "ъ", .Glag: "ⱏ"],
+        ]
+        
         var vowelElements = baseVowelLetters + otherVowelLetters
         
-        vowelElements += baseVowelLetters.map {[.Latn: "yh" + $0[.Latn]! , .Cyrl: "ъ" + $0[.Cyrl]!, .Glag: "ⱏⱜ" + $0[.Glag]!]}
+        let consonantPrefix = consonantLetters + [[.Latn: "", .Cyrl: "", .Glag: ""]]
+       
+        vowelElements += consonantPrefix.flatMap { (consonant) -> RAWScriptTable in
+            
+            return baseVowelLetters.map { (vowel) -> RAWScriptTableCell in
+                return [
+                    .Latn: consonant[.Latn]! + "yh" + vowel[.Latn]!,
+                    .Cyrl: consonant[.Cyrl]! + "ъ" + vowel[.Cyrl]!,
+                    .Glag: consonant[.Glag]! + "ⱏⱜ" + vowel[.Glag]!
+                ]
+            }
+        }
         
-        vowelElements += consonantLetters.map {[.Latn: $0[.Latn]! + "e", .Cyrl: $0[.Cyrl]! + "е", .Glag: $0[.Glag]! + "ⰵ"]}
-        vowelElements += consonantLetters.map {[.Latn: $0[.Latn]! + "ye", .Cyrl: $0[.Cyrl]! + "э", .Glag: $0[.Glag]! + "ⱔ"]}
+        vowelElements += otherLetters.flatMap { (sign) -> RAWScriptTable in
+            
+            return otherVowelLetters.map { (vowel) -> RAWScriptTableCell in
+                return [
+                    .Latn: sign[.Latn]! + vowel[.Latn]!,
+                    .Cyrl: sign[.Cyrl]! + vowel[.Cyrl]!,
+                    .Glag: sign[.Glag]! + vowel[.Glag]!
+                ]
+            }
+        }
         
+        vowelElements += consonantLetters.flatMap { (consonant) -> RAWScriptTable in
+            let vovelSuffix = otherVowelLetters.filter {$0[.Latn] != "ye"} + [[.Latn: "ye", .Cyrl: "э", .Glag: "ⱔ"], [.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"]]
+            
+            return vovelSuffix.map { (vowel) -> RAWScriptTableCell in
+                return [
+                    .Latn: consonant[.Latn]! + vowel[.Latn]!,
+                    .Cyrl: consonant[.Cyrl]! + vowel[.Cyrl]!,
+                    .Glag: consonant[.Glag]! + vowel[.Glag]!
+                ]
+            }
+        }
         vowelElements += vowelElements.map {[.Latn: $0[.Latn]! + "́", .Cyrl: $0[.Cyrl]! + "́", .Glag: $0[.Glag]! + "́"]}
         vowelElements += vowelElements.map {[.Latn: $0[.Latn]! + "̀", .Cyrl: $0[.Cyrl]! + "̀", .Glag: $0[.Glag]! + "̀"]}
         
         
-        var elements = vowelElements + consonantLetters
+        var elements = vowelElements + consonantLetters + otherLetters
         
         elements.append([.Latn: "j", .Cyrl: "й", .Glag: "ⰻ"])
-        
-        elements.append([.Latn: "y", .Cyrl: "ъ", .Glag: "ⱏ"])
-        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь", .Glag: $0[.Glag]! + "ⱐ"]}
+        elements.append([.Latn: "y", .Cyrl: "ѵ", .Glag: "ⱛ"])
+        elements += consonantLetters.filter {$0[.Latn] != "h"}.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь", .Glag: $0[.Glag]! + "ⱐ"]}
+        elements += consonantLetters.filter {$0[.Latn] != "h"}.map {[.Latn: $0[.Latn]! + "y", .Cyrl: $0[.Cyrl]! + "ъ", .Glag: $0[.Glag]! + "ⱏ"]}
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "yj", .Cyrl: $0[.Cyrl]! + "й", .Glag: $0[.Glag]! + "ⰻ"]}
         
         
