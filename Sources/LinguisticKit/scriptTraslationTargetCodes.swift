@@ -7,6 +7,6 @@
 
 let scriptTraslationTargetCodes: [String: (scriptTable: ScriptTable, targetScript: Script)] = [
     "ru": (.ru, .Cyrl),
-    "rugl": (.ru, .Glag),
+    "rug": (.ru, .Glag),
     "rul": (.ru, .Latn),
 ]
