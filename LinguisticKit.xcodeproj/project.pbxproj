@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		962314952242CFA50083F1B8 /* scriptTraslationTargetCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962314942242CFA50083F1B8 /* scriptTraslationTargetCodes.swift */; };
+		9628612B22552792003C8D15 /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628612A22552792003C8D15 /* XCTest.swift */; };
 		96431FB22241C17100239434 /* ScriptTable.ru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96431FB12241C17100239434 /* ScriptTable.ru.swift */; };
 		96431FB62241C3CD00239434 /* StringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96431FB52241C3CD00239434 /* StringProtocol.swift */; };
 		96AE4EB32241C8DC0032605C /* StringProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4EB22241C8DC0032605C /* StringProtocolTests.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		962314942242CFA50083F1B8 /* scriptTraslationTargetCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scriptTraslationTargetCodes.swift; sourceTree = "<group>"; };
+		9628612A22552792003C8D15 /* XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest.swift; sourceTree = "<group>"; };
 		96431FB12241C17100239434 /* ScriptTable.ru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTable.ru.swift; sourceTree = "<group>"; };
 		96431FB52241C3CD00239434 /* StringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.swift; sourceTree = "<group>"; };
 		96AE4EB22241C8DC0032605C /* StringProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolTests.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				OBJ_14 /* LinguisticKitTests.swift */,
 				OBJ_15 /* ScriptTableRuTests.swift */,
 				96AE4EB22241C8DC0032605C /* StringProtocolTests.swift */,
+				9628612A22552792003C8D15 /* XCTest.swift */,
 				OBJ_16 /* XCTestManifests.swift */,
 			);
 			name = LinguisticKitTests;
@@ -280,6 +283,7 @@
 				96AE4EB32241C8DC0032605C /* StringProtocolTests.swift in Sources */,
 				OBJ_46 /* LinguisticKitTests.swift in Sources */,
 				OBJ_47 /* ScriptTableRuTests.swift in Sources */,
+				9628612B22552792003C8D15 /* XCTest.swift in Sources */,
 				OBJ_48 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
