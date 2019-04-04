@@ -10,11 +10,11 @@ public extension ScriptTable {
     static let ru: ScriptTable = .init(languageCode: "ru") { () -> ScriptTable.RAWScriptTable in
         
         let baseVowelLetters: RAWScriptTable = [
-            [.Latn: "a", .Cyrl: "а", .Glag: "ⰰ"],
+            .a,
             [.Latn: "e", .Cyrl: "э", .Glag: "ⱔ"],
-            [.Latn: "i", .Cyrl: "и", .Glag: "ⰹ"],
-            [.Latn: "o", .Cyrl: "о", .Glag: "ⱁ"],
-            [.Latn: "u", .Cyrl: "у", .Glag: "ⱆ"],
+            .i,
+            .o,
+            .u,
         ]
         
         let otherVowelLetters: RAWScriptTable = [
@@ -26,32 +26,32 @@ public extension ScriptTable {
         ]
         
         let consonantLetters: RAWScriptTable = [
-            [.Latn: "b", .Cyrl: "б", .Glag: "ⰱ"],
+            .b,
             [.Latn: "c", .Cyrl: "ц", .Glag: "ⱌ"],
             [.Latn: "ch", .Cyrl: "ч", .Glag: "ⱍ"],
-            [.Latn: "d", .Cyrl: "д", .Glag: "ⰴ"],
+            .d,
             [.Latn: "dh", .Cyrl: "ҙ", .Glag: "ҙ"],
-            [.Latn: "f", .Cyrl: "ф", .Glag: "ⱇ"],
-            [.Latn: "g", .Cyrl: "г", .Glag: "ⰳ"],
+            .f,
+            .g,
             [.Latn: "gh", .Cyrl: "ғ", .Glag: "ғ"],
-            [.Latn: "h", .Cyrl: "һ", .Glag: "һ"],
-            [.Latn: "k", .Cyrl: "к", .Glag: "ⰽ"],
-            [.Latn: "l", .Cyrl: "л", .Glag: "ⰾ"],
-            [.Latn: "m", .Cyrl: "м", .Glag: "ⰿ"],
-            [.Latn: "n", .Cyrl: "н", .Glag: "ⱀ"],
-            [.Latn: "p", .Cyrl: "п", .Glag: "ⱂ"],
+            .h,
+            .k,
+            .l,
+            .m,
+            .n,
+            .p,
             [.Latn: "q", .Cyrl: "қ", .Glag: "қ"],
-            [.Latn: "r", .Cyrl: "р", .Glag: "ⱃ"],
-            [.Latn: "s", .Cyrl: "с", .Glag: "ⱄ"],
+            .r,
+            .s,
             [.Latn: "sh", .Cyrl: "ш", .Glag: "ⱎ"],
             [.Latn: "sjh", .Cyrl: "щ", .Glag: "ⱋ"],
-            [.Latn: "t", .Cyrl: "т", .Glag: "ⱅ"],
+            .t,
             [.Latn: "th", .Cyrl: "ѳ", .Glag: "ⱚ"],
-            [.Latn: "v", .Cyrl: "в", .Glag: "ⰲ"],
-            [.Latn: "w", .Cyrl: "ў", .Glag: "ў"],
-            [.Latn: "x", .Cyrl: "ѯ", .Glag: "ѯ"],
+            .v,
+            .w,
+            .x,
             [.Latn: "xh", .Cyrl: "х", .Glag: "ⱈ"],
-            [.Latn: "z", .Cyrl: "з", .Glag: "ⰸ"],
+            .z,
             [.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ"],
             [.Latn: "zjh", .Cyrl: "җ", .Glag: "җ"],
         ]
@@ -104,8 +104,8 @@ public extension ScriptTable {
         
         var elements = vowelElements + consonantLetters + otherLetters
         
-        elements.append([.Latn: "j", .Cyrl: "й", .Glag: "ⰻ"])
-        elements.append([.Latn: "y", .Cyrl: "ѵ", .Glag: "ⱛ"])
+        elements.append(.j)
+        elements.append(.y)
         elements += consonantLetters.filter {$0[.Latn] != "h"}.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь", .Glag: $0[.Glag]! + "ⱐ"]}
         elements += consonantLetters.filter {$0[.Latn] != "h"}.map {[.Latn: $0[.Latn]! + "y", .Cyrl: $0[.Cyrl]! + "ъ", .Glag: $0[.Glag]! + "ⱏ"]}
         elements += consonantLetters.map {[.Latn: $0[.Latn]! + "yj", .Cyrl: $0[.Cyrl]! + "й", .Glag: $0[.Glag]! + "ⰻ"]}
