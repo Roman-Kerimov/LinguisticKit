@@ -6,6 +6,8 @@
 //
 
 let scriptTraslationTargetCodes: [String: (scriptTable: ScriptTable, targetScript: Script)] = [
+    "az": (.az, .Cyrl),
+    "azl": (.az, .Latn),
     "ru": (.ru, .Cyrl),
     "rug": (.ru, .Glag),
     "rul": (.ru, .Latn),
