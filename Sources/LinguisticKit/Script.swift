@@ -6,6 +6,11 @@
 //
 
 public enum Script: CaseIterable {
+    
+    var identifier: String {
+        return .init(describing: self)
+    }
+    
     case Cyrl
     case Glag
     case Latn

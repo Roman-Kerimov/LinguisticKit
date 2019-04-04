@@ -7,7 +7,7 @@
 
 public extension ScriptTable {
     
-    static let ru: ScriptTable = .init { () -> ScriptTable.RAWScriptTable in
+    static let ru: ScriptTable = .init(languageCode: "ru") { () -> ScriptTable.RAWScriptTable in
         
         let baseVowelLetters: RAWScriptTable = [
             [.Latn: "a", .Cyrl: "а", .Glag: "ⰰ"],

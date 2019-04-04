@@ -10,7 +10,7 @@ public class ScriptTable {
     internal typealias RAWScriptTable = [RAWScriptTableCell]
     internal typealias IndexedScriptTable = [String: RAWScriptTableCell]
     
-    
+    let languageCode: String
     private let table: RAWScriptTable
     
     private lazy var scriptSet = table.map {$0.keys} .reduce(Set.init(Script.allCases)) {$0.intersection($1)}
@@ -21,7 +21,8 @@ public class ScriptTable {
         }
     )
     
-    init(makeScriptTable: () -> RAWScriptTable) {
+    init(languageCode: String, makeScriptTable: () -> RAWScriptTable) {
+        self.languageCode = languageCode
         table = makeScriptTable()
     }
     

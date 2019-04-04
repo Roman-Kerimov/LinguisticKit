@@ -5,6 +5,8 @@
 //  Created by Roman Kerimov on 2019-03-20.
 //
 
+import Foundation
+
 private enum Case {
     case lowercased, uppercased, capitalized, uppercasedOrCapitalized, uncased
 }
@@ -38,6 +40,13 @@ public extension StringProtocol {
     
     func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
         
+        func locale(script: Script) -> Locale {
+            return Locale.init(identifier: [scriptTable.languageCode, script.identifier].joined(separator: "_"))
+        }
+        
+        let sourceLocale = locale(script: sourceScript)
+        let targetLocale = locale(script: targetScript)
+        
         var index = 0
         var elements: [(source: String, target: String)] = .init()
         
@@ -48,7 +57,7 @@ public extension StringProtocol {
                 
                 let sourceElement: String = .init(self.dropFirst(index).prefix(sourceElementLength))
                 
-                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(), of: sourceScript) {
+                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(with: sourceLocale), of: sourceScript) {
                     elements.append((source: sourceElement, target: targetElement))
                     break
                 }
@@ -115,13 +124,13 @@ public extension StringProtocol {
             switch elementCase {
                 
             case .lowercased:
-                elements[index].target = elements[index].target.lowercased()
+                elements[index].target = elements[index].target.lowercased(with: targetLocale)
                 
             case .uppercased:
-                elements[index].target = elements[index].target.uppercased()
+                elements[index].target = elements[index].target.uppercased(with: targetLocale)
                 
             case .capitalized:
-                elements[index].target = elements[index].target.capitalized
+                elements[index].target = elements[index].target.capitalized(with: targetLocale)
                 
             case .uppercasedOrCapitalized, .uncased:
                 continue
