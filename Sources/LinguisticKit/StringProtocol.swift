@@ -156,14 +156,15 @@ public extension StringProtocol {
     
     func translationByTargetScriptCode() -> (translatedString: String, sourceString: String)? {
         
-        let scriptTranslationTargetCode = self.components(separatedBy: .whitespaces).last ?? .init()
+        let scriptTranslationTargetCode = self.components(separatedBy: .whitespacesAndNewlines).last ?? .init()
         
         guard let scriptTranslationTarget = scriptTraslationTargetCodes[scriptTranslationTargetCode] else {
             return nil
         }
         
-        let sourceString = self.components(separatedBy: .newlines).last?.trimmingCharacters(in: .whitespaces) ?? .init()
+        let lastParagraph = self.components(separatedBy: .newlines).last?.trimmingCharacters(in: .whitespaces) ?? .init()
         
+        let sourceString = lastParagraph != scriptTranslationTargetCode ? lastParagraph : .init(self)
         
         let sourceStringWithoutTranslationTargetCode = sourceString.dropLast(scriptTranslationTargetCode.count + 1)
         
