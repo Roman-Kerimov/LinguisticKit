@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		962314952242CFA50083F1B8 /* scriptTraslationTargetCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962314942242CFA50083F1B8 /* scriptTraslationTargetCodes.swift */; };
+		962314952242CFA50083F1B8 /* scriptTransformationTargetCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962314942242CFA50083F1B8 /* scriptTransformationTargetCodes.swift */; };
 		9628612B22552792003C8D15 /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628612A22552792003C8D15 /* XCTest.swift */; };
 		9628612D22556D11003C8D15 /* ScriptTable.az.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628612C22556D11003C8D15 /* ScriptTable.az.swift */; };
 		9628612F22556DDB003C8D15 /* ScriptTableAzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628612E22556DDB003C8D15 /* ScriptTableAzTests.swift */; };
@@ -56,7 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		962314942242CFA50083F1B8 /* scriptTraslationTargetCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scriptTraslationTargetCodes.swift; sourceTree = "<group>"; };
+		962314942242CFA50083F1B8 /* scriptTransformationTargetCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scriptTransformationTargetCodes.swift; sourceTree = "<group>"; };
 		9628612A22552792003C8D15 /* XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest.swift; sourceTree = "<group>"; };
 		9628612C22556D11003C8D15 /* ScriptTable.az.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTable.az.swift; sourceTree = "<group>"; };
 		9628612E22556DDB003C8D15 /* ScriptTableAzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptTableAzTests.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				OBJ_11 /* ScriptTable.swift */,
 				9628612C22556D11003C8D15 /* ScriptTable.az.swift */,
 				96431FB12241C17100239434 /* ScriptTable.ru.swift */,
-				962314942242CFA50083F1B8 /* scriptTraslationTargetCodes.swift */,
+				962314942242CFA50083F1B8 /* scriptTransformationTargetCodes.swift */,
 				96431FB52241C3CD00239434 /* StringProtocol.swift */,
 			);
 			name = LinguisticKit;
@@ -270,7 +270,7 @@
 				96431FB22241C17100239434 /* ScriptTable.ru.swift in Sources */,
 				OBJ_27 /* Script.swift in Sources */,
 				OBJ_28 /* ScriptTable.swift in Sources */,
-				962314952242CFA50083F1B8 /* scriptTraslationTargetCodes.swift in Sources */,
+				962314952242CFA50083F1B8 /* scriptTransformationTargetCodes.swift in Sources */,
 				96431FB62241C3CD00239434 /* StringProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

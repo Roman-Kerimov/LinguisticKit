@@ -38,7 +38,7 @@ public extension StringProtocol {
         }
     }
     
-    func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
+    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
         
         func locale(script: Script) -> Locale {
             return Locale.init(identifier: [scriptTable.languageCode, script.identifier].joined(separator: "_"))
@@ -140,7 +140,7 @@ public extension StringProtocol {
         return elements.map {$0.target} .joined()
     }
     
-    func translating(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String {
+    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String {
         
         return self.components(separatedBy: escapeSequence + escapeSequence).map({ (segment) -> String in
             
@@ -148,39 +148,39 @@ public extension StringProtocol {
                 
                 let escapedLetters = offset == 0 ? .init() : element.prefix(while: {$0.isLetter} ).description
                 let escapedPrefix = offset == 0 ? .init() : escapedLetters.isEmpty ? escapeSequence : escapedLetters
-                return escapedPrefix + element.dropFirst(escapedLetters.count).translating(from: sourceScript, to: targetScript, withTable: scriptTable)
+                return escapedPrefix + element.dropFirst(escapedLetters.count).applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable)
                 
             }).joined()
         }).joined(separator: escapeSequence)
     }
     
-    func translationByTargetScriptCode() -> (translatedString: String, sourceString: String)? {
+    func transformationByTargetScriptCode() -> (sourceString: String, targetString: String)? {
         
-        let scriptTranslationTargetCode = self.components(separatedBy: .whitespacesAndNewlines).last ?? .init()
+        let scriptTransformationTargetCode = self.components(separatedBy: .whitespacesAndNewlines).last ?? .init()
         
-        guard let scriptTranslationTarget = scriptTraslationTargetCodes[scriptTranslationTargetCode] else {
+        guard let scriptTransformationTarget = scriptTransformationTargetCodes[scriptTransformationTargetCode] else {
             return nil
         }
         
         let lastParagraph = self.components(separatedBy: .newlines).last?.trimmingCharacters(in: .whitespaces) ?? .init()
         
-        let sourceString = lastParagraph != scriptTranslationTargetCode ? lastParagraph : .init(self)
+        let sourceString = lastParagraph != scriptTransformationTargetCode ? lastParagraph : .init(self)
         
-        let sourceStringWithoutTranslationTargetCode = sourceString.dropLast(scriptTranslationTargetCode.count + 1)
+        let sourceStringWithoutTransformationTargetCode = sourceString.dropLast(scriptTransformationTargetCode.count + 1)
         
         var sourceScript: Script? = nil
         
-        for character in sourceStringWithoutTranslationTargetCode.reversed() {
-            if let script = scriptTranslationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().first ?? character) && $0.key != scriptTranslationTarget.targetScript}).first?.key {
+        for character in sourceStringWithoutTransformationTargetCode.reversed() {
+            if let script = scriptTransformationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().first ?? character) && $0.key != scriptTransformationTarget.targetScript}).first?.key {
                 sourceScript = script
                 break
             }
         }
         
         if let sourceScript = sourceScript {
-            let translatedString = sourceStringWithoutTranslationTargetCode.translating(from: sourceScript, to: scriptTranslationTarget.targetScript, withTable: scriptTranslationTarget.scriptTable, withEscapeSequence: "`")
+            let targetString = sourceStringWithoutTransformationTargetCode.applyingTransform(from: sourceScript, to: scriptTransformationTarget.targetScript, withTable: scriptTransformationTarget.scriptTable, withEscapeSequence: "`")
             
-            return (translatedString, sourceString)
+            return (sourceString, targetString)
         }
         else {
             return ("", sourceString)

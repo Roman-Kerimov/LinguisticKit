@@ -23,24 +23,24 @@ class StringProtocolTests: XCTestCase {
         let escapeSequence = "`"
         
         XCTAssertEqual(
-            "`Y‐xhromosoma".translating(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
+            "`Y‐xhromosoma".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
             "Y‐хромосома"
         )
         
         XCTAssertEqual(
-            "``abc `xyz ` opr `` ".translating(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
+            "``abc `xyz ` opr `` ".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
             "`абц xyz ` опр ` "
         )
     }
     
-    func testTranslateByTargetScriptCode() {
+    func testApplyingTransformByTargetScriptCode() {
         
-        XCTAssertEqual("stroka ru".translationByTargetScriptCode()?.translatedString, "строка")
-        XCTAssertEqual("stroka\nstroka ru".translationByTargetScriptCode()?.translatedString, "строка")
-        XCTAssertEqual("stroka\nstroka\nru".translationByTargetScriptCode()?.translatedString, "строка\nстрока")
-        XCTAssertEqual("stroka\nstroka ru".translationByTargetScriptCode()?.sourceString, "stroka ru")
-        XCTAssertEqual("STROKA ru".translationByTargetScriptCode()?.translatedString, "СТРОКА")
-        XCTAssertNil("stroka".translationByTargetScriptCode())
+        XCTAssertEqual("stroka ru".transformationByTargetScriptCode()?.targetString, "строка")
+        XCTAssertEqual("stroka\nstroka ru".transformationByTargetScriptCode()?.targetString, "строка")
+        XCTAssertEqual("stroka\nstroka\nru".transformationByTargetScriptCode()?.targetString, "строка\nстрока")
+        XCTAssertEqual("stroka\nstroka ru".transformationByTargetScriptCode()?.sourceString, "stroka ru")
+        XCTAssertEqual("STROKA ru".transformationByTargetScriptCode()?.targetString, "СТРОКА")
+        XCTAssertNil("stroka".transformationByTargetScriptCode())
         
     }
 }

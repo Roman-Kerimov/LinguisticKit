@@ -34,8 +34,8 @@ extension StringProtocolTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__StringProtocolTests = [
+        ("testApplyingTransformByTargetScriptCode", testApplyingTransformByTargetScriptCode),
         ("testEscaping", testEscaping),
-        ("testTranslateByTargetScriptCode", testTranslateByTargetScriptCode),
     ]
 }
 
