@@ -105,6 +105,14 @@ public extension StringProtocol {
             
             elementCases[index] = newElementCase
         }
+        
+        elementCases.enumerated().split { ![.uppercasedOrCapitalized, .uppercased].contains($0.element) } .forEach { sequence in
+            guard sequence.count > 1 else {
+                return
+            }
+            
+            sequence.forEach {elementCases[$0.offset] = .uppercased}
+        }
 
         for (index, _) in elementCases.enumerated().filter({$0.element == .uppercasedOrCapitalized}) {
 

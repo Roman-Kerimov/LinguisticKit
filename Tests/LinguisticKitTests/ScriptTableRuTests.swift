@@ -219,6 +219,12 @@ class ScriptTableRuTests: XCTestCase {
         )
         
         XCTAssertRuScriptTable(
+            [.Cyrl: "ОБЖ — основы безопасности жизнедеятельности",
+             .Glag: "ⰑⰁⰆ — ⱁⱄⱀⱁⰲⱏⰹ ⰱⰵⰸⱁⱂⰰⱄⱀⱁⱄⱅⰹ ⰶⰹⰸⱀⰵⰴⰵⱑⱅⰵⰾⱐⱀⱁⱄⱅⰹ",
+             .Latn: "OBZH — osnovyi bezopasnosti zhiznedeyateljnosti"]
+        )
+        
+        XCTAssertRuScriptTable(
             [.Cyrl: "о̀колозе́мный",
              .Glag: "ⱁ̀ⰽⱁⰾⱁⰸⰵ́ⰿⱀⱏⰹⰻ",
              .Latn: "òkolozémnyij"]
