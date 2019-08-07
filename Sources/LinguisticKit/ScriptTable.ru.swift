@@ -88,9 +88,9 @@ public extension ScriptTable {
         }
         
         vowelElements += consonantLetters.flatMap { (consonant) -> RAWScriptTable in
-            let vovelSuffix = otherVowelLetters.filter {$0[.Latn] != "ye"} + [[.Latn: "ye", .Cyrl: "э", .Glag: "ⱔ"], [.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"]]
+            let vowelSuffix = otherVowelLetters.filter {$0[.Latn] != "ye"} + [[.Latn: "ye", .Cyrl: "э", .Glag: "ⱔ"], [.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"]]
             
-            return vovelSuffix.map { (vowel) -> RAWScriptTableCell in
+            return vowelSuffix.map { (vowel) -> RAWScriptTableCell in
                 return [
                     .Latn: consonant[.Latn]! + vowel[.Latn]!,
                     .Cyrl: consonant[.Cyrl]! + vowel[.Cyrl]!,
