@@ -40,12 +40,8 @@ public extension StringProtocol {
     
     func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
         
-        func locale(script: Script) -> Locale {
-            return Locale.init(identifier: [scriptTable.languageCode, script.identifier].joined(separator: "_"))
-        }
-        
-        let sourceLocale = locale(script: sourceScript)
-        let targetLocale = locale(script: targetScript)
+        let sourceLocale = scriptTable.locale(script: sourceScript)
+        let targetLocale = scriptTable.locale(script: targetScript)
         
         var index = 0
         var elements: [(source: String, target: String)] = .init()
@@ -57,7 +53,7 @@ public extension StringProtocol {
                 
                 let sourceElement: String = .init(self.dropFirst(index).prefix(sourceElementLength))
                 
-                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(with: sourceLocale), of: sourceScript) {
+                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(with: sourceLocale), of: sourceScript, prefixElement: elements.last?.source ?? "", postfixElement: index + sourceElementLength == self.count ? "" : self.dropFirst(index + sourceElementLength).first?.description ?? "") {
                     elements.append((source: sourceElement, target: targetElement))
                     break
                 }
@@ -116,9 +112,9 @@ public extension StringProtocol {
 
         for (index, _) in elementCases.enumerated().filter({$0.element == .uppercasedOrCapitalized}) {
 
-            let casedElelementsBeforeAndAfter = elements.enumerated().filter({[.uppercasedOrCapitalized, .uncased].contains($0.element.source.case) == false}) .split {$0.offset == index}
+            let casedElelementCasesBeforeAndAfter = elementCases.enumerated().filter({![.uppercasedOrCapitalized, .uncased].contains($0.element)}) .split {$0.offset == index}
 
-            let contextCases = [casedElelementsBeforeAndAfter.first?.last?.element.source.case, casedElelementsBeforeAndAfter.last?.first?.element.source.case]
+            let contextCases = [casedElelementCasesBeforeAndAfter.first?.last?.element, casedElelementCasesBeforeAndAfter.last?.first?.element]
 
             if contextCases.compactMap({$0}).contains(.uppercased) {
                 elementCases[index] = .uppercased

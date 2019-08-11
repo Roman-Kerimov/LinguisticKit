@@ -9,109 +9,58 @@ public extension ScriptTable {
     
     static let ru: ScriptTable = .init(languageCode: "ru") { () -> ScriptTable.RAWScriptTable in
         
-        let baseVowelLetters: RAWScriptTable = [
+        return [
             .a,
-            [.Latn: "e", .Cyrl: "э", .Glag: "ⱔ"],
-            .i,
-            .o,
-            .u,
-        ]
-        
-        let otherVowelLetters: RAWScriptTable = [
-            [.Latn: "ya", .Cyrl: "я", .Glag: "ⱑ"],
-            [.Latn: "ye", .Cyrl: "е", .Glag: "ⰵ"],
-            [.Latn: "yi", .Cyrl: "ы", .Glag: "ⱏⰹ"],
-            [.Latn: "yo", .Cyrl: "ё", .Glag: "ⱖ"],
-            [.Latn: "yu", .Cyrl: "ю", .Glag: "ⱓ"],
-        ]
-        
-        let consonantLetters: RAWScriptTable = [
+            .init([.Latn: "ya", .Cyrl: "я", .Glag: "ⱑ"]),
             .b,
-            [.Latn: "c", .Cyrl: "ц", .Glag: "ⱌ"],
-            [.Latn: "ch", .Cyrl: "ч", .Glag: "ⱍ"],
+            .init([.Latn: "c", .Cyrl: "ц", .Glag: "ⱌ"], type: .consonant),
+            .init([.Latn: "ch", .Cyrl: "ч", .Glag: "ⱍ"], type: .consonant),
             .d,
-            [.Latn: "dh", .Cyrl: "ҙ", .Glag: "ҙ"],
+            .init([.Latn: "dh", .Cyrl: "ҙ", .Glag: "ҙ"], type: .consonant),
+            .init([.Latn: "e", .Cyrl: "э", .Glag: "ⱔ"], prefixContext: .nonConsonant),
+            .init([.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"], prefixContext: .consonant),
+            .init([.Latn: "ye", .Cyrl: "е", .Glag: "ⰵ"], prefixContext: .nonConsonant),
+            .init([.Latn: "ye", .Cyrl: "э", .Glag: "ⱔ"], prefixContext: .consonant),
             .f,
             .g,
-            [.Latn: "gh", .Cyrl: "ғ", .Glag: "ғ"],
+            .init([.Latn: "gh", .Cyrl: "ғ", .Glag: "ғ"], type: .consonant),
             .h,
+            .i,
+            .init([.Latn: "yi", .Cyrl: "ы", .Glag: "ⱏⰹ"]),
+            .init([.Latn: "j", .Cyrl: "й", .Glag: "ⰻ"], prefixContext: .nonConsonant),
+            .init([.Latn: "j", .Cyrl: "ь", .Glag: "ⱐ"], prefixContext: .consonant),
+            .init([.Latn: "hj", .Cyrl: "ь", .Glag: "ⱐ"], prefixContext: .nonConsonant),
+            .init([.Latn: "yj", .Cyrl: "й", .Glag: "ⰻ"], prefixContext: .consonant),
             .k,
             .l,
             .m,
             .n,
+            .o,
+            .init([.Latn: "yo", .Cyrl: "ё", .Glag: "ⱖ"]),
             .p,
-            [.Latn: "q", .Cyrl: "қ", .Glag: "қ"],
+            .init([.Latn: "q", .Cyrl: "қ", .Glag: "қ"], type: .consonant),
             .r,
             .s,
-            [.Latn: "sh", .Cyrl: "ш", .Glag: "ⱎ"],
-            [.Latn: "sjh", .Cyrl: "щ", .Glag: "ⱋ"],
+            .init([.Latn: "sh", .Cyrl: "ш", .Glag: "ⱎ"], type: .consonant),
+            .init([.Latn: "sjh", .Cyrl: "щ", .Glag: "ⱋ"], type: .consonant),
             .t,
-            [.Latn: "th", .Cyrl: "ѳ", .Glag: "ⱚ"],
+            .init([.Latn: "th", .Cyrl: "ѳ", .Glag: "ⱚ"], type: .consonant),
+            .u,
+            .init([.Latn: "yu", .Cyrl: "ю", .Glag: "ⱓ"], type: .consonant),
             .v,
             .w,
             .x,
-            [.Latn: "xh", .Cyrl: "х", .Glag: "ⱈ"],
+            .init([.Latn: "xh", .Cyrl: "х", .Glag: "ⱈ"], type: .consonant),
+            .init([.Latn: "y", .Cyrl: "ѵ", .Glag: "ⱛ"], prefixContext: .nonConsonant),
+            .init([.Latn: "y", .Cyrl: "ъ", .Glag: "ⱏ"], prefixContext: .consonant, postfixContext: .nonVowel),
+            .init([.Latn: "hy", .Cyrl: "ъ", .Glag: "ⱏ"], prefixContext: .nonConsonant, postfixContext: .nonVowel),
+            .init([.Latn: "yh", .Cyrl: "ъ", .Glag: "ⱏⱜ"], prefixContext: .consonant, postfixContext: .vowel),
+            .init([.Latn: "hyh", .Cyrl: "ъ", .Glag: "ⱏⱜ"], prefixContext: .nonConsonant, postfixContext: .vowel),
             .z,
-            [.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ"],
-            [.Latn: "zjh", .Cyrl: "җ", .Glag: "җ"],
+            .init([.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ"], type: .consonant),
+            .init([.Latn: "zjh", .Cyrl: "җ", .Glag: "җ"], type: .consonant)
         ]
-        
-        let otherLetters: RAWScriptTable = [
-            [.Latn: "hj", .Cyrl: "ь", .Glag: "ⱐ"],
-            [.Latn: "hy", .Cyrl: "ъ", .Glag: "ⱏ"],
-        ]
-        
-        var vowelElements = baseVowelLetters + otherVowelLetters
-        
-        let consonantPrefix = consonantLetters + [[.Latn: "", .Cyrl: "", .Glag: ""]]
-       
-        vowelElements += consonantPrefix.flatMap { (consonant) -> RAWScriptTable in
-            
-            return baseVowelLetters.map { (vowel) -> RAWScriptTableCell in
-                return [
-                    .Latn: consonant[.Latn]! + "yh" + vowel[.Latn]!,
-                    .Cyrl: consonant[.Cyrl]! + "ъ" + vowel[.Cyrl]!,
-                    .Glag: consonant[.Glag]! + "ⱏⱜ" + vowel[.Glag]!
-                ]
-            }
-        }
-        
-        vowelElements += otherLetters.flatMap { (sign) -> RAWScriptTable in
-            
-            return otherVowelLetters.map { (vowel) -> RAWScriptTableCell in
-                return [
-                    .Latn: sign[.Latn]! + vowel[.Latn]!,
-                    .Cyrl: sign[.Cyrl]! + vowel[.Cyrl]!,
-                    .Glag: sign[.Glag]! + vowel[.Glag]!
-                ]
-            }
-        }
-        
-        vowelElements += consonantLetters.flatMap { (consonant) -> RAWScriptTable in
-            let vowelSuffix = otherVowelLetters.filter {$0[.Latn] != "ye"} + [[.Latn: "ye", .Cyrl: "э", .Glag: "ⱔ"], [.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"]]
-            
-            return vowelSuffix.map { (vowel) -> RAWScriptTableCell in
-                return [
-                    .Latn: consonant[.Latn]! + vowel[.Latn]!,
-                    .Cyrl: consonant[.Cyrl]! + vowel[.Cyrl]!,
-                    .Glag: consonant[.Glag]! + vowel[.Glag]!
-                ]
-            }
-        }
-        vowelElements += vowelElements.map {[.Latn: $0[.Latn]! + "́", .Cyrl: $0[.Cyrl]! + "́", .Glag: $0[.Glag]! + "́"]}
-        vowelElements += vowelElements.map {[.Latn: $0[.Latn]! + "̀", .Cyrl: $0[.Cyrl]! + "̀", .Glag: $0[.Glag]! + "̀"]}
-        
-        
-        var elements = vowelElements + consonantLetters + otherLetters
-        
-        elements.append(.j)
-        elements.append(.y)
-        elements += consonantLetters.filter {$0[.Latn] != "h"}.map {[.Latn: $0[.Latn]! + "j", .Cyrl: $0[.Cyrl]! + "ь", .Glag: $0[.Glag]! + "ⱐ"]}
-        elements += consonantLetters.filter {$0[.Latn] != "h"}.map {[.Latn: $0[.Latn]! + "y", .Cyrl: $0[.Cyrl]! + "ъ", .Glag: $0[.Glag]! + "ⱏ"]}
-        elements += consonantLetters.map {[.Latn: $0[.Latn]! + "yj", .Cyrl: $0[.Cyrl]! + "й", .Glag: $0[.Glag]! + "ⰻ"]}
-        
-        
-        return elements
+
     }
 }
 
