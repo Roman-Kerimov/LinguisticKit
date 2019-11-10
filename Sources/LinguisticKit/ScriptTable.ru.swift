@@ -46,7 +46,7 @@ public extension ScriptTable {
             .t,
             .init([.Latn: "th", .Cyrl: "ѳ", .Glag: "ⱚ"], type: .consonant),
             .u,
-            .init([.Latn: "yu", .Cyrl: "ю", .Glag: "ⱓ"], type: .consonant),
+            .init([.Latn: "yu", .Cyrl: "ю", .Glag: "ⱓ"]),
             .v,
             .w,
             .x,
