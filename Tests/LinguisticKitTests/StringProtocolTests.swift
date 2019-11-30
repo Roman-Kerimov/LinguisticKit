@@ -41,6 +41,9 @@ class StringProtocolTests: XCTestCase {
         XCTAssertEqual("stroka\nstroka ru".transformationByTargetScriptCode()?.sourceString, "stroka ru")
         XCTAssertEqual("STROKA ru".transformationByTargetScriptCode()?.targetString, "СТРОКА")
         XCTAssertNil("stroka".transformationByTargetScriptCode())
-        
+        XCTAssertNil("ru".transformationByTargetScriptCode())
+        XCTAssertNil("строка ru".transformationByTargetScriptCode())
+        XCTAssertNil("\nru".transformationByTargetScriptCode())
+        XCTAssertNil(" ru".transformationByTargetScriptCode())
     }
 }

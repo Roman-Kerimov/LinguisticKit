@@ -187,7 +187,7 @@ public extension StringProtocol {
             return (sourceString, targetString)
         }
         else {
-            return ("", sourceString)
+            return nil
         }
     }
 }
