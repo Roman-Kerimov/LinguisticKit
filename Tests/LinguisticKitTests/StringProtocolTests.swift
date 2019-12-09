@@ -46,4 +46,9 @@ class StringProtocolTests: XCTestCase {
         XCTAssertNil("\nru".transformationByTargetScriptCode())
         XCTAssertNil(" ru".transformationByTargetScriptCode())
     }
+    
+    func testApplyingTransformByTargetScriptCodeForWord() {
+        XCTAssertEqual("slovo slovo ru ".transformationByTargetScriptCode()?.sourceString, "slovo ru ")
+        XCTAssertEqual("slovo slovo ru ".transformationByTargetScriptCode()?.targetString, "слово")
+    }
 }

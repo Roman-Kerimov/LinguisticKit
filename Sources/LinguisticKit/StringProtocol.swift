@@ -160,21 +160,45 @@ public extension StringProtocol {
     
     func transformationByTargetScriptCode() -> (sourceString: String, targetString: String)? {
         
-        let scriptTransformationTargetCode = self.components(separatedBy: .whitespacesAndNewlines).last ?? .init()
+        var string: String
+        
+        let constraint: String
+        var constraintSet: CharacterSet
+        
+        if let character = self.last, CharacterSet.whitespaces.contains(character.unicodeScalars.first!) {
+            constraint = character.description
+            constraintSet = .whitespacesAndNewlines
+            string = String(self.dropLast())
+        }
+        else {
+            constraint = ""
+            constraintSet = .newlines
+            string = .init(self)
+        }
+        
+        let scriptTransformationTargetCode = string.components(separatedBy: .whitespacesAndNewlines).last ?? .init()
         
         guard let scriptTransformationTarget = scriptTransformationTargetCodes[scriptTransformationTargetCode] else {
             return nil
         }
         
-        let lastParagraph = self.components(separatedBy: .newlines).last?.trimmingCharacters(in: .whitespaces) ?? .init()
+        string = string.dropLast(scriptTransformationTargetCode.count).description
         
-        let sourceString = lastParagraph != scriptTransformationTargetCode ? lastParagraph : .init(self)
+        let scriptTransformationSeparator = string.components(separatedBy: CharacterSet.whitespacesAndNewlines.inverted).last ?? .init()
         
-        let sourceStringWithoutTransformationTargetCode = sourceString.dropLast(scriptTransformationTargetCode.count + 1)
+        if scriptTransformationSeparator.unicodeScalars.contains(where: {CharacterSet.newlines.contains($0)}) {
+            constraintSet = .init()
+        }
+        
+        string = string.dropLast(scriptTransformationSeparator.count).description
+        
+        string = string.components(separatedBy: constraintSet).last?.trimmingCharacters(in: .whitespaces) ?? .init()
+        
+        let sourceString = string + scriptTransformationSeparator + scriptTransformationTargetCode + constraint
         
         var sourceScript: Script? = nil
         
-        for character in sourceStringWithoutTransformationTargetCode.reversed() {
+        for character in string.reversed() {
             if let script = scriptTransformationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().first ?? character) && $0.key != scriptTransformationTarget.targetScript}).first?.key {
                 sourceScript = script
                 break
@@ -182,7 +206,7 @@ public extension StringProtocol {
         }
         
         if let sourceScript = sourceScript {
-            let targetString = sourceStringWithoutTransformationTargetCode.applyingTransform(from: sourceScript, to: scriptTransformationTarget.targetScript, withTable: scriptTransformationTarget.scriptTable, withEscapeSequence: "`")
+            let targetString = string.applyingTransform(from: sourceScript, to: scriptTransformationTarget.targetScript, withTable: scriptTransformationTarget.scriptTable, withEscapeSequence: "`")
             
             return (sourceString, targetString)
         }
