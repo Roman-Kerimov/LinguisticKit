@@ -199,7 +199,7 @@ public extension StringProtocol {
         var sourceScript: Script? = nil
         
         for character in string.reversed() {
-            if let script = scriptTransformationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().first ?? character) && $0.key != scriptTransformationTarget.targetScript}).first?.key {
+            if let script = scriptTransformationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().decomposedStringWithCanonicalMapping.unicodeScalars.first!) && $0.key != scriptTransformationTarget.targetScript}).first?.key {
                 sourceScript = script
                 break
             }

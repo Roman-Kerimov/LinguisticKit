@@ -45,7 +45,7 @@ public class ScriptTable {
     private let table: RAWScriptTable
     
     private lazy var scriptSet = table.map {$0.scriptElements.keys} .reduce(Set.init(Script.allCases)) {$0.intersection($1)}
-    lazy var scriptLetterSets: [Script: Set<Character>] = indexedScriptTables.mapValues {.init($0.keys.joined())}
+    lazy var scriptLetterSets: [Script: CharacterSet] = indexedScriptTables.mapValues {CharacterSet(charactersIn: $0.keys.joined()).subtracting(.nonBaseCharacters)}
     private lazy var indexedScriptTables: [Script: IndexedScriptTable] = Dictionary.init(
         uniqueKeysWithValues: scriptSet.map { (script) -> (Script, IndexedScriptTable) in
             return (script, IndexedScriptTable.init(table.map { ($0.scriptElements[script]!, [$0]) }, uniquingKeysWith: {$0 + $1}))
