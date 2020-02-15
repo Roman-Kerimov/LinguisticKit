@@ -214,4 +214,18 @@ public extension StringProtocol {
             return nil
         }
     }
+    
+    func applyingReverseTransform(transformationCode: String, sourceScript: Script = .Latn) -> String? {
+        guard let scriptTransformation = scriptTransformationTargetCodes[transformationCode] else {
+            return nil
+        }
+        
+        let sourceText = "\(self.applyingTransform(from: scriptTransformation.targetScript, to: sourceScript, withTable: scriptTransformation.scriptTable)) \(transformationCode)"
+        
+        guard sourceText.transformationByTargetScriptCode()?.targetString == .init(self) else {
+            return nil
+        }
+        
+        return sourceText
+    }
 }

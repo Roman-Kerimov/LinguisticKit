@@ -52,4 +52,10 @@ class StringProtocolTests: XCTestCase {
         XCTAssertEqual("slovo slovo ru ".transformationByTargetScriptCode()?.sourceString, "slovo ru ")
         XCTAssertEqual("slovo slovo ru ".transformationByTargetScriptCode()?.targetString, "слово")
     }
+    
+    func testApplyingReverseTransform() {
+        XCTAssertEqual("латиница".applyingReverseTransform(transformationCode: "ru"), "latinica ru")
+        XCTAssertNil("латиница".applyingReverseTransform(transformationCode: "rul"))
+        XCTAssertNil("latinica".applyingReverseTransform(transformationCode: "ru"))
+    }
 }
