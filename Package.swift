@@ -11,6 +11,10 @@ let package = Package(
             name: "LinguisticKit",
             type: .dynamic,
             targets: ["LinguisticKit"]),
+        .library(
+            name: "LinguisticKit.static",
+            type: .static,
+            targets: ["LinguisticKit"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
