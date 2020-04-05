@@ -7,7 +7,14 @@
 
 import Foundation
 
-public class ScriptTable {
+public class ScriptTable: Equatable {
+    public static func == (lhs: ScriptTable, rhs: ScriptTable) -> Bool {
+        lhs === rhs
+    }
+    
+    public static func by(identifier: String) -> ScriptTable? {
+        scriptTransformationTargetCodes[identifier]?.scriptTable
+    }
     
     struct ContextType: OptionSet {
         let rawValue: Int
