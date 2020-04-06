@@ -22,7 +22,7 @@ class ScriptTableUkTests: XCTestCase {
         
         XCTAssertUkScriptTable([
             .Cyrl: "безйодовий",
-            .Latn: "bezʼjhodovyj",
+            .Latn: "bez`jhodovyj",
         ])
         
         XCTAssertUkScriptTable([
@@ -43,6 +43,11 @@ class ScriptTableUkTests: XCTestCase {
         XCTAssertUkScriptTable([
             .Cyrl: "дельартовскій",
             .Latn: "deljhartovskij"
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "пʼять",
+            .Latn: "pʼjatj"
         ])
     }
 
