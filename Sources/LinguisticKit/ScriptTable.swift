@@ -114,7 +114,7 @@ public class ScriptTable: Equatable {
                 return indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type ?? .other
             }
             
-            return targetScriptCells.filter {$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))} .first!.scriptElements[targetScript]?.appending(graphemeExtend)
+            return targetScriptCells.filter {$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))} .first?.scriptElements[targetScript]?.appending(graphemeExtend)
         }
     }
     

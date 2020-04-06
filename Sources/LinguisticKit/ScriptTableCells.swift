@@ -10,6 +10,8 @@ import Foundation
 extension ScriptTable.Cell {
     static let a = Self([.Latn: "a", .Cyrl: "а", .Glag: "ⰰ"], type: .vowel)
     static let b = Self([.Latn: "b", .Cyrl: "б", .Glag: "ⰱ"], type: .consonant)
+    static let c = Self([.Latn: "c", .Cyrl: "ц", .Glag: "ⱌ"], type: .consonant)
+    static let ch = Self([.Latn: "ch", .Cyrl: "ч", .Glag: "ⱍ"], type: .consonant)
     static let d = Self([.Latn: "d", .Cyrl: "д", .Glag: "ⰴ"], type: .consonant)
     static let e = Self([.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"], type: .vowel)
     static let f = Self([.Latn: "f", .Cyrl: "ф", .Glag: "ⱇ"], type: .consonant)
@@ -25,11 +27,14 @@ extension ScriptTable.Cell {
     static let p = Self([.Latn: "p", .Cyrl: "п", .Glag: "ⱂ"], type: .consonant)
     static let r = Self([.Latn: "r", .Cyrl: "р", .Glag: "ⱃ"], type: .consonant)
     static let s = Self([.Latn: "s", .Cyrl: "с", .Glag: "ⱄ"], type: .consonant)
+    static let sh = Self([.Latn: "sh", .Cyrl: "ш", .Glag: "ⱎ"], type: .consonant)
     static let t = Self([.Latn: "t", .Cyrl: "т", .Glag: "ⱅ"], type: .consonant)
     static let u = Self([.Latn: "u", .Cyrl: "у", .Glag: "ⱆ"], type: .vowel)
     static let v = Self([.Latn: "v", .Cyrl: "в", .Glag: "ⰲ"], type: .consonant)
     static let w = Self([.Latn: "w", .Cyrl: "ў", .Glag: "ў"], type: .consonant)
     static let x = Self([.Latn: "x", .Cyrl: "ѯ", .Glag: "ѯ"], type: .consonant)
+    static let xh = Self([.Latn: "xh", .Cyrl: "х", .Glag: "ⱈ"], type: .consonant)
     static let y = Self([.Latn: "y", .Cyrl: "ѵ", .Glag: "ⱛ"], type: .vowel)
     static let z = Self([.Latn: "z", .Cyrl: "з", .Glag: "ⰸ"], type: .consonant)
+    static let zh = Self([.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ"], type: .consonant)
 }

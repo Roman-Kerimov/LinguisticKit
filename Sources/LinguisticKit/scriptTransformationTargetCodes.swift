@@ -11,4 +11,6 @@ let scriptTransformationTargetCodes: [String: (scriptTable: ScriptTable, targetS
     "ru": (.ru, .Cyrl),
     "rug": (.ru, .Glag),
     "rul": (.ru, .Latn),
+    "uk": (.uk, .Cyrl),
+    "ukl": (.uk, .Latn),
 ]
