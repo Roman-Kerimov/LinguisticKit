@@ -22,12 +22,22 @@ class ScriptTableUkTests: XCTestCase {
         
         XCTAssertUkScriptTable([
             .Cyrl: "безйодовий",
-            .Latn: "bez`jhodovyj",
+            .Latn: "bez'jodovyj",
         ])
         
         XCTAssertUkScriptTable([
             .Cyrl: "йогурт",
-            .Latn: "jhogurt",
+            .Latn: "jogurt",
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "Йукноом",
+            .Latn: "Jhuknoom",
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "Ґйафер",
+            .Latn: "Gh'jhafer",
         ])
         
         XCTAssertUkScriptTable([
@@ -42,12 +52,32 @@ class ScriptTableUkTests: XCTestCase {
         
         XCTAssertUkScriptTable([
             .Cyrl: "дельартовскій",
-            .Latn: "deljhartovskij"
+            .Latn: "deljhartovskij",
         ])
         
         XCTAssertUkScriptTable([
-            .Cyrl: "пʼять",
-            .Latn: "pʼjatj"
+            .Cyrl: "п'ять",
+            .Latn: "p'jatj",
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "мільйон",
+            .Latn: "miljjon",
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "середньоазіатській",
+            .Latn: "serednjoaziatsjkij",
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "Йоан",
+            .Latn: "Joan",
+        ])
+        
+        XCTAssertUkScriptTable([
+            .Cyrl: "пйп",
+            .Latn: "p'jp",
         ])
     }
 

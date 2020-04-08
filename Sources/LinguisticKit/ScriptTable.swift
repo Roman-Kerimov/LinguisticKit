@@ -104,18 +104,12 @@ public class ScriptTable: Equatable {
             
             targetScriptCells = cells
         }
+            
+        func context(of element: String) -> ContextType {
+            return indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type ?? .other
+        }
         
-        if targetScriptCells.count == 1 {
-            return targetScriptCells.first!.scriptElements[targetScript]?.appending(graphemeExtend)
-        }
-        else {
-            
-            func context(of element: String) -> ContextType {
-                return indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type ?? .other
-            }
-            
-            return targetScriptCells.filter {$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))} .first?.scriptElements[targetScript]?.appending(graphemeExtend)
-        }
+        return targetScriptCells.filter {$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))} .first?.scriptElements[targetScript]?.appending(graphemeExtend)
     }
     
     func locale(script: Script) -> Locale {
