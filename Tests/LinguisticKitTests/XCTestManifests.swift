@@ -35,6 +35,7 @@ extension ScriptTableTests {
     // to regenerate.
     static let __allTests__ScriptTableTests = [
         ("testElement", testElement),
+        ("testScripts", testScripts),
         ("testScriptTableByIdentifier", testScriptTableByIdentifier),
     ]
 }

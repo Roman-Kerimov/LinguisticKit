@@ -14,6 +14,10 @@ class ScriptTableTests: XCTestCase {
         XCTAssertNotEqual(ScriptTable.by(identifier: "az"), .ru)
     }
     
+    func testScripts() {
+        XCTAssertEqual(ScriptTable.az.scripts, [.Latn, .Cyrl])
+    }
+    
     func testElement() {
         XCTAssertNil(ScriptTable.uk.element(of: .Cyrl, from: "'j", of: .Latn, prefixElement: "p", postfixElement: "a"))
     }

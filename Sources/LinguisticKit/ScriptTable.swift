@@ -16,6 +16,8 @@ public class ScriptTable: Equatable {
         scriptTransformationTargetCodes[identifier]?.scriptTable
     }
     
+    public var scripts: Set<Script> {scriptSet}
+    
     struct ContextType: OptionSet {
         let rawValue: Int
         
