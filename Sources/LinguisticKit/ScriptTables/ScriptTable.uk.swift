@@ -7,7 +7,7 @@
 
 public extension ScriptTable {
     
-    static let uk: ScriptTable = .init(languageCode: "uk") {[
+    static let uk: ScriptTable = .init(languageCode: "uk", defaultScript: .Cyrl) {[
         .a,
         .b,
         .v,

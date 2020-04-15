@@ -16,6 +16,8 @@ public class ScriptTable: Equatable {
         scriptTransformationTargetCodes[identifier]?.scriptTable
     }
     
+    public let defaultScript: Script
+    
     public var scripts: Set<Script> {scriptSet}
     
     struct ContextType: OptionSet {
@@ -61,8 +63,9 @@ public class ScriptTable: Equatable {
         }
     )
     
-    init(languageCode: String, makeScriptTable: () -> RAWScriptTable) {
+    init(languageCode: String, defaultScript: Script, makeScriptTable: () -> RAWScriptTable) {
         self.languageCode = languageCode
+        self.defaultScript = defaultScript
         table = makeScriptTable()
     }
     
