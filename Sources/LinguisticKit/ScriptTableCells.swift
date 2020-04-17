@@ -38,3 +38,39 @@ extension ScriptTable.Cell {
     static let z = Self([.Latn: "z", .Cyrl: "з", .Glag: "ⰸ"], type: .consonant)
     static let zh = Self([.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ"], type: .consonant)
 }
+
+extension Array where Element == ScriptTable.Cell {
+    static let VukGajTable: ScriptTable.RAWScriptTable = [
+        .a,
+        .b,
+        .v,
+        .g,
+        .d,
+        .init([.Cyrl: "ђ", .Latn: "đ"]), // sr
+        .e,
+        .init([.Cyrl: "ж", .Latn: "ž"]),
+        .z,
+        .init([.Cyrl: "ѕ", .Latn: "ǳ"]), // mk
+        .i,
+        .init([.Cyrl: "ј", .Latn: "j"]),
+        .k,
+        .l,
+        .init([.Cyrl: "љ", .Latn: "ǉ"]),
+        .m,
+        .n,
+        .init([.Cyrl: "њ", .Latn: "ǌ"]),
+        .o,
+        .p,
+        .r,
+        .s,
+        .t,
+        .init([.Cyrl: "ћ", .Latn: "ć"]), // sr
+        .u,
+        .f,
+        .init([.Cyrl: "х", .Latn: "h"]),
+        .c,
+        .init([.Cyrl: "ч", .Latn: "č"]),
+        .init([.Cyrl: "џ", .Latn: "ǆ"]),
+        .init([.Cyrl: "ш", .Latn: "š"]),
+    ]
+}

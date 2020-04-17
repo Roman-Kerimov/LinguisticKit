@@ -27,7 +27,7 @@ public extension StringProtocol {
         else if filter({$0.isCased}).map({$0.isLowercase}).contains(false) == false {
             return .lowercased
         }
-        else if map({$0.isLowercase}).contains(true) {
+        else if map({$0.isLowercase}).contains(true) || (!firstCharacter.isUppercase && !firstCharacter.isLowercase) {
             return .capitalized
         }
         else if filter({$0.isCased}).map({$0.isUppercase}).contains(false) == false {
