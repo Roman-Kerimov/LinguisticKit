@@ -8,6 +8,8 @@
 let scriptTransformationTargetCodes: [String: (scriptTable: ScriptTable, targetScript: Script)] = [
     "az": (.az, .Cyrl),
     "azl": (.az, .Latn),
+    "bs": (.bs, .Cyrl),
+    "bsl": (.bs, .Latn),
     "cnr": (.cnr, .Cyrl),
     "cnrl": (.cnr, .Latn),
     "me": (.cnr, .Cyrl),
