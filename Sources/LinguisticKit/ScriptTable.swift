@@ -118,7 +118,7 @@ public class ScriptTable: Equatable {
     }
     
     func locale(script: Script) -> Locale {
-        return Locale.init(identifier: [languageCode, script.identifier].joined(separator: "_"))
+        return Locale.init(identifier: [languageCode, script.rawValue].joined(separator: "_"))
     }
 
 }
