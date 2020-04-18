@@ -52,6 +52,7 @@ extension ScriptTableTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__ScriptTableTests = [
+        ("testDescription", testDescription),
         ("testElement", testElement),
         ("testScripts", testScripts),
         ("testScriptTableByIdentifier", testScriptTableByIdentifier),

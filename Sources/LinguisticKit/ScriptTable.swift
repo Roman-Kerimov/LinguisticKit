@@ -122,3 +122,9 @@ public class ScriptTable: Equatable {
     }
 
 }
+
+extension ScriptTable: CustomStringConvertible {
+    public var description: String {
+        return languageCode
+    }
+}

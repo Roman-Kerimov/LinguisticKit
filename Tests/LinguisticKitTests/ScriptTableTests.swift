@@ -21,4 +21,8 @@ class ScriptTableTests: XCTestCase {
     func testElement() {
         XCTAssertNil(ScriptTable.uk.element(of: .Cyrl, from: "'j", of: .Latn, prefixElement: "p", postfixElement: "a"))
     }
+    
+    func testDescription() {
+        XCTAssertEqual("\(ScriptTable.ru)", "ru")
+    }
 }
