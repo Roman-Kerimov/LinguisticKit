@@ -33,6 +33,11 @@ class StringProtocolTests: XCTestCase {
         )
     }
     
+    func testApplyingTransform() {
+        XCTAssertNil("".applyingTransform(from: .Latn, to: .Glag, withTable: .az))
+        XCTAssertNil("".applyingTransform(from: .Glag, to: .Cyrl, withTable: .az, withEscapeSequence: "`"))
+    }
+    
     func testApplyingTransformByTargetScriptCode() {
         
         XCTAssertEqual("stroka ru".transformationByTargetScriptCode()?.targetString, "строка")

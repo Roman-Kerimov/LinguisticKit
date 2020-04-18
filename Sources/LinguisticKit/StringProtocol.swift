@@ -38,7 +38,10 @@ public extension StringProtocol {
         }
     }
     
-    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String {
+    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String? {
+        guard scriptTable.scripts.contains(sourceScript) && scriptTable.scripts.contains(targetScript) else {
+            return nil
+        }
         
         let sourceLocale = scriptTable.locale(script: sourceScript)
         let targetLocale = scriptTable.locale(script: targetScript)
@@ -144,7 +147,11 @@ public extension StringProtocol {
         return elements.map {$0.target} .joined()
     }
     
-    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String {
+    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String? {
+        
+        guard scriptTable.scripts.contains(sourceScript) && scriptTable.scripts.contains(targetScript) else {
+            return nil
+        }
         
         return self.components(separatedBy: escapeSequence + escapeSequence).map({ (segment) -> String in
             
@@ -152,7 +159,7 @@ public extension StringProtocol {
                 
                 let escapedLetters = offset == 0 ? .init() : element.prefix(while: {$0.isLetter} ).description
                 let escapedPrefix = offset == 0 ? .init() : escapedLetters.isEmpty ? escapeSequence : escapedLetters
-                return escapedPrefix + element.dropFirst(escapedLetters.count).applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable)
+                return escapedPrefix + element.dropFirst(escapedLetters.count).applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable)!
                 
             }).joined()
         }).joined(separator: escapeSequence)
@@ -206,7 +213,7 @@ public extension StringProtocol {
         }
         
         if let sourceScript = sourceScript {
-            let targetString = string.applyingTransform(from: sourceScript, to: scriptTransformationTarget.targetScript, withTable: scriptTransformationTarget.scriptTable, withEscapeSequence: "`")
+            let targetString = string.applyingTransform(from: sourceScript, to: scriptTransformationTarget.targetScript, withTable: scriptTransformationTarget.scriptTable, withEscapeSequence: "`")!
             
             return (sourceString, targetString)
         }
@@ -220,7 +227,7 @@ public extension StringProtocol {
             return nil
         }
         
-        let sourceText = "\(self.applyingTransform(from: scriptTransformation.targetScript, to: sourceScript, withTable: scriptTransformation.scriptTable)) \(transformationCode)"
+        let sourceText = "\(self.applyingTransform(from: scriptTransformation.targetScript, to: sourceScript, withTable: scriptTransformation.scriptTable)!) \(transformationCode)"
         
         guard sourceText.transformationByTargetScriptCode()?.targetString == .init(self) else {
             return nil

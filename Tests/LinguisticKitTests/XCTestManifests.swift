@@ -73,6 +73,7 @@ extension StringProtocolTests {
     // to regenerate.
     static let __allTests__StringProtocolTests = [
         ("testApplyingReverseTransform", testApplyingReverseTransform),
+        ("testApplyingTransform", testApplyingTransform),
         ("testApplyingTransformByTargetScriptCode", testApplyingTransformByTargetScriptCode),
         ("testApplyingTransformByTargetScriptCodeForWord", testApplyingTransformByTargetScriptCodeForWord),
         ("testEscaping", testEscaping),
