@@ -18,7 +18,6 @@ extension ScriptTable.Cell {
     static let g = Self([.Latn: "g", .Cyrl: "г", .Glag: "ⰳ"], type: .consonant)
     static let h = Self([.Latn: "h", .Cyrl: "һ", .Glag: "һ"], type: .consonant)
     static let i = Self([.Latn: "i", .Cyrl: "и", .Glag: "ⰹ"], type: .vowel)
-    static let j = Self([.Latn: "j", .Cyrl: "й", .Glag: "ⰻ"], type: .consonant)
     static let k = Self([.Latn: "k", .Cyrl: "к", .Glag: "ⰽ"], type: .consonant)
     static let l = Self([.Latn: "l", .Cyrl: "л", .Glag: "ⰾ"], type: .consonant)
     static let m = Self([.Latn: "m", .Cyrl: "м", .Glag: "ⰿ"], type: .consonant)
@@ -34,7 +33,6 @@ extension ScriptTable.Cell {
     static let w = Self([.Latn: "w", .Cyrl: "ў", .Glag: "ў"], type: .consonant)
     static let x = Self([.Latn: "x", .Cyrl: "ѯ", .Glag: "ѯ"], type: .consonant)
     static let xh = Self([.Latn: "xh", .Cyrl: "х", .Glag: "ⱈ"], type: .consonant)
-    static let y = Self([.Latn: "y", .Cyrl: "ѵ", .Glag: "ⱛ"], type: .vowel)
     static let z = Self([.Latn: "z", .Cyrl: "з", .Glag: "ⰸ"], type: .consonant)
     static let zh = Self([.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ"], type: .consonant)
 }
