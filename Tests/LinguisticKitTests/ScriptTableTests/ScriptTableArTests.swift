@@ -39,4 +39,11 @@ class ScriptTableArTests: XCTestCase {
             .Latn: "ww",
         ])
     }
+    
+    func testYeh() {
+        XCTAssertArScriptTable([
+            .Arab: "زي",
+            .Latn: "zy",
+        ])
+    }
 }

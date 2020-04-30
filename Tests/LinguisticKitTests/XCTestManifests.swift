@@ -18,6 +18,7 @@ extension ScriptTableArTests {
     static let __allTests__ScriptTableArTests = [
         ("testArScriptTable", testArScriptTable),
         ("testWaw", testWaw),
+        ("testYeh", testYeh),
     ]
 }
 

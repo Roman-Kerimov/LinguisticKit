@@ -10,6 +10,7 @@ public extension ScriptTable {
         .l,
         .n,
         .m,
+        .init([.Arab: "ي", .Latn: "y"]),
         .w,
         .h,
         .b,
