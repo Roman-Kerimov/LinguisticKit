@@ -6,6 +6,7 @@
 //
 
 public enum Script: String, CaseIterable {
+    case Arab
     case Cyrl
     case Glag
     case Latn

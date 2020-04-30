@@ -36,7 +36,7 @@ public extension ScriptTable {
         .o,
         .init([.Latn: "yo", .Cyrl: "ё", .Glag: "ⱖ"]),
         .p,
-        .init([.Latn: "q", .Cyrl: "қ", .Glag: "қ"], type: .consonant),
+        .q,
         .r,
         .s,
         .sh,
