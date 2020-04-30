@@ -31,7 +31,7 @@ extension ScriptTable.Cell {
     static let t = Self([.Latn: "t", .Arab: "ت", .Cyrl: "т", .Glag: "ⱅ"], type: .consonant)
     static let u = Self([.Latn: "u", .Cyrl: "у", .Glag: "ⱆ"], type: .vowel)
     static let v = Self([.Latn: "v", .Cyrl: "в", .Glag: "ⰲ"], type: .consonant)
-    static let w = Self([.Latn: "w", .Cyrl: "ў", .Glag: "ў"], type: .consonant)
+    static let w = Self([.Latn: "w", .Arab: "و", .Cyrl: "ў", .Glag: "ў"], type: .consonant)
     static let x = Self([.Latn: "x", .Cyrl: "ѯ", .Glag: "ѯ"], type: .consonant)
     static let xh = Self([.Latn: "xh", .Cyrl: "х", .Glag: "ⱈ"], type: .consonant)
     static let z = Self([.Latn: "z", .Arab: "ز", .Cyrl: "з", .Glag: "ⰸ"], type: .consonant)

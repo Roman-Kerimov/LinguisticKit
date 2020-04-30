@@ -22,4 +22,21 @@ class ScriptTableArTests: XCTestCase {
             .Latn: "lnm",
         ])
     }
+    
+    func testWaw() {
+        XCTAssertArScriptTable([
+            .Arab: "رو",
+            .Latn: "rw",
+        ])
+        
+        XCTAssertArScriptTable([
+            .Arab: "رود",
+            .Latn: "rwd",
+        ])
+        
+        XCTAssertArScriptTable([
+            .Arab: "وو",
+            .Latn: "ww",
+        ])
+    }
 }

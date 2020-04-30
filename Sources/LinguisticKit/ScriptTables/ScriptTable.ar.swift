@@ -10,6 +10,7 @@ public extension ScriptTable {
         .l,
         .n,
         .m,
+        .w,
         .h,
         .b,
         .r,

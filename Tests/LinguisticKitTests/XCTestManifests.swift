@@ -17,6 +17,7 @@ extension ScriptTableArTests {
     // to regenerate.
     static let __allTests__ScriptTableArTests = [
         ("testArScriptTable", testArScriptTable),
+        ("testWaw", testWaw),
     ]
 }
 
