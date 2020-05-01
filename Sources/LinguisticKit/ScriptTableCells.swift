@@ -8,7 +8,7 @@
 import Foundation
 
 extension ScriptTable.Cell {
-    static let a = Self([.Latn: "a", .Cyrl: "а", .Glag: "ⰰ"], type: .vowel)
+    static let a = Self([.Latn: "a", .Arab: "ا", .Cyrl: "а", .Glag: "ⰰ"], type: .vowel)
     static let b = Self([.Latn: "b", .Arab: "ب", .Cyrl: "б", .Glag: "ⰱ"], type: .consonant)
     static let c = Self([.Latn: "c", .Cyrl: "ц", .Glag: "ⱌ"], type: .consonant)
     static let ch = Self([.Latn: "ch", .Cyrl: "ч", .Glag: "ⱍ"], type: .consonant)

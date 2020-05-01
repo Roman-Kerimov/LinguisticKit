@@ -7,6 +7,7 @@
 
 public extension ScriptTable {
     static let ar = ScriptTable(languageCode: "ar", defaultScript: .Arab) {[
+        .a,
         .l,
         .n,
         .m,
