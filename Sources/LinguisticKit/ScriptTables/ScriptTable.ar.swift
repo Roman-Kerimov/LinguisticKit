@@ -23,5 +23,8 @@ public extension ScriptTable {
         .k,
         .t,
         .z,
+        
+        
+        .init([.Arab: "َ", .Latn: "́"]),
     ]}
 }

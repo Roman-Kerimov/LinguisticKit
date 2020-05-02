@@ -71,7 +71,7 @@ public class ScriptTable: Equatable {
     
     internal func maxElementLength(forScript script: Script) -> Int {
         
-        return indexedScriptTables[script]?.keys.map {$0.count} .max() ?? 0
+        return indexedScriptTables[script]?.keys.map {$0.decomposedStringWithCanonicalMapping.unicodeScalars.count} .max() ?? 0
     }
     
     internal func element(of targetScript: Script, from sourceElement: String, of sourceScript: Script, prefixElement: String, postfixElement: String) -> String? {
