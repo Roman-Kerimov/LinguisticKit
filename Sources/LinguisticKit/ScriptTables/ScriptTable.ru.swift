@@ -15,7 +15,7 @@ public extension ScriptTable {
         .ch,
         .d,
         .init([.Latn: "dh", .Cyrl: "ҙ", .Glag: "ҙ"], type: .consonant),
-        .init([.Latn: "e", .Cyrl: "э", .Glag: "ⱔ"], prefixContext: .nonConsonant),
+        .init([.Latn: "e", .Cyrl: "э", .Glag: "ⱔ"], type: .vowel, prefixContext: .nonConsonant),
         .init([.Latn: "e", .Cyrl: "е", .Glag: "ⰵ"], prefixContext: .consonant),
         .init([.Latn: "ye", .Cyrl: "е", .Glag: "ⰵ"], prefixContext: .nonConsonant),
         .init([.Latn: "ye", .Cyrl: "э", .Glag: "ⱔ"], prefixContext: .consonant),
