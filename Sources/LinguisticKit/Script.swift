@@ -8,5 +8,9 @@
 public enum Script: String, CaseIterable {
     case Cyrl
     case Glag
+    case Hira
+    case Hrkt
+    case Jpan
+    case Kana
     case Latn
 }
