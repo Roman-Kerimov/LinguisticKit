@@ -10,7 +10,7 @@ import XCTest
 
 extension XCTest {
     
-    func XCTAssert(scriptTable: ScriptTable, testCase: [Script: String], file: StaticString = #file, line: UInt = #line) {
+    func XCTAssert(scriptTable: ScriptTable, testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
         let transformations = testCase.keys.flatMap { (sourceScript) -> [(Script, Script)] in
             return testCase.keys.compactMap { (targetScript) -> (Script, Script)? in
                 if sourceScript == targetScript {

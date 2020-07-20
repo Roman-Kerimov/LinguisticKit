@@ -10,7 +10,7 @@ import XCTest
 
 class ScriptTableRuTests: XCTestCase {
     
-    func XCTAssertRuScriptTable(_ testCase: [Script: String], file: StaticString = #file, line: UInt = #line) {
+    func XCTAssertRuScriptTable(_ testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
         XCTAssert(scriptTable: .ru, testCase: testCase, file: file, line: line)
     }
 
