@@ -53,4 +53,36 @@ class ScriptTableJaTests: XCTestCase {
             .Latn: "t'a",
         ])
     }
+    
+    func testN() {
+        XCTAssertJaScriptTable([
+            .Hira: "んあ",
+            .Latn: "n'a",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "んい",
+            .Latn: "n'i",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "んう",
+            .Latn: "n'u",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "んえ",
+            .Latn: "n'e",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "んお",
+            .Latn: "n'o",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "んや",
+            .Latn: "n'ya",
+        ])
+    }
 }

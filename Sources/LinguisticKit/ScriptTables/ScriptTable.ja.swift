@@ -157,6 +157,18 @@ public extension ScriptTable {
             ], type: .consonant)
         }
         
+        scriptTable += scriptTable.compactMap {
+            guard $0.type == .vowel || $0.scriptElements[.Latn]?.first == "y" else {
+                return nil
+            }
+            
+            return .init([
+                .Hira: "ん\($0.scriptElements[.Hira]!)",
+                .Kana: "ン\($0.scriptElements[.Kana]!)",
+                .Latn: "n'\($0.scriptElements[.Latn]!)",
+            ], type: .consonant)
+        }
+        
         return scriptTable
     }
 }
