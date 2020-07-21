@@ -36,5 +36,21 @@ class ScriptTableJaTests: XCTestCase {
             .Latn: "aisukurîmu",
         ])
     }
-
+    
+    func testSokuon() {
+        XCTAssertJaScriptTable([
+            .Hira: "なっとう",
+            .Latn: "nattou",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "あっ!",
+            .Latn: "at!",
+        ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "っあ",
+            .Latn: "t'a",
+        ])
+    }
 }

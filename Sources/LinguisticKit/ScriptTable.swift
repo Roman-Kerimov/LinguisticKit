@@ -31,6 +31,7 @@ public class ScriptTable: Equatable {
         
         static let nonConsonant = Self.any.subtracting(.consonant)
         static let nonVowel = Self.any.subtracting(.vowel)
+        static let nonOther = Self.any.subtracting(.other)
     }
     
     struct Cell {
