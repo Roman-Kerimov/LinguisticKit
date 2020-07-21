@@ -84,6 +84,11 @@ class ScriptTableJaTests: XCTestCase {
             .Hira: "んや",
             .Latn: "n'ya",
         ])
+        
+        XCTAssertJaScriptTable([
+            .Hira: "ごめんなさい",
+            .Latn: "gomen'nasai",
+        ])
     }
     
     func testPunctuation() {

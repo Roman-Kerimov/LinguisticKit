@@ -158,7 +158,7 @@ public extension ScriptTable {
         }
         
         scriptTable += scriptTable.compactMap {
-            guard $0.type == .vowel || $0.scriptElements[.Latn]?.first == "y" else {
+            guard $0.type == .vowel ||  ["y", "n"].contains($0.scriptElements[.Latn]!.first!) else {
                 return nil
             }
             
