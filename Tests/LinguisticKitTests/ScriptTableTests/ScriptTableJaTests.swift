@@ -14,7 +14,7 @@ class ScriptTableJaTests: XCTestCase {
         XCTAssert(scriptTable: .ja, testCase: testCase, file: file, line: line)
     }
     
-    func testAzScriptTable() {
+    func testJaScriptTable() {
         
         XCTAssertJaScriptTable([
             .Hira: "おちゃ",
