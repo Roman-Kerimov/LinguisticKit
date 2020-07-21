@@ -169,6 +169,35 @@ public extension ScriptTable {
             ], type: .consonant)
         }
         
+        let punctuationTable: RAWScriptTable = [
+            .init([.Hrkt: "｛", .Latn: "{"]),
+            .init([.Hrkt: "｝", .Latn: "}"]),
+            .init([.Hrkt: "（", .Latn: "("]),
+            .init([.Hrkt: "）", .Latn: ")"]),
+            .init([.Hrkt: "［", .Latn: "["]),
+            .init([.Hrkt: "］", .Latn: "]"]),
+            .init([.Hrkt: "、", .Latn: ","]),
+            .init([.Hrkt: "。", .Latn: "."]),
+            .init([.Hrkt: "・", .Latn: "·"]),
+            .init([.Hrkt: "「", .Latn: "‹"]),
+            .init([.Hrkt: "」", .Latn: "›"]),
+            .init([.Hrkt: "『", .Latn: "«"]),
+            .init([.Hrkt: "』", .Latn: "»"]),
+            .init([.Hrkt: "　", .Latn: " "]),
+            .init([.Hrkt: "〜", .Latn: "~"]),
+            .init([.Hrkt: "：", .Latn: ":"]),
+            .init([.Hrkt: "！", .Latn: "!"]),
+            .init([.Hrkt: "？", .Latn: "?"]),
+        ]
+        
+        scriptTable += punctuationTable.map {
+            Cell([
+                .Hira: $0.scriptElements[.Hrkt]!,
+                .Kana: $0.scriptElements[.Hrkt]!,
+                .Latn: $0.scriptElements[.Latn]!,
+            ])
+        }
+        
         return scriptTable
     }
 }
