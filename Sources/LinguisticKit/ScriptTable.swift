@@ -60,7 +60,18 @@ public class ScriptTable: Equatable {
     lazy var scriptLetterSets: [Script: CharacterSet] = indexedScriptTables.mapValues {CharacterSet(charactersIn: $0.keys.joined()).subtracting(.nonBaseCharacters)}
     private lazy var indexedScriptTables: [Script: IndexedScriptTable] = Dictionary.init(
         uniqueKeysWithValues: scriptSet.map { (script) -> (Script, IndexedScriptTable) in
-            return (script, IndexedScriptTable.init(table.map { ($0.scriptElements[script]!, [$0]) }, uniquingKeysWith: {$0 + $1}))
+            return (
+                script,
+                IndexedScriptTable(table.map { ($0.scriptElements[script]!, [$0]) }, uniquingKeysWith: {
+                    let combinedValues = $0 + $1
+                    
+                    guard combinedValues.count == Set(combinedValues.map {"\($0.scriptElements[script]!)\($0.prefixContext)\($0.postfixContext)"}).count else {
+                        fatalError("Ambiguity in \"\(self)\" script table for \"\($0.first!.scriptElements[script]!)\"!")
+                    }
+                    
+                    return combinedValues
+                })
+            )
         }
     )
     
