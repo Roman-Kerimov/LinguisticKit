@@ -49,14 +49,14 @@ public extension StringProtocol {
         var index = 0
         var elements: [(source: String, target: String)] = .init()
         
-        while index < self.count {
+        while index < self.decomposedStringWithCanonicalMapping.unicodeScalars.count {
             var sourceElementLength = scriptTable.maxElementLength(forScript: sourceScript)
             
             while true {
                 
-                let sourceElement: String = .init(self.dropFirst(index).prefix(sourceElementLength))
+                let sourceElement: String = .init(self.decomposedStringWithCanonicalMapping.unicodeScalars.dropFirst(index).prefix(sourceElementLength))
                 
-                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(with: sourceLocale), of: sourceScript, prefixElement: elements.last?.source ?? "", postfixElement: index + sourceElementLength == self.count ? "" : self.dropFirst(index + sourceElementLength).first?.description ?? "") {
+                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(with: sourceLocale), of: sourceScript, prefixElement: elements.last?.source ?? "", postfixElement: index + sourceElementLength == self.decomposedStringWithCanonicalMapping.unicodeScalars.count ? "" : self.decomposedStringWithCanonicalMapping.unicodeScalars.dropFirst(index + sourceElementLength).first?.description ?? "") {
                     elements.append((source: sourceElement, target: targetElement))
                     break
                 }
