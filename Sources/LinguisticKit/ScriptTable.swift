@@ -26,12 +26,14 @@ public class ScriptTable: Equatable {
         static let consonant: Self = .init(rawValue: 1 << 0)
         static let vowel: Self = .init(rawValue: 1 << 1)
         static let other: Self = .init(rawValue: 1 << 2)
+        static let nonLetter: Self = .init(rawValue: 1 << 3)
         
-        static let any: Self = [.consonant, .vowel, .other]
+        static let any: Self = [.consonant, .vowel, .other, nonLetter]
         
         static let nonConsonant = Self.any.subtracting(.consonant)
         static let nonVowel = Self.any.subtracting(.vowel)
         static let nonOther = Self.any.subtracting(.other)
+        static let letter = Self.any.subtracting(.nonLetter)
     }
     
     struct Cell {
@@ -106,19 +108,15 @@ public class ScriptTable: Equatable {
         else {
             let sourceUnicodeScalars = sourceElement.decomposedStringWithCanonicalMapping.unicodeScalars
             
-            guard sourceUnicodeScalars.last?.properties.isGraphemeExtend == true,
-                let grapehmeExtendIndex = sourceUnicodeScalars.lastIndex(where: {$0.properties.isGraphemeExtend}) else {
-                    
-                return nil
-            }
-            
-            graphemeExtend = .init(sourceUnicodeScalars.suffix(from: grapehmeExtendIndex))
+            graphemeExtend = .init(sourceUnicodeScalars.filter({$0.properties.isGraphemeExtend}))
             
             if let _ = indexedScriptTables[sourceScript]?[graphemeExtend] {
                 return nil
             }
             
-            guard let cells = indexedScriptTables[sourceScript]?[.init(sourceUnicodeScalars.dropLast(graphemeExtend.unicodeScalars.count))] else {
+            let sourceBase = String(sourceUnicodeScalars.filter({!$0.properties.isGraphemeExtend}))
+            
+            guard let cells = indexedScriptTables[sourceScript]?[sourceBase] else {
                 return nil
             }
             
@@ -126,10 +124,31 @@ public class ScriptTable: Equatable {
         }
             
         func context(of element: String) -> ContextType {
-            return indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type ?? .other
+            func optionalContextType(element: String) -> ContextType? {
+                indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type
+            }
+            
+            return optionalContextType(element: element)
+                ?? optionalContextType(element: String(element.unicodeScalars.filter({!$0.properties.isGraphemeExtend})))
+                ?? .nonLetter
         }
         
-        return targetScriptCells.filter {$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))} .first?.scriptElements[targetScript]?.appending(graphemeExtend)
+        guard var target = targetScriptCells.filter({$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))}) .first?.scriptElements[targetScript] else {
+            return nil
+        }
+        
+        if target.count > 1, target.hasSuffix("h") {
+            target
+                .insert(
+                    contentsOf: graphemeExtend,
+                    at: target.index(after: target.startIndex)
+                )
+        }
+        else {
+            target.append(graphemeExtend)
+        }
+        
+        return target
     }
     
     func locale(script: Script) -> Locale {

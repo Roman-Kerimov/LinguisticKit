@@ -42,7 +42,7 @@ public extension ScriptTable {
         .sh,
         .init([.Latn: "sjh", .Cyrl: "щ", .Glag: "ⱋ"], type: .consonant),
         .t,
-        .init([.Latn: "th", .Cyrl: "ѳ", .Glag: "ⱚ"], type: .consonant),
+        .th,
         .u,
         .init([.Latn: "yu", .Cyrl: "ю", .Glag: "ⱓ"]),
         .v,
