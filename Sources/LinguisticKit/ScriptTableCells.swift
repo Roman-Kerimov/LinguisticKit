@@ -49,8 +49,8 @@ extension ScriptTable.Cell {
     static let zh = Self([.Latn: "zh", .Cyrl: "ж", .Glag: "ⰶ", .Grek: "ζͱ"], type: .consonant)
 }
 
-extension Array where Element == ScriptTable.Cell {
-    static let VukGajTable: ScriptTable.RAWScriptTable = [
+extension ScriptTable.RAWScriptTable {
+    static let VukGaj: ScriptTable.RAWScriptTable = [
         .a,
         .b,
         .v,
@@ -84,7 +84,7 @@ extension Array where Element == ScriptTable.Cell {
         .init([.Cyrl: "ш", .Latn: "š"]),
     ]
     
-    static let GreekSharedTable: ScriptTable.RAWScriptTable = [
+    static let GreekShared: ScriptTable.RAWScriptTable = [
         .a,
         .g,
         .d,

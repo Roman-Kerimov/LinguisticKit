@@ -6,5 +6,5 @@
 //
 
 extension ScriptTable {
-    static let mk = ScriptTable(languageCode: "mk", defaultScript: .Cyrl) {.VukGajTable}
+    static let mk = ScriptTable(languageCode: "mk", defaultScript: .Cyrl) {.VukGaj}
 }
