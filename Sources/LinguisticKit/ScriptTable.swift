@@ -50,6 +50,14 @@ public class ScriptTable: Equatable {
             self.prefixContext = prefixContext
             self.postfixContext = postfixContext
         }
+        
+        init(type: ContextType = .other, _ scriptElements: [Script: String]) {
+            self.scriptElements = scriptElements
+            
+            self.type = type
+            self.prefixContext = .any
+            self.postfixContext = .any
+        }
     }
     
     internal typealias RAWScriptTable = [Cell]
