@@ -72,4 +72,11 @@ class ScriptTableBeTests: XCTestCase {
             .Latn: "łu lu l'u lju",
         ])
     }
+    
+    func testAcute() {
+        XCTAssertBeScriptTable([
+            .Cyrl: "Белару́ская мо́ва",
+            .Latn: "Biełarúskaja móva",
+        ])
+    }
 }
