@@ -14,7 +14,7 @@ extension ScriptTable.RAWScriptTable {
         .d,
         .init([.Cyrl: "ђ", .Latn: "đ"]), // sr
         .e,
-        .init([.Cyrl: "ж", .Latn: "ž"]),
+        .ž,
         .z,
         .init([.Cyrl: "ѕ", .Latn: "ǳ"]), // mk
         .i,
@@ -35,8 +35,8 @@ extension ScriptTable.RAWScriptTable {
         .f,
         .init([.Cyrl: "х", .Latn: "h"]),
         .c,
-        .init([.Cyrl: "ч", .Latn: "č"]),
+        .č,
         .init([.Cyrl: "џ", .Latn: "ǆ"]),
-        .init([.Cyrl: "ш", .Latn: "š"]),
+        .š,
     ]
 }
