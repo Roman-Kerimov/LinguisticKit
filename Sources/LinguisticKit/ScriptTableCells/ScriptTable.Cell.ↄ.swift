@@ -6,13 +6,5 @@
 //
 
 extension ScriptTable.Cell {
-    static let ↄ = Self(
-        type: .consonant,
-        [
-            .Latn: "ↄ",
-            .Cyrl: "ѱ",
-            .Glag: "ⱂⱄ",
-            .Grek: "ψ",
-        ]
-    )
+    static let ↄ = ps(.Latn, "ↄ")
 }

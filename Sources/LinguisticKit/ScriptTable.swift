@@ -58,6 +58,17 @@ public class ScriptTable: Equatable {
             self.prefixContext = .any
             self.postfixContext = .any
         }
+        
+        func callAsFunction(_ script: Script, _ element: String) -> Self {
+            var scriptElements = self.scriptElements
+            scriptElements[script] = element
+            return Cell(
+                scriptElements,
+                type: type,
+                prefixContext: prefixContext,
+                postfixContext: postfixContext
+            )
+        }
     }
     
     internal typealias RAWScriptTable = [Cell]
