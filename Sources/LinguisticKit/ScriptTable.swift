@@ -106,7 +106,7 @@ public class ScriptTable: Equatable {
         return indexedScriptTables[script]?.keys.map {$0.decomposedStringWithCanonicalMapping.unicodeScalars.count} .max() ?? 0
     }
     
-    internal func element(of targetScript: Script, from sourceElement: String, of sourceScript: Script, prefixElement: String, postfixElement: String) -> String? {
+    internal func element(of targetScript: Script, from sourceElement: String, of sourceScript: Script, prefixElement: String, postfixString: String) -> String? {
         
         
         guard indexedScriptTables.keys.contains(sourceScript) else {
@@ -141,18 +141,39 @@ public class ScriptTable: Equatable {
             
             targetScriptCells = cells
         }
-            
-        func context(of element: String) -> ContextType {
+        
+        func contextType(of element: String) -> ContextType? {
             func optionalContextType(element: String) -> ContextType? {
                 indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type
             }
             
             return optionalContextType(element: element)
                 ?? optionalContextType(element: String(element.unicodeScalars.filter({!$0.properties.isGraphemeExtend})))
-                ?? .nonLetter
         }
         
-        guard var target = targetScriptCells.filter({$0.prefixContext.contains(context(of: prefixElement)) && $0.postfixContext.contains(context(of: postfixElement))}) .first?.scriptElements[targetScript] else {
+        func contextTypeOfFirstElement(in string: String) -> ContextType {
+            var maxLength = maxElementLength(forScript: sourceScript)
+
+            while maxLength > 0 {
+                if let contextType = contextType(of: String(string.prefix(maxLength))) {
+                    return contextType
+                }
+                else {
+                    maxLength -= 1
+                }
+            }
+
+            return .nonLetter
+        }
+        
+        guard var target = targetScriptCells
+                .filter({
+                    $0.prefixContext.contains(contextType(of: prefixElement) ?? .nonLetter)
+                        && $0.postfixContext.contains(contextTypeOfFirstElement(in: postfixString))
+                })
+                .first?
+                .scriptElements[targetScript]
+        else {
             return nil
         }
         
