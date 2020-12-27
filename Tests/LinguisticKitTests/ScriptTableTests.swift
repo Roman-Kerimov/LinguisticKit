@@ -19,7 +19,7 @@ class ScriptTableTests: XCTestCase {
     }
     
     func testElement() {
-        XCTAssertNil(ScriptTable.uk.element(of: .Cyrl, from: "'j", of: .Latn, prefixElement: "p", postfixElement: "a"))
+        XCTAssertNil(ScriptTable.uk.element(of: .Cyrl, from: "'j", of: .Latn, prefixElement: "p", postfixString: "a"))
     }
     
     func testDescription() {

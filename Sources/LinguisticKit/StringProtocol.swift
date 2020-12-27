@@ -56,7 +56,15 @@ public extension StringProtocol {
                 
                 let sourceElement: String = .init(self.dropFirst(index).prefix(sourceElementLength))
                 
-                if let targetElement = scriptTable.element(of: targetScript, from: sourceElement.lowercased(with: sourceLocale), of: sourceScript, prefixElement: elements.last?.source ?? "", postfixElement: index + sourceElementLength == self.count ? "" : self.dropFirst(index + sourceElementLength).first?.description ?? "") {
+                if let targetElement = scriptTable.element(
+                    of: targetScript,
+                    from: sourceElement.lowercased(with: sourceLocale),
+                    of: sourceScript,
+                    prefixElement: elements.last?.source ?? "",
+                    postfixString: index + sourceElementLength == self.count
+                        ? ""
+                        : self.dropFirst(index + sourceElementLength).description
+                ) {
                     elements.append((source: sourceElement, target: targetElement))
                     break
                 }

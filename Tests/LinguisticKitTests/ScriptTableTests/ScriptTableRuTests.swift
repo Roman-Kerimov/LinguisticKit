@@ -38,6 +38,26 @@ class ScriptTableRuTests: XCTestCase {
             .Latn: "dyhe",
         ])
         
+        XCTAssertRuScriptTable([
+            .Cyrl: "ъй",
+            .Latn: "hyhj",
+        ])
+        
+        XCTAssertRuScriptTable([
+            .Cyrl: "дъй",
+            .Latn: "dyhj",
+        ])
+        
+        XCTAssertRuScriptTable([
+            .Cyrl: "дъь",
+            .Latn: "dyhhj",
+        ])
+        
+        XCTAssertRuScriptTable([
+            .Cyrl: "ъъ",
+            .Latn: "hyhy",
+        ])
+        
         XCTAssertRuScriptTable(
             [.Cyrl: "интервьюер",
              .Glag: "ⰹⱀⱅⰵⱃⰲⱐⱓⰵⱃ",
