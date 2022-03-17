@@ -48,7 +48,7 @@ public extension ScriptTable {
         .v,
         .w,
         .x,
-        .xh,
+        .kh,
         .init([.Latn: "y", .Cyrl: "ѵ", .Glag: "ⱛ"], prefixContext: .nonConsonant),
         .init([.Latn: "y", .Cyrl: "ъ", .Glag: "ⱏ"], prefixContext: .consonant, postfixContext: .nonVowel),
         .init([.Latn: "hy", .Cyrl: "ъ", .Glag: "ⱏ"], prefixContext: .nonConsonant, postfixContext: .nonVowel),

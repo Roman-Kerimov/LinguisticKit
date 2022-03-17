@@ -38,7 +38,7 @@ public extension ScriptTable {
         .t,
         .u,
         .f,
-        .xh,
+        .kh,
         .c,
         .ch,
         .sh,

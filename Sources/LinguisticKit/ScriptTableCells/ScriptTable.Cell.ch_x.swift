@@ -6,5 +6,5 @@
 //
 
 extension ScriptTable.Cell {
-    static let ch_x = xh(.Latn, "ch")
+    static let ch_x = kh(.Latn, "ch")
 }

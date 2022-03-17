@@ -23,7 +23,7 @@ class StringProtocolTests: XCTestCase {
         let escapeSequence = "`"
         
         XCTAssertEqual(
-            "`Y‐xhromosoma".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
+            "`Y‐khromosoma".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
             "Y‐хромосома"
         )
         

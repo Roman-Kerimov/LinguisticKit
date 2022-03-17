@@ -1,15 +1,15 @@
 //
-//  ScriptTable.Cell.xh.swift
+//  ScriptTable.Cell.kh.swift
 //  
 //
 //  Created by Roman Kerimov on 2020-09-01.
 //
 
 extension ScriptTable.Cell {
-    static let xh = Self(
+    static let kh = Self(
         type: .consonant,
         [
-            .Latn: "xh",
+            .Latn: "kh",
             .Cyrl: "х",
             .Glag: "ⱈ",
             .Grek: "χ",
