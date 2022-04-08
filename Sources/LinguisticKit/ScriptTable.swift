@@ -103,8 +103,18 @@ public class ScriptTable: Equatable {
     }
     
     internal func maxElementLength(forScript script: Script) -> Int {
-        return indexedScriptTables[script]?.keys.map {$0.decomposedStringWithCanonicalMapping.unicodeScalars.count} .max() ?? 0
+        if let maxElementLength = scriptMaxElementLengthDictionary[script] {
+            return maxElementLength
+        } else {
+            scriptMaxElementLengthDictionary[script] = indexedScriptTables[script]?.keys
+                .map(\.decomposedStringWithCanonicalMapping.unicodeScalars.count)
+                .max() ?? 0
+            
+            return scriptMaxElementLengthDictionary[script]!
+        }
     }
+    
+    private var scriptMaxElementLengthDictionary: [Script: Int] = [:]
     
     internal func element(of targetScript: Script, from sourceElement: String, of sourceScript: Script, prefixElement: String, postfixString: String) -> String? {
         
@@ -153,7 +163,7 @@ public class ScriptTable: Equatable {
         
         func contextTypeOfFirstElement(in string: String) -> ContextType {
             var maxLength = maxElementLength(forScript: sourceScript)
-
+            
             while maxLength > 0 {
                 if let contextType = contextType(of: String(string.prefix(maxLength))) {
                     return contextType
@@ -162,7 +172,7 @@ public class ScriptTable: Equatable {
                     maxLength -= 1
                 }
             }
-
+            
             return .nonLetter
         }
         

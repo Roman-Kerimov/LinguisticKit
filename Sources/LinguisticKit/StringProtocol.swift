@@ -38,106 +38,104 @@ public extension StringProtocol {
         }
     }
     
-    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable) -> String? {
-        guard scriptTable.scripts.contains(sourceScript) && scriptTable.scripts.contains(targetScript) else {
+    func applyingTransform(
+        from sourceScript: Script,
+        to targetScript: Script,
+        withTable scriptTable: ScriptTable
+    ) -> String? {
+        guard scriptTable.scripts.contains(sourceScript), scriptTable.scripts.contains(targetScript) else {
             return nil
         }
         
         let sourceLocale = scriptTable.locale(script: sourceScript)
         let targetLocale = scriptTable.locale(script: targetScript)
         
-        var index = 0
-        var elements: [(source: String, target: String)] = .init()
+        var elements: [(source: String, target: String)] = []
         
-        while index < self.decomposedStringWithCanonicalMapping.unicodeScalars.count {
-            var sourceElementLength = scriptTable.maxElementLength(forScript: sourceScript)
-            
-            while true {
+        let unicodeScalars = decomposedStringWithCanonicalMapping.unicodeScalars
+        var tail = unicodeScalars[unicodeScalars.startIndex..<unicodeScalars.endIndex]
+        let maxElementLength = scriptTable.maxElementLength(forScript: sourceScript)
+        
+        while tail.isEmpty == false {
+            autoreleasepool {
+                var sourceElementLength = maxElementLength
                 
-                let sourceElement: String = .init(self.decomposedStringWithCanonicalMapping.unicodeScalars.dropFirst(index).prefix(sourceElementLength))
-                
-                if let targetElement = scriptTable.element(
-                    of: targetScript,
-                    from: sourceElement.lowercased(with: sourceLocale),
-                    of: sourceScript,
-                    prefixElement: elements.last?.source ?? "",
-                    postfixString: index + sourceElementLength == decomposedStringWithCanonicalMapping.unicodeScalars.count
-                        ? ""
-                        : String(decomposedStringWithCanonicalMapping.unicodeScalars.dropFirst(index + sourceElementLength))
-                ) {
-                    elements.append((source: sourceElement, target: targetElement))
-                    break
+                while true {
+                    
+                    let sourceElement: String = tail.prefix(sourceElementLength).map(\.description).joined()
+                    
+                    if let targetElement = scriptTable.element(
+                        of: targetScript,
+                        from: sourceElement.lowercased(with: sourceLocale),
+                        of: sourceScript,
+                        prefixElement: elements.last?.source ?? "",
+                        postfixString: tail.dropFirst(sourceElementLength).prefix(maxElementLength).map(\.description).joined()
+                    ) {
+                        elements.append((source: sourceElement, target: targetElement))
+                        break
+                    }
+                    else if sourceElementLength == 1 {
+                        elements.append((source: sourceElement, target: sourceElement))
+                        break
+                    }
+                    
+                    sourceElementLength -= 1
                 }
-                else if sourceElementLength == 1 {
-                    elements.append((source: sourceElement, target: sourceElement))
-                    break
-                }
                 
-                sourceElementLength -= 1
+                tail = tail.dropFirst(sourceElementLength)
             }
-            
-            index += sourceElementLength
         }
         
-        var elementCases: [Case] = elements.map {$0.source.case}
+        var elementCases: [Case] = elements.map(\.source.case)
         
         for (index, elementCase) in elementCases.enumerated() {
             guard elementCase == .uppercasedOrCapitalized else {
                 continue
             }
             
-            let enumeratedElementCasesBeforeAndAfter = Array.init(elementCases.enumerated()).split {$0.offset == index}
-            
-            guard let elementBefore = enumeratedElementCasesBeforeAndAfter.first?.last?.element else {
+            guard index != 0, index != elementCases.count - 1 else {
                 continue
             }
             
-            guard let elementAfter = enumeratedElementCasesBeforeAndAfter.last?.first?.element else {
-                continue
-            }
-            
-            let newElementCase: Case
-            
-            switch (elementBefore, elementAfter) {
-                
+            switch (elementCases[index - 1], elementCases[index + 1]) {
             case (_, .uncased):
                 continue
                 
             case (_, .lowercased):
-                newElementCase = .capitalized
+                elementCases[index] = .capitalized
                 
             default:
-                newElementCase = .uppercased
-            }
-            
-            elementCases[index] = newElementCase
-        }
-        
-        elementCases.enumerated().split { ![.uppercasedOrCapitalized, .uppercased].contains($0.element) } .forEach { sequence in
-            guard sequence.count > 1 else {
-                return
-            }
-            
-            sequence.forEach {elementCases[$0.offset] = .uppercased}
-        }
-
-        for (index, _) in elementCases.enumerated().filter({$0.element == .uppercasedOrCapitalized}) {
-
-            let casedElelementCasesBeforeAndAfter = elementCases.enumerated().filter({![.uppercasedOrCapitalized, .uncased].contains($0.element)}) .split {$0.offset == index}
-
-            let contextCases = [casedElelementCasesBeforeAndAfter.first?.last?.element, casedElelementCasesBeforeAndAfter.last?.first?.element]
-
-            if contextCases.compactMap({$0}).contains(.uppercased) {
                 elementCases[index] = .uppercased
             }
-            else {
-                elementCases[index] = .capitalized
+        }
+        
+        elementCases.enumerated()
+            .split {[.uppercasedOrCapitalized, .uppercased].contains($0.element) == false}
+            .forEach { sequence in
+                guard sequence.count > 1 else {
+                    return
+                }
+                
+                sequence.forEach {
+                    elementCases[$0.offset] = .uppercased
+                }
             }
+        
+        for (index, _) in elementCases.enumerated().filter({$0.element == .uppercasedOrCapitalized}) {
+            let casedElelementCasesBeforeAndAfter = elementCases.enumerated()
+                .filter {[.uppercasedOrCapitalized, .uncased].contains($0.element) == false}
+                .split {$0.offset == index}
+            
+            let contextCases = [
+                casedElelementCasesBeforeAndAfter.first?.last?.element,
+                casedElelementCasesBeforeAndAfter.last?.first?.element
+            ]
+            
+            elementCases[index] = contextCases.contains(.uppercased) ? .uppercased : .capitalized
         }
         
         for (index, elementCase) in elementCases.enumerated() {
             switch elementCase {
-                
             case .lowercased:
                 elements[index].target = elements[index].target.lowercased(with: targetLocale)
                 
@@ -152,7 +150,7 @@ public extension StringProtocol {
             }
         }
         
-        return elements.map {$0.target} .joined()
+        return elements.map(\.target).joined()
     }
     
     func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String? {
