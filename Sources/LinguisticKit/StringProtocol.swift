@@ -150,7 +150,7 @@ public extension StringProtocol {
             }
         }
         
-        return elements.map(\.target).joined()
+        return elements.map(\.target).joined().precomposedStringWithCanonicalMapping
     }
     
     func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String? {

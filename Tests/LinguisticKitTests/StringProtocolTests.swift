@@ -38,6 +38,29 @@ class StringProtocolTests: XCTestCase {
         XCTAssertNil("".applyingTransform(from: .Glag, to: .Cyrl, withTable: .az, withEscapeSequence: "`"))
     }
     
+    func testApplyingTransformPrecomposition() {
+        XCTAssertEqual(
+            "у́".applyingTransform(from: .Cyrl, to: .Latn, withTable: .ru)?.unicodeScalars.count,
+            "ú".unicodeScalars.count
+        )
+    }
+    
+    func testApplyingTransformForPrecomposedString() {
+        let precomposedString = "ё"
+        XCTAssertEqual(
+            precomposedString.applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru)?.unicodeScalars.count,
+            precomposedString.unicodeScalars.count
+        )
+    }
+    
+    func testApplyingTransformForDecomposedString() {
+        let decomposedString = "ё"
+        XCTAssertNotEqual(
+            decomposedString.applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru)?.unicodeScalars.count,
+            decomposedString.unicodeScalars.count
+        )
+    }
+    
     func testApplyingTransformByTargetScriptCode() {
         
         XCTAssertEqual("stroka ru".transformationByTargetScriptCode()?.targetString, "строка")
