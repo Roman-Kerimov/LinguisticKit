@@ -7,262 +7,254 @@
 
 public extension ScriptTable {
     static let ja = ScriptTable(languageCode: "ja", defaultScript: .Hrkt) {
-        var scriptTable: RAWScriptTable = [
-            .init([.Hira: "あ", .Kana: "ア", .Latn: "a"], type: .vowel),
-            .init([.Hira: "い", .Kana: "イ", .Latn: "i"], type: .vowel),
-            .init([.Hira: "う", .Kana: "ウ", .Latn: "u"], type: .vowel),
-            .init([.Hira: "え", .Kana: "エ", .Latn: "e"], type: .vowel),
-            .init([.Hira: "お", .Kana: "オ", .Latn: "o"], type: .vowel),
+        var scriptTable = RAWScriptTable()
+            .cell([.Hira: "あ", .Kana: "ア", .Latn: "a"], type: .vowel)
+            .cell([.Hira: "い", .Kana: "イ", .Latn: "i"], type: .vowel)
+            .cell([.Hira: "う", .Kana: "ウ", .Latn: "u"], type: .vowel)
+            .cell([.Hira: "え", .Kana: "エ", .Latn: "e"], type: .vowel)
+            .cell([.Hira: "お", .Kana: "オ", .Latn: "o"], type: .vowel)
             
-            .init([.Hira: "か", .Kana: "カ", .Latn: "ka"], type: .consonant),
-            .init([.Hira: "き", .Kana: "キ", .Latn: "ki"], type: .consonant),
-            .init([.Hira: "く", .Kana: "ク", .Latn: "ku"], type: .consonant),
-            .init([.Hira: "け", .Kana: "ケ", .Latn: "ke"], type: .consonant),
-            .init([.Hira: "こ", .Kana: "コ", .Latn: "ko"], type: .consonant),
-            .init([.Hira: "きゃ", .Kana: "キャ", .Latn: "kya"], type: .consonant),
-            .init([.Hira: "きゅ", .Kana: "キュ", .Latn: "kyu"], type: .consonant),
-            .init([.Hira: "きょ", .Kana: "キョ", .Latn: "kyo"], type: .consonant),
+            .cell([.Hira: "か", .Kana: "カ", .Latn: "ka"], type: .consonant)
+            .cell([.Hira: "き", .Kana: "キ", .Latn: "ki"], type: .consonant)
+            .cell([.Hira: "く", .Kana: "ク", .Latn: "ku"], type: .consonant)
+            .cell([.Hira: "け", .Kana: "ケ", .Latn: "ke"], type: .consonant)
+            .cell([.Hira: "こ", .Kana: "コ", .Latn: "ko"], type: .consonant)
+            .cell([.Hira: "きゃ", .Kana: "キャ", .Latn: "kya"], type: .consonant)
+            .cell([.Hira: "きゅ", .Kana: "キュ", .Latn: "kyu"], type: .consonant)
+            .cell([.Hira: "きょ", .Kana: "キョ", .Latn: "kyo"], type: .consonant)
             
-            .init([.Hira: "さ", .Kana: "サ", .Latn: "sa"], type: .consonant),
-            .init([.Hira: "し", .Kana: "シ", .Latn: "si"], type: .consonant),
-            .init([.Hira: "す", .Kana: "ス", .Latn: "su"], type: .consonant),
-            .init([.Hira: "せ", .Kana: "セ", .Latn: "se"], type: .consonant),
-            .init([.Hira: "そ", .Kana: "ソ", .Latn: "so"], type: .consonant),
-            .init([.Hira: "しゃ", .Kana: "シャ", .Latn: "sya"], type: .consonant),
-            .init([.Hira: "しゅ", .Kana: "シュ", .Latn: "syu"], type: .consonant),
-            .init([.Hira: "しょ", .Kana: "ショ", .Latn: "syo"], type: .consonant),
+            .cell([.Hira: "さ", .Kana: "サ", .Latn: "sa"], type: .consonant)
+            .cell([.Hira: "し", .Kana: "シ", .Latn: "si"], type: .consonant)
+            .cell([.Hira: "す", .Kana: "ス", .Latn: "su"], type: .consonant)
+            .cell([.Hira: "せ", .Kana: "セ", .Latn: "se"], type: .consonant)
+            .cell([.Hira: "そ", .Kana: "ソ", .Latn: "so"], type: .consonant)
+            .cell([.Hira: "しゃ", .Kana: "シャ", .Latn: "sya"], type: .consonant)
+            .cell([.Hira: "しゅ", .Kana: "シュ", .Latn: "syu"], type: .consonant)
+            .cell([.Hira: "しょ", .Kana: "ショ", .Latn: "syo"], type: .consonant)
             
-            .init([.Hira: "た", .Kana: "タ", .Latn: "ta"], type: .consonant),
-            .init([.Hira: "ち", .Kana: "チ", .Latn: "ti"], type: .consonant),
-            .init([.Hira: "つ", .Kana: "ツ", .Latn: "tu"], type: .consonant),
-            .init([.Hira: "て", .Kana: "テ", .Latn: "te"], type: .consonant),
-            .init([.Hira: "と", .Kana: "ト", .Latn: "to"], type: .consonant),
-            .init([.Hira: "ちゃ", .Kana: "チャ", .Latn: "tya"], type: .consonant),
-            .init([.Hira: "ちゅ", .Kana: "チュ", .Latn: "tyu"], type: .consonant),
-            .init([.Hira: "ちょ", .Kana: "チョ", .Latn: "tyo"], type: .consonant),
+            .cell([.Hira: "た", .Kana: "タ", .Latn: "ta"], type: .consonant)
+            .cell([.Hira: "ち", .Kana: "チ", .Latn: "ti"], type: .consonant)
+            .cell([.Hira: "つ", .Kana: "ツ", .Latn: "tu"], type: .consonant)
+            .cell([.Hira: "て", .Kana: "テ", .Latn: "te"], type: .consonant)
+            .cell([.Hira: "と", .Kana: "ト", .Latn: "to"], type: .consonant)
+            .cell([.Hira: "ちゃ", .Kana: "チャ", .Latn: "tya"], type: .consonant)
+            .cell([.Hira: "ちゅ", .Kana: "チュ", .Latn: "tyu"], type: .consonant)
+            .cell([.Hira: "ちょ", .Kana: "チョ", .Latn: "tyo"], type: .consonant)
             
-            .init([.Hira: "な", .Kana: "ナ", .Latn: "na"], type: .consonant),
-            .init([.Hira: "に", .Kana: "ニ", .Latn: "ni"], type: .consonant),
-            .init([.Hira: "ぬ", .Kana: "ヌ", .Latn: "nu"], type: .consonant),
-            .init([.Hira: "ね", .Kana: "ネ", .Latn: "ne"], type: .consonant),
-            .init([.Hira: "の", .Kana: "ノ", .Latn: "no"], type: .consonant),
-            .init([.Hira: "にゃ", .Kana: "ニャ", .Latn: "nya"], type: .consonant),
-            .init([.Hira: "にゅ", .Kana: "ニュ", .Latn: "nyu"], type: .consonant),
-            .init([.Hira: "にょ", .Kana: "ニョ", .Latn: "nyo"], type: .consonant),
+            .cell([.Hira: "な", .Kana: "ナ", .Latn: "na"], type: .consonant)
+            .cell([.Hira: "に", .Kana: "ニ", .Latn: "ni"], type: .consonant)
+            .cell([.Hira: "ぬ", .Kana: "ヌ", .Latn: "nu"], type: .consonant)
+            .cell([.Hira: "ね", .Kana: "ネ", .Latn: "ne"], type: .consonant)
+            .cell([.Hira: "の", .Kana: "ノ", .Latn: "no"], type: .consonant)
+            .cell([.Hira: "にゃ", .Kana: "ニャ", .Latn: "nya"], type: .consonant)
+            .cell([.Hira: "にゅ", .Kana: "ニュ", .Latn: "nyu"], type: .consonant)
+            .cell([.Hira: "にょ", .Kana: "ニョ", .Latn: "nyo"], type: .consonant)
             
-            .init([.Hira: "は", .Kana: "ハ", .Latn: "ha"], type: .consonant),
-            .init([.Hira: "ひ", .Kana: "ヒ", .Latn: "hi"], type: .consonant),
-            .init([.Hira: "ふ", .Kana: "フ", .Latn: "hu"], type: .consonant),
-            .init([.Hira: "へ", .Kana: "ヘ", .Latn: "he"], type: .consonant),
-            .init([.Hira: "ほ", .Kana: "ホ", .Latn: "ho"], type: .consonant),
-            .init([.Hira: "ひゃ", .Kana: "ヒャ", .Latn: "hya"], type: .consonant),
-            .init([.Hira: "ひゅ", .Kana: "ヒュ", .Latn: "hyu"], type: .consonant),
-            .init([.Hira: "ひょ", .Kana: "ヒョ", .Latn: "hyo"], type: .consonant),
+            .cell([.Hira: "は", .Kana: "ハ", .Latn: "ha"], type: .consonant)
+            .cell([.Hira: "ひ", .Kana: "ヒ", .Latn: "hi"], type: .consonant)
+            .cell([.Hira: "ふ", .Kana: "フ", .Latn: "hu"], type: .consonant)
+            .cell([.Hira: "へ", .Kana: "ヘ", .Latn: "he"], type: .consonant)
+            .cell([.Hira: "ほ", .Kana: "ホ", .Latn: "ho"], type: .consonant)
+            .cell([.Hira: "ひゃ", .Kana: "ヒャ", .Latn: "hya"], type: .consonant)
+            .cell([.Hira: "ひゅ", .Kana: "ヒュ", .Latn: "hyu"], type: .consonant)
+            .cell([.Hira: "ひょ", .Kana: "ヒョ", .Latn: "hyo"], type: .consonant)
             
-            .init([.Hira: "ま", .Kana: "マ", .Latn: "ma"], type: .consonant),
-            .init([.Hira: "み", .Kana: "ミ", .Latn: "mi"], type: .consonant),
-            .init([.Hira: "む", .Kana: "ム", .Latn: "mu"], type: .consonant),
-            .init([.Hira: "め", .Kana: "メ", .Latn: "me"], type: .consonant),
-            .init([.Hira: "も", .Kana: "モ", .Latn: "mo"], type: .consonant),
-            .init([.Hira: "みゃ", .Kana: "ミャ", .Latn: "mya"], type: .consonant),
-            .init([.Hira: "みゅ", .Kana: "ミュ", .Latn: "myu"], type: .consonant),
-            .init([.Hira: "みょ", .Kana: "ミョ", .Latn: "myo"], type: .consonant),
+            .cell([.Hira: "ま", .Kana: "マ", .Latn: "ma"], type: .consonant)
+            .cell([.Hira: "み", .Kana: "ミ", .Latn: "mi"], type: .consonant)
+            .cell([.Hira: "む", .Kana: "ム", .Latn: "mu"], type: .consonant)
+            .cell([.Hira: "め", .Kana: "メ", .Latn: "me"], type: .consonant)
+            .cell([.Hira: "も", .Kana: "モ", .Latn: "mo"], type: .consonant)
+            .cell([.Hira: "みゃ", .Kana: "ミャ", .Latn: "mya"], type: .consonant)
+            .cell([.Hira: "みゅ", .Kana: "ミュ", .Latn: "myu"], type: .consonant)
+            .cell([.Hira: "みょ", .Kana: "ミョ", .Latn: "myo"], type: .consonant)
             
-            .init([.Hira: "や", .Kana: "ヤ", .Latn: "ya"], type: .consonant),
-            .init([.Hira: "ゆ", .Kana: "ユ", .Latn: "yu"], type: .consonant),
-            .init([.Hira: "よ", .Kana: "ヨ", .Latn: "yo"], type: .consonant),
+            .cell([.Hira: "や", .Kana: "ヤ", .Latn: "ya"], type: .consonant)
+            .cell([.Hira: "ゆ", .Kana: "ユ", .Latn: "yu"], type: .consonant)
+            .cell([.Hira: "よ", .Kana: "ヨ", .Latn: "yo"], type: .consonant)
             
-            .init([.Hira: "ら", .Kana: "ラ", .Latn: "ra"], type: .consonant),
-            .init([.Hira: "り", .Kana: "リ", .Latn: "ri"], type: .consonant),
-            .init([.Hira: "る", .Kana: "ル", .Latn: "ru"], type: .consonant),
-            .init([.Hira: "れ", .Kana: "レ", .Latn: "re"], type: .consonant),
-            .init([.Hira: "ろ", .Kana: "ロ", .Latn: "ro"], type: .consonant),
-            .init([.Hira: "りゃ", .Kana: "リャ", .Latn: "rya"], type: .consonant),
-            .init([.Hira: "りゅ", .Kana: "リュ", .Latn: "ryu"], type: .consonant),
-            .init([.Hira: "りょ", .Kana: "リョ", .Latn: "ryo"], type: .consonant),
+            .cell([.Hira: "ら", .Kana: "ラ", .Latn: "ra"], type: .consonant)
+            .cell([.Hira: "り", .Kana: "リ", .Latn: "ri"], type: .consonant)
+            .cell([.Hira: "る", .Kana: "ル", .Latn: "ru"], type: .consonant)
+            .cell([.Hira: "れ", .Kana: "レ", .Latn: "re"], type: .consonant)
+            .cell([.Hira: "ろ", .Kana: "ロ", .Latn: "ro"], type: .consonant)
+            .cell([.Hira: "りゃ", .Kana: "リャ", .Latn: "rya"], type: .consonant)
+            .cell([.Hira: "りゅ", .Kana: "リュ", .Latn: "ryu"], type: .consonant)
+            .cell([.Hira: "りょ", .Kana: "リョ", .Latn: "ryo"], type: .consonant)
             
-            .init([.Hira: "わ", .Kana: "ワ", .Latn: "wa"], type: .consonant),
-            .init([.Hira: "ゐ", .Kana: "ヰ", .Latn: "wi"], type: .consonant),
-            .init([.Hira: "ゑ", .Kana: "ヱ", .Latn: "we"], type: .consonant),
-            .init([.Hira: "を", .Kana: "ヲ", .Latn: "wo"], type: .consonant),
+            .cell([.Hira: "わ", .Kana: "ワ", .Latn: "wa"], type: .consonant)
+            .cell([.Hira: "ゐ", .Kana: "ヰ", .Latn: "wi"], type: .consonant)
+            .cell([.Hira: "ゑ", .Kana: "ヱ", .Latn: "we"], type: .consonant)
+            .cell([.Hira: "を", .Kana: "ヲ", .Latn: "wo"], type: .consonant)
             
-            .init([.Hira: "ん", .Kana: "ン", .Latn: "n"], type: .consonant),
+            .cell([.Hira: "ん", .Kana: "ン", .Latn: "n"], type: .consonant)
             
-            .init([.Hira: "が", .Kana: "ガ", .Latn: "ga"], type: .consonant),
-            .init([.Hira: "ぎ", .Kana: "ギ", .Latn: "gi"], type: .consonant),
-            .init([.Hira: "ぐ", .Kana: "グ", .Latn: "gu"], type: .consonant),
-            .init([.Hira: "げ", .Kana: "ゲ", .Latn: "ge"], type: .consonant),
-            .init([.Hira: "ご", .Kana: "ゴ", .Latn: "go"], type: .consonant),
-            .init([.Hira: "ぎゃ", .Kana: "ギャ", .Latn: "gya"], type: .consonant),
-            .init([.Hira: "ぎゅ", .Kana: "ギュ", .Latn: "gyu"], type: .consonant),
-            .init([.Hira: "ぎょ", .Kana: "ギョ", .Latn: "gyo"], type: .consonant),
+            .cell([.Hira: "が", .Kana: "ガ", .Latn: "ga"], type: .consonant)
+            .cell([.Hira: "ぎ", .Kana: "ギ", .Latn: "gi"], type: .consonant)
+            .cell([.Hira: "ぐ", .Kana: "グ", .Latn: "gu"], type: .consonant)
+            .cell([.Hira: "げ", .Kana: "ゲ", .Latn: "ge"], type: .consonant)
+            .cell([.Hira: "ご", .Kana: "ゴ", .Latn: "go"], type: .consonant)
+            .cell([.Hira: "ぎゃ", .Kana: "ギャ", .Latn: "gya"], type: .consonant)
+            .cell([.Hira: "ぎゅ", .Kana: "ギュ", .Latn: "gyu"], type: .consonant)
+            .cell([.Hira: "ぎょ", .Kana: "ギョ", .Latn: "gyo"], type: .consonant)
             
-            .init([.Hira: "ざ", .Kana: "ザ", .Latn: "za"], type: .consonant),
-            .init([.Hira: "じ", .Kana: "ジ", .Latn: "zi"], type: .consonant),
-            .init([.Hira: "ず", .Kana: "ズ", .Latn: "zu"], type: .consonant),
-            .init([.Hira: "ぜ", .Kana: "ゼ", .Latn: "ze"], type: .consonant),
-            .init([.Hira: "ぞ", .Kana: "ゾ", .Latn: "zo"], type: .consonant),
-            .init([.Hira: "じゃ", .Kana: "ジャ", .Latn: "zya"], type: .consonant),
-            .init([.Hira: "じゅ", .Kana: "ジュ", .Latn: "zyu"], type: .consonant),
-            .init([.Hira: "じょ", .Kana: "ジョ", .Latn: "zyo"], type: .consonant),
+            .cell([.Hira: "ざ", .Kana: "ザ", .Latn: "za"], type: .consonant)
+            .cell([.Hira: "じ", .Kana: "ジ", .Latn: "zi"], type: .consonant)
+            .cell([.Hira: "ず", .Kana: "ズ", .Latn: "zu"], type: .consonant)
+            .cell([.Hira: "ぜ", .Kana: "ゼ", .Latn: "ze"], type: .consonant)
+            .cell([.Hira: "ぞ", .Kana: "ゾ", .Latn: "zo"], type: .consonant)
+            .cell([.Hira: "じゃ", .Kana: "ジャ", .Latn: "zya"], type: .consonant)
+            .cell([.Hira: "じゅ", .Kana: "ジュ", .Latn: "zyu"], type: .consonant)
+            .cell([.Hira: "じょ", .Kana: "ジョ", .Latn: "zyo"], type: .consonant)
             
-            .init([.Hira: "だ", .Kana: "ダ", .Latn: "da"], type: .consonant),
-            .init([.Hira: "ぢ", .Kana: "ヂ", .Latn: "di"], type: .consonant),
-            .init([.Hira: "づ", .Kana: "ヅ", .Latn: "du"], type: .consonant),
-            .init([.Hira: "で", .Kana: "デ", .Latn: "de"], type: .consonant),
-            .init([.Hira: "ど", .Kana: "ド", .Latn: "do"], type: .consonant),
-            .init([.Hira: "ぢゃ", .Kana: "ヂャ", .Latn: "dya"], type: .consonant),
-            .init([.Hira: "ぢゅ", .Kana: "ヂュ", .Latn: "dyu"], type: .consonant),
-            .init([.Hira: "ぢょ", .Kana: "ヂョ", .Latn: "dyo"], type: .consonant),
+            .cell([.Hira: "だ", .Kana: "ダ", .Latn: "da"], type: .consonant)
+            .cell([.Hira: "ぢ", .Kana: "ヂ", .Latn: "di"], type: .consonant)
+            .cell([.Hira: "づ", .Kana: "ヅ", .Latn: "du"], type: .consonant)
+            .cell([.Hira: "で", .Kana: "デ", .Latn: "de"], type: .consonant)
+            .cell([.Hira: "ど", .Kana: "ド", .Latn: "do"], type: .consonant)
+            .cell([.Hira: "ぢゃ", .Kana: "ヂャ", .Latn: "dya"], type: .consonant)
+            .cell([.Hira: "ぢゅ", .Kana: "ヂュ", .Latn: "dyu"], type: .consonant)
+            .cell([.Hira: "ぢょ", .Kana: "ヂョ", .Latn: "dyo"], type: .consonant)
             
-            .init([.Hira: "ば", .Kana: "バ", .Latn: "ba"], type: .consonant),
-            .init([.Hira: "び", .Kana: "ビ", .Latn: "bi"], type: .consonant),
-            .init([.Hira: "ぶ", .Kana: "ブ", .Latn: "bu"], type: .consonant),
-            .init([.Hira: "べ", .Kana: "ベ", .Latn: "be"], type: .consonant),
-            .init([.Hira: "ぼ", .Kana: "ボ", .Latn: "bo"], type: .consonant),
-            .init([.Hira: "びゃ", .Kana: "ビャ", .Latn: "bya"], type: .consonant),
-            .init([.Hira: "びゅ", .Kana: "ビュ", .Latn: "byu"], type: .consonant),
-            .init([.Hira: "びょ", .Kana: "ビョ", .Latn: "byo"], type: .consonant),
+            .cell([.Hira: "ば", .Kana: "バ", .Latn: "ba"], type: .consonant)
+            .cell([.Hira: "び", .Kana: "ビ", .Latn: "bi"], type: .consonant)
+            .cell([.Hira: "ぶ", .Kana: "ブ", .Latn: "bu"], type: .consonant)
+            .cell([.Hira: "べ", .Kana: "ベ", .Latn: "be"], type: .consonant)
+            .cell([.Hira: "ぼ", .Kana: "ボ", .Latn: "bo"], type: .consonant)
+            .cell([.Hira: "びゃ", .Kana: "ビャ", .Latn: "bya"], type: .consonant)
+            .cell([.Hira: "びゅ", .Kana: "ビュ", .Latn: "byu"], type: .consonant)
+            .cell([.Hira: "びょ", .Kana: "ビョ", .Latn: "byo"], type: .consonant)
             
-            .init([.Hira: "ぱ", .Kana: "パ", .Latn: "pa"], type: .consonant),
-            .init([.Hira: "ぴ", .Kana: "ピ", .Latn: "pi"], type: .consonant),
-            .init([.Hira: "ぷ", .Kana: "プ", .Latn: "pu"], type: .consonant),
-            .init([.Hira: "ぺ", .Kana: "ペ", .Latn: "pe"], type: .consonant),
-            .init([.Hira: "ぽ", .Kana: "ポ", .Latn: "po"], type: .consonant),
-            .init([.Hira: "ぴゃ", .Kana: "ピャ", .Latn: "pya"], type: .consonant),
-            .init([.Hira: "ぴゅ", .Kana: "ピュ", .Latn: "pyu"], type: .consonant),
-            .init([.Hira: "ぴょ", .Kana: "ピョ", .Latn: "pyo"], type: .consonant),
-            
-            
-            .init([.Hira: "きぇ", .Kana: "キェ", .Latn: "kye"], type: .consonant),
-            
-            .init([.Hira: "くゎ", .Kana: "クヮ", .Latn: "kwa"], type: .consonant),
-            .init([.Hira: "くぃ", .Kana: "クィ", .Latn: "kwi"], type: .consonant),
-            .init([.Hira: "くぇ", .Kana: "クェ", .Latn: "kwe"], type: .consonant),
-            .init([.Hira: "くぉ", .Kana: "クォ", .Latn: "kwo"], type: .consonant),
-            
-            .init([.Hira: "ぎぇ", .Kana: "ギェ", .Latn: "gye"], type: .consonant),
-            
-            .init([.Hira: "ぐゎ", .Kana: "グヮ", .Latn: "gwa"], type: .consonant),
-            .init([.Hira: "ぐぃ", .Kana: "グィ", .Latn: "gwi"], type: .consonant),
-            .init([.Hira: "ぐぇ", .Kana: "グェ", .Latn: "gwe"], type: .consonant),
-            .init([.Hira: "ぐぉ", .Kana: "グォ", .Latn: "gwo"], type: .consonant),
-            
-            .init([.Hira: "すぃ", .Kana: "スィ", .Latn: "sxi"], type: .consonant),
-            .init([.Hira: "しぇ", .Kana: "シェ", .Latn: "she"], type: .consonant),
-            
-            .init([.Hira: "ずぃ", .Kana: "ズィ", .Latn: "zxi"], type: .consonant),
-            .init([.Hira: "じぇ", .Kana: "ジェ", .Latn: "je"], type: .consonant),
-            
-            .init([.Hira: "てぃ", .Kana: "ティ", .Latn: "txi"], type: .consonant),
-            .init([.Hira: "とぅ", .Kana: "トゥ", .Latn: "txu"], type: .consonant),
-            .init([.Hira: "てゅ", .Kana: "テュ", .Latn: "txyu"], type: .consonant),
-            .init([.Hira: "ちぇ", .Kana: "チェ", .Latn: "che"], type: .consonant),
-            
-            .init([.Hira: "つぁ", .Kana: "ツァ", .Latn: "tsa"], type: .consonant),
-            .init([.Hira: "つぃ", .Kana: "ツィ", .Latn: "tsi"], type: .consonant),
-            .init([.Hira: "つぇ", .Kana: "ツェ", .Latn: "tse"], type: .consonant),
-            .init([.Hira: "つぉ", .Kana: "ツォ", .Latn: "tso"], type: .consonant),
-            
-            .init([.Hira: "でぃ", .Kana: "ディ", .Latn: "dxi"], type: .consonant),
-            .init([.Hira: "どぅ", .Kana: "ドゥ", .Latn: "dxu"], type: .consonant),
-            .init([.Hira: "でゅ", .Kana: "デュ", .Latn: "dxyu"], type: .consonant),
-            
-            .init([.Hira: "にぇ", .Kana: "ニェ", .Latn: "nye"], type: .consonant),
-            
-            .init([.Hira: "ほぅ", .Kana: "ホゥ", .Latn: "hxu"], type: .consonant),
-            .init([.Hira: "ヒぇ", .Kana: "ヒェ", .Latn: "hye"], type: .consonant),
-            
-            .init([.Hira: "ふぁ", .Kana: "ファ", .Latn: "fa"], type: .consonant),
-            .init([.Hira: "ふぃ", .Kana: "フィ", .Latn: "fi"], type: .consonant),
-            .init([.Hira: "ふぇ", .Kana: "フェ", .Latn: "fe"], type: .consonant),
-            .init([.Hira: "ふぉ", .Kana: "フォ", .Latn: "fo"], type: .consonant),
-            .init([.Hira: "ふゃ", .Kana: "フャ", .Latn: "fya"], type: .consonant),
-            .init([.Hira: "ふゅ", .Kana: "フュ", .Latn: "fyu"], type: .consonant),
-            .init([.Hira: "ふぃぇ", .Kana: "フィェ", .Latn: "fye"], type: .consonant),
-            .init([.Hira: "ふょ", .Kana: "フョ", .Latn: "fyo"], type: .consonant),
-            
-            .init([.Hira: "びぇ", .Kana: "ビェ", .Latn: "bye"], type: .consonant),
-            
-            .init([.Hira: "ぴぇ", .Kana: "ピェ", .Latn: "pye"], type: .consonant),
-            
-            .init([.Hira: "みぇ", .Kana: "ミェ", .Latn: "mye"], type: .consonant),
-            
-            .init([.Hira: "いぃ", .Kana: "イィ", .Latn: "yi"], type: .consonant),
-            .init([.Hira: "いぇ", .Kana: "イェ", .Latn: "ye"], type: .consonant),
-            
-            .init([.Hira: "りぇ", .Kana: "リェ", .Latn: "rye"], type: .consonant),
-            
-            .init([.Hira: "うぃ", .Kana: "ウィ", .Latn: "wxi"], type: .consonant),
-            .init([.Hira: "うぅ", .Kana: "ウゥ", .Latn: "wu"], type: .consonant),
-            .init([.Hira: "うぇ", .Kana: "ウェ", .Latn: "wxe"], type: .consonant),
-            .init([.Hira: "うぉ", .Kana: "ウォ", .Latn: "wxo"], type: .consonant),
-            .init([.Hira: "うゅ", .Kana: "ウュ", .Latn: "wyu"], type: .consonant),
-            
-            .init([.Hira: "ゔぁ", .Kana: "ヴァ", .Latn: "va"], type: .consonant),
-            .init([.Hira: "ゔぃ", .Kana: "ヴィ", .Latn: "vi"], type: .consonant),
-            .init([.Hira: "ゔ", .Kana: "ヴ", .Latn: "vu"], type: .consonant),
-            .init([.Hira: "ゔぇ", .Kana: "ヴェ", .Latn: "ve"], type: .consonant),
-            .init([.Hira: "ゔぉ", .Kana: "ヴォ", .Latn: "vo"], type: .consonant),
-            .init([.Hira: "ゔゃ", .Kana: "ヴャ", .Latn: "vya"], type: .consonant),
-            .init([.Hira: "ゔゅ", .Kana: "ヴュ", .Latn: "vyu"], type: .consonant),
-            .init([.Hira: "ゔぃぇ", .Kana: "ヴィェ", .Latn: "vye"], type: .consonant),
-            .init([.Hira: "ゔょ", .Kana: "ヴョ", .Latn: "vyo"], type: .consonant),
+            .cell([.Hira: "ぱ", .Kana: "パ", .Latn: "pa"], type: .consonant)
+            .cell([.Hira: "ぴ", .Kana: "ピ", .Latn: "pi"], type: .consonant)
+            .cell([.Hira: "ぷ", .Kana: "プ", .Latn: "pu"], type: .consonant)
+            .cell([.Hira: "ぺ", .Kana: "ペ", .Latn: "pe"], type: .consonant)
+            .cell([.Hira: "ぽ", .Kana: "ポ", .Latn: "po"], type: .consonant)
+            .cell([.Hira: "ぴゃ", .Kana: "ピャ", .Latn: "pya"], type: .consonant)
+            .cell([.Hira: "ぴゅ", .Kana: "ピュ", .Latn: "pyu"], type: .consonant)
+            .cell([.Hira: "ぴょ", .Kana: "ピョ", .Latn: "pyo"], type: .consonant)
             
             
+            .cell([.Hira: "きぇ", .Kana: "キェ", .Latn: "kye"], type: .consonant)
             
-            .init([.Hira: "ー", .Kana: "ー", .Latn: "̂"]),
+            .cell([.Hira: "くゎ", .Kana: "クヮ", .Latn: "kwa"], type: .consonant)
+            .cell([.Hira: "くぃ", .Kana: "クィ", .Latn: "kwi"], type: .consonant)
+            .cell([.Hira: "くぇ", .Kana: "クェ", .Latn: "kwe"], type: .consonant)
+            .cell([.Hira: "くぉ", .Kana: "クォ", .Latn: "kwo"], type: .consonant)
             
-            .init([.Hira: "っ", .Kana: "ッ", .Latn: "t"], postfixContext: .other),
-            .init([.Hira: "っ", .Kana: "ッ", .Latn: "t'"], postfixContext: .nonOther),
-        ]
+            .cell([.Hira: "ぎぇ", .Kana: "ギェ", .Latn: "gye"], type: .consonant)
+            
+            .cell([.Hira: "ぐゎ", .Kana: "グヮ", .Latn: "gwa"], type: .consonant)
+            .cell([.Hira: "ぐぃ", .Kana: "グィ", .Latn: "gwi"], type: .consonant)
+            .cell([.Hira: "ぐぇ", .Kana: "グェ", .Latn: "gwe"], type: .consonant)
+            .cell([.Hira: "ぐぉ", .Kana: "グォ", .Latn: "gwo"], type: .consonant)
+            
+            .cell([.Hira: "すぃ", .Kana: "スィ", .Latn: "sxi"], type: .consonant)
+            .cell([.Hira: "しぇ", .Kana: "シェ", .Latn: "she"], type: .consonant)
+            
+            .cell([.Hira: "ずぃ", .Kana: "ズィ", .Latn: "zxi"], type: .consonant)
+            .cell([.Hira: "じぇ", .Kana: "ジェ", .Latn: "je"], type: .consonant)
+            
+            .cell([.Hira: "てぃ", .Kana: "ティ", .Latn: "txi"], type: .consonant)
+            .cell([.Hira: "とぅ", .Kana: "トゥ", .Latn: "txu"], type: .consonant)
+            .cell([.Hira: "てゅ", .Kana: "テュ", .Latn: "txyu"], type: .consonant)
+            .cell([.Hira: "ちぇ", .Kana: "チェ", .Latn: "che"], type: .consonant)
+            
+            .cell([.Hira: "つぁ", .Kana: "ツァ", .Latn: "tsa"], type: .consonant)
+            .cell([.Hira: "つぃ", .Kana: "ツィ", .Latn: "tsi"], type: .consonant)
+            .cell([.Hira: "つぇ", .Kana: "ツェ", .Latn: "tse"], type: .consonant)
+            .cell([.Hira: "つぉ", .Kana: "ツォ", .Latn: "tso"], type: .consonant)
+            
+            .cell([.Hira: "でぃ", .Kana: "ディ", .Latn: "dxi"], type: .consonant)
+            .cell([.Hira: "どぅ", .Kana: "ドゥ", .Latn: "dxu"], type: .consonant)
+            .cell([.Hira: "でゅ", .Kana: "デュ", .Latn: "dxyu"], type: .consonant)
+            
+            .cell([.Hira: "にぇ", .Kana: "ニェ", .Latn: "nye"], type: .consonant)
+            
+            .cell([.Hira: "ほぅ", .Kana: "ホゥ", .Latn: "hxu"], type: .consonant)
+            .cell([.Hira: "ヒぇ", .Kana: "ヒェ", .Latn: "hye"], type: .consonant)
+            
+            .cell([.Hira: "ふぁ", .Kana: "ファ", .Latn: "fa"], type: .consonant)
+            .cell([.Hira: "ふぃ", .Kana: "フィ", .Latn: "fi"], type: .consonant)
+            .cell([.Hira: "ふぇ", .Kana: "フェ", .Latn: "fe"], type: .consonant)
+            .cell([.Hira: "ふぉ", .Kana: "フォ", .Latn: "fo"], type: .consonant)
+            .cell([.Hira: "ふゃ", .Kana: "フャ", .Latn: "fya"], type: .consonant)
+            .cell([.Hira: "ふゅ", .Kana: "フュ", .Latn: "fyu"], type: .consonant)
+            .cell([.Hira: "ふぃぇ", .Kana: "フィェ", .Latn: "fye"], type: .consonant)
+            .cell([.Hira: "ふょ", .Kana: "フョ", .Latn: "fyo"], type: .consonant)
+            
+            .cell([.Hira: "びぇ", .Kana: "ビェ", .Latn: "bye"], type: .consonant)
+            
+            .cell([.Hira: "ぴぇ", .Kana: "ピェ", .Latn: "pye"], type: .consonant)
+            
+            .cell([.Hira: "みぇ", .Kana: "ミェ", .Latn: "mye"], type: .consonant)
+            
+            .cell([.Hira: "いぃ", .Kana: "イィ", .Latn: "yi"], type: .consonant)
+            .cell([.Hira: "いぇ", .Kana: "イェ", .Latn: "ye"], type: .consonant)
+            
+            .cell([.Hira: "りぇ", .Kana: "リェ", .Latn: "rye"], type: .consonant)
+            
+            .cell([.Hira: "うぃ", .Kana: "ウィ", .Latn: "wxi"], type: .consonant)
+            .cell([.Hira: "うぅ", .Kana: "ウゥ", .Latn: "wu"], type: .consonant)
+            .cell([.Hira: "うぇ", .Kana: "ウェ", .Latn: "wxe"], type: .consonant)
+            .cell([.Hira: "うぉ", .Kana: "ウォ", .Latn: "wxo"], type: .consonant)
+            .cell([.Hira: "うゅ", .Kana: "ウュ", .Latn: "wyu"], type: .consonant)
+            
+            .cell([.Hira: "ゔぁ", .Kana: "ヴァ", .Latn: "va"], type: .consonant)
+            .cell([.Hira: "ゔぃ", .Kana: "ヴィ", .Latn: "vi"], type: .consonant)
+            .cell([.Hira: "ゔ", .Kana: "ヴ", .Latn: "vu"], type: .consonant)
+            .cell([.Hira: "ゔぇ", .Kana: "ヴェ", .Latn: "ve"], type: .consonant)
+            .cell([.Hira: "ゔぉ", .Kana: "ヴォ", .Latn: "vo"], type: .consonant)
+            .cell([.Hira: "ゔゃ", .Kana: "ヴャ", .Latn: "vya"], type: .consonant)
+            .cell([.Hira: "ゔゅ", .Kana: "ヴュ", .Latn: "vyu"], type: .consonant)
+            .cell([.Hira: "ゔぃぇ", .Kana: "ヴィェ", .Latn: "vye"], type: .consonant)
+            .cell([.Hira: "ゔょ", .Kana: "ヴョ", .Latn: "vyo"], type: .consonant)
+            
+            
+            
+            .cell([.Hira: "ー", .Kana: "ー", .Latn: "̂"])
+            
+            .cell([.Hira: "っ", .Kana: "ッ", .Latn: "t"], postfixContext: .other)
+            .cell([.Hira: "っ", .Kana: "ッ", .Latn: "t'"], postfixContext: .nonOther)
         
         scriptTable += scriptTable.compactMap {
-            guard $0.type == .consonant else {
-                return nil
-            }
-            
-            return .init([
+            $0.type == .consonant ? Cell([
                 .Hira: "っ\($0.scriptElements[.Hira]!)",
                 .Kana: "ッ\($0.scriptElements[.Kana]!)",
                 .Latn: "\($0.scriptElements[.Latn]!.first!)\($0.scriptElements[.Latn]!)",
-            ], type: .consonant)
+            ], type: .consonant) : nil
         }
         
         scriptTable += scriptTable.compactMap {
-            guard $0.type == .vowel ||  ["y", "n"].contains($0.scriptElements[.Latn]!.first!) else {
-                return nil
-            }
-            
-            return .init([
+            $0.type == .vowel ||  ["y", "n"].contains($0.scriptElements[.Latn]!.first!) ? Cell([
                 .Hira: "ん\($0.scriptElements[.Hira]!)",
                 .Kana: "ン\($0.scriptElements[.Kana]!)",
                 .Latn: "n'\($0.scriptElements[.Latn]!)",
-            ], type: .consonant)
+            ], type: .consonant) : nil
         }
         
-        let punctuationTable: RAWScriptTable = [
-            .init([.Hrkt: "｛", .Latn: "{"]),
-            .init([.Hrkt: "｝", .Latn: "}"]),
-            .init([.Hrkt: "（", .Latn: "("]),
-            .init([.Hrkt: "）", .Latn: ")"]),
-            .init([.Hrkt: "［", .Latn: "["]),
-            .init([.Hrkt: "］", .Latn: "]"]),
-            .init([.Hrkt: "、", .Latn: ","]),
-            .init([.Hrkt: "。", .Latn: "."]),
-            .init([.Hrkt: "・", .Latn: "·"]),
-            .init([.Hrkt: "「", .Latn: "‹"]),
-            .init([.Hrkt: "」", .Latn: "›"]),
-            .init([.Hrkt: "『", .Latn: "«"]),
-            .init([.Hrkt: "』", .Latn: "»"]),
-            .init([.Hrkt: "　", .Latn: " "]),
-            .init([.Hrkt: "〜", .Latn: "~"]),
-            .init([.Hrkt: "：", .Latn: ":"]),
-            .init([.Hrkt: "！", .Latn: "!"]),
-            .init([.Hrkt: "？", .Latn: "?"]),
-        ]
+        var punctuationTable: RAWScriptTable =
+            .cell([.Hrkt: "｛", .Latn: "{"])
+            .cell([.Hrkt: "｝", .Latn: "}"])
+            .cell([.Hrkt: "（", .Latn: "("])
+            .cell([.Hrkt: "）", .Latn: ")"])
+            .cell([.Hrkt: "［", .Latn: "["])
+            .cell([.Hrkt: "］", .Latn: "]"])
+        punctuationTable = punctuationTable // Fix for Swift 5.6
+            .cell([.Hrkt: "、", .Latn: ","])
+            .cell([.Hrkt: "。", .Latn: "."])
+            .cell([.Hrkt: "・", .Latn: "·"])
+            .cell([.Hrkt: "「", .Latn: "‹"])
+            .cell([.Hrkt: "」", .Latn: "›"])
+            .cell([.Hrkt: "『", .Latn: "«"])
+            .cell([.Hrkt: "』", .Latn: "»"])
+            .cell([.Hrkt: "　", .Latn: " "])
+            .cell([.Hrkt: "〜", .Latn: "~"])
+            .cell([.Hrkt: "：", .Latn: ":"])
+            .cell([.Hrkt: "！", .Latn: "!"])
+            .cell([.Hrkt: "？", .Latn: "?"])
         
-        scriptTable += punctuationTable.map {
+        scriptTable += punctuationTable
+            .map {
             Cell([
                 .Hira: $0.scriptElements[.Hrkt]!,
                 .Kana: $0.scriptElements[.Hrkt]!,

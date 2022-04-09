@@ -6,36 +6,35 @@
 //
 
 extension ScriptTable.RAWScriptTable {
-    static let GreekShared: ScriptTable.RAWScriptTable = [
-        .a,
-        .g,
-        .d,
-        .e,
-        .z,
-        .th,
-        .i,
-        .k,
-        .l,
-        .m,
-        .n,
-        .x,
-        .o,
-        .p,
-        .r,
-        .init([.Grek: "σ", .Latn: "s"], postfixContext: .letter),
-        .init([.Grek: "σ", .Latn: "s"], prefixContext: .nonLetter, postfixContext: .nonLetter),
-        .init([.Grek: "ς", .Latn: "s"], prefixContext: .letter, postfixContext: .nonLetter),
-        .init([.Grek: "ς", .Latn: "hs"], prefixContext: .nonLetter, postfixContext: .nonLetter),
-        .t,
-        .y,
-        .ch_x,
-        .ps,
-        .init([.Grek: "πσ", .Latn: "p's"], postfixContext: .letter),
-        .init([.Grek: "πς", .Latn: "p's"], postfixContext: .nonLetter),
-        .oh,
+    static let GreekShared: ScriptTable.RAWScriptTable =
+        .a
+        .g
+        .d
+        .e
+        .z
+        .th
+        .i
+        .k
+        .l
+        .m
+        .n
+        .x
+        .o
+        .p
+        .r
+        .cell([.Grek: "σ", .Latn: "s"], postfixContext: .letter)
+        .cell([.Grek: "σ", .Latn: "s"], prefixContext: .nonLetter, postfixContext: .nonLetter)
+        .cell([.Grek: "ς", .Latn: "s"], prefixContext: .letter, postfixContext: .nonLetter)
+        .cell([.Grek: "ς", .Latn: "hs"], prefixContext: .nonLetter, postfixContext: .nonLetter)
+        .t
+        .y
+        .ch_x
+        .ps
+        .cell([.Grek: "πσ", .Latn: "p's"], postfixContext: .letter)
+        .cell([.Grek: "πς", .Latn: "p's"], postfixContext: .nonLetter)
+        .oh
         
-        .h,
-        .q,
-        .w,
-    ]
+        .h
+        .q
+        .w
 }

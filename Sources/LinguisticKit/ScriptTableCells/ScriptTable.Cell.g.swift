@@ -5,14 +5,16 @@
 //  Created by Roman Kerimov on 2020-09-01.
 //
 
-extension ScriptTable.Cell {
-    static let g = Self(
-        type: .consonant,
-        [
-            .Latn: "g",
-            .Cyrl: "г",
-            .Glag: "ⰳ",
-            .Grek: "γ",
-        ]
-    )
+extension ScriptTable.RAWScriptTable {
+    var g: Self {
+        self + .cell(
+            type: .consonant,
+            [
+                .Latn: "g",
+                .Cyrl: "г",
+                .Glag: "ⰳ",
+                .Grek: "γ",
+            ]
+        )
+    }
 }

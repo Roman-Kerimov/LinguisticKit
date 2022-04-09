@@ -5,6 +5,8 @@
 //  Created by Roman Kerimov on 2020-09-02.
 //
 
-extension ScriptTable.Cell {
-    static let ŭ = w(.Latn, "ŭ")
+extension ScriptTable.RAWScriptTable {
+    var ŭ: Self {
+        self + w(.Latn, "ŭ")
+    }
 }

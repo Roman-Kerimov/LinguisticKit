@@ -7,12 +7,9 @@
 
 extension ScriptTable {
     static let el = ScriptTable(languageCode: "el", defaultScript: .Grek) {
-        .GreekShared + [
-            .v,
-            .ih,
-            .f,
-        ]
+        .GreekShared
+        .v
+        .ih
+        .f
     }
 }
-
-

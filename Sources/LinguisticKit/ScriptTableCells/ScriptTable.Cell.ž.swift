@@ -5,6 +5,8 @@
 //  Created by Roman Kerimov on 2020-09-02.
 //
 
-extension ScriptTable.Cell {
-    static let ž = zh(.Latn, "ž")
+extension ScriptTable.RAWScriptTable {
+    var ž: Self {
+        self + zh(.Latn, "ž")
+    }
 }
