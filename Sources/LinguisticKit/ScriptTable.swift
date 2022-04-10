@@ -23,17 +23,17 @@ public class ScriptTable: Equatable {
     struct ContextType: OptionSet {
         let rawValue: Int
         
-        static let consonant: Self = .init(rawValue: 1 << 0)
-        static let vowel: Self = .init(rawValue: 1 << 1)
-        static let other: Self = .init(rawValue: 1 << 2)
-        static let nonLetter: Self = .init(rawValue: 1 << 3)
+        static let consonant = ContextType(rawValue: 1 << 0)
+        static let vowel = ContextType(rawValue: 1 << 1)
+        static let other = ContextType(rawValue: 1 << 2)
+        static let nonLetter = ContextType(rawValue: 1 << 3)
         
-        static let any: Self = [.consonant, .vowel, .other, nonLetter]
+        static let any: ContextType = [.consonant, .vowel, .other, nonLetter]
         
-        static let nonConsonant = Self.any.subtracting(.consonant)
-        static let nonVowel = Self.any.subtracting(.vowel)
-        static let nonOther = Self.any.subtracting(.other)
-        static let letter = Self.any.subtracting(.nonLetter)
+        static let nonConsonant = ContextType.any.subtracting(.consonant)
+        static let nonVowel = ContextType.any.subtracting(.vowel)
+        static let nonOther = ContextType.any.subtracting(.other)
+        static let letter = ContextType.any.subtracting(.nonLetter)
     }
     
     struct Cell {
@@ -43,7 +43,12 @@ public class ScriptTable: Equatable {
         let prefixContext: ContextType
         let postfixContext: ContextType
         
-        init(_ scriptElements: [Script: String], type: ContextType = .other, prefixContext: ContextType = .any, postfixContext: ContextType = .any) {
+        init(
+            _ scriptElements: [Script: String],
+            type: ContextType = .other,
+            prefixContext: ContextType = .any,
+            postfixContext: ContextType = .any
+        ) {
             self.scriptElements = scriptElements
             
             self.type = type
@@ -62,6 +67,7 @@ public class ScriptTable: Equatable {
         func callAsFunction(_ script: Script, _ element: String) -> Self {
             var scriptElements = self.scriptElements
             scriptElements[script] = element
+            
             return Cell(
                 scriptElements,
                 type: type,
@@ -75,24 +81,41 @@ public class ScriptTable: Equatable {
     internal typealias IndexedScriptTable = [String: [Cell]]
     
     let languageCode: String
+    
     private let table: RAWScriptTable
     
-    private lazy var scriptSet = table.map {$0.scriptElements.keys} .reduce(Set.init(Script.allCases)) {$0.intersection($1)}
-    lazy var scriptLetterSets: [Script: CharacterSet] = indexedScriptTables.mapValues {CharacterSet(charactersIn: $0.keys.joined()).subtracting(.nonBaseCharacters)}
-    private lazy var indexedScriptTables: [Script: IndexedScriptTable] = Dictionary.init(
+    private lazy var scriptSet = table
+        .map(\.scriptElements.keys)
+        .reduce(Set(Script.allCases)) {
+            $0.intersection($1)
+        }
+    
+    lazy var scriptLetterSets: [Script: CharacterSet] = indexedScriptTables
+        .mapValues {
+            CharacterSet(charactersIn: $0.keys.joined()).subtracting(.nonBaseCharacters)
+        }
+    
+    private lazy var indexedScriptTables: [Script: IndexedScriptTable] = Dictionary(
         uniqueKeysWithValues: scriptSet.map { (script) -> (Script, IndexedScriptTable) in
-            return (
-                script,
-                IndexedScriptTable(table.map { ($0.scriptElements[script]!, [$0]) }, uniquingKeysWith: {
-                    let combinedValues = $0 + $1
-                    
-                    guard combinedValues.count == Set(combinedValues.map {"\($0.scriptElements[script]!)\($0.prefixContext)\($0.postfixContext)"}).count else {
-                        fatalError("Ambiguity in \"\(self)\" script table for \"\($0.first!.scriptElements[script]!)\"!")
-                    }
-                    
-                    return combinedValues
-                })
-            )
+            let indexedScriptTable = IndexedScriptTable(
+                table.map { ($0.scriptElements[script]!, [$0]) }
+            ) {
+                let combinedValues = $0 + $1
+                
+                let combinedValuesSet = Set(
+                    combinedValues.map {"\($0.scriptElements[script]!)\($0.prefixContext)\($0.postfixContext)"}
+                )
+                
+                guard combinedValues.count == combinedValuesSet.count else {
+                    fatalError(
+                        "Ambiguity in \"\(self)\" script table for \"\($0.first!.scriptElements[script]!)\"!"
+                    )
+                }
+                
+                return combinedValues
+            }
+            
+            return (script, indexedScriptTable)
         }
     )
     
@@ -116,15 +139,20 @@ public class ScriptTable: Equatable {
     
     private var scriptMaxElementLengthDictionary: [Script: Int] = [:]
     
-    internal func element(of targetScript: Script, from sourceElement: String, of sourceScript: Script, prefixElement: String, postfixString: String) -> String? {
-        
+    internal func element(
+        of targetScript: Script,
+        from sourceElement: String,
+        of sourceScript: Script,
+        prefixElement: String,
+        postfixString: String
+    ) -> String? {
         
         guard indexedScriptTables.keys.contains(sourceScript) else {
-            fatalError("The script table donʼt support \(String.init(describing: sourceScript)) source script!")
+            fatalError("The script table donʼt support \(String(describing: sourceScript)) source script!")
         }
         
         guard indexedScriptTables.keys.contains(targetScript) else {
-            fatalError("The script table donʼt support \(String.init(describing: targetScript)) target script!")
+            fatalError("The script table donʼt support \(String(describing: targetScript)) target script!")
         }
         
         let targetScriptCells: [Cell]
@@ -132,12 +160,11 @@ public class ScriptTable: Equatable {
         
         if let cells = indexedScriptTables[sourceScript]?[sourceElement] {
             targetScriptCells = cells
-            graphemeExtend = .init()
-        }
-        else {
+            graphemeExtend = ""
+        } else {
             let sourceUnicodeScalars = sourceElement.decomposedStringWithCanonicalMapping.unicodeScalars
             
-            graphemeExtend = .init(sourceUnicodeScalars.filter({$0.properties.isGraphemeExtend}))
+            graphemeExtend = String(sourceUnicodeScalars.filter {$0.properties.isGraphemeExtend})
             
             if let _ = indexedScriptTables[sourceScript]?[graphemeExtend] {
                 return nil
@@ -158,7 +185,11 @@ public class ScriptTable: Equatable {
             }
             
             return optionalContextType(element: element)
-                ?? optionalContextType(element: String(element.unicodeScalars.filter({!$0.properties.isGraphemeExtend})))
+            ?? optionalContextType(
+                element: element.unicodeScalars
+                    .filter {!$0.properties.isGraphemeExtend}
+                    .description
+            )
         }
         
         func contextTypeOfFirstElement(in string: String) -> ContextType {
@@ -167,8 +198,7 @@ public class ScriptTable: Equatable {
             while maxLength > 0 {
                 if let contextType = contextType(of: String(string.prefix(maxLength))) {
                     return contextType
-                }
-                else {
+                } else {
                     maxLength -= 1
                 }
             }
@@ -176,25 +206,21 @@ public class ScriptTable: Equatable {
             return .nonLetter
         }
         
-        guard var target = targetScriptCells
-                .filter({
-                    $0.prefixContext.contains(contextType(of: prefixElement) ?? .nonLetter)
-                        && $0.postfixContext.contains(contextTypeOfFirstElement(in: postfixString))
-                })
-                .first?
-                .scriptElements[targetScript]
-        else {
+        let target = targetScriptCells
+            .filter {
+                $0.prefixContext.contains(contextType(of: prefixElement) ?? .nonLetter)
+                && $0.postfixContext.contains(contextTypeOfFirstElement(in: postfixString))
+            }
+            .first?
+            .scriptElements[targetScript]
+        
+        guard var target = target else {
             return nil
         }
         
         if target.count > 1, target.hasSuffix("h") {
-            target
-                .insert(
-                    contentsOf: graphemeExtend,
-                    at: target.index(after: target.startIndex)
-                )
-        }
-        else {
+            target.insert(contentsOf: graphemeExtend, at: target.index(after: target.startIndex))
+        } else {
             target.append(graphemeExtend)
         }
         
@@ -202,13 +228,13 @@ public class ScriptTable: Equatable {
     }
     
     func locale(script: Script) -> Locale {
-        return Locale.init(identifier: [languageCode, script.rawValue].joined(separator: "_"))
+        Locale(identifier: [languageCode, script.rawValue].joined(separator: "_"))
     }
 
 }
 
 extension ScriptTable: CustomStringConvertible {
     public var description: String {
-        return languageCode
+        languageCode
     }
 }
