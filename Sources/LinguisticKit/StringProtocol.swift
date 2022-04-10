@@ -20,20 +20,15 @@ public extension StringProtocol {
         
         if firstCharacter.isCased == false {
             return .uncased
-        }
-        else if firstCharacter.isUppercase && count == 1 {
+        } else if firstCharacter.isUppercase, count == 1 {
             return .uppercasedOrCapitalized
-        }
-        else if filter({$0.isCased}).map({$0.isLowercase}).contains(false) == false {
+        } else if filter({$0.isCased}).map(\.isLowercase).contains(false) == false {
             return .lowercased
-        }
-        else if map({$0.isLowercase}).contains(true) || (!firstCharacter.isUppercase && !firstCharacter.isLowercase) {
+        } else if map(\.isLowercase).contains(true) || (!firstCharacter.isUppercase && !firstCharacter.isLowercase) {
             return .capitalized
-        }
-        else if filter({$0.isCased}).map({$0.isUppercase}).contains(false) == false {
+        } else if filter({$0.isCased}).map(\.isUppercase).contains(false) == false {
             return .uppercased
-        }
-        else {
+        } else {
             return .uncased
         }
     }
@@ -69,7 +64,9 @@ public extension StringProtocol {
                         from: sourceElement.lowercased(with: sourceLocale),
                         of: sourceScript,
                         prefixElement: elements.last?.source ?? "",
-                        postfixString: tail.dropFirst(sourceElementLength).prefix(maxElementLength).map(\.description).joined()
+                        postfixString: tail.dropFirst(sourceElementLength).prefix(maxElementLength)
+                            .map(\.description)
+                            .joined()
                     ) {
                         elements.append((source: sourceElement, target: targetElement))
                         break
@@ -153,22 +150,31 @@ public extension StringProtocol {
         return elements.map(\.target).joined().precomposedStringWithCanonicalMapping
     }
     
-    func applyingTransform(from sourceScript: Script, to targetScript: Script, withTable scriptTable: ScriptTable, withEscapeSequence escapeSequence: String) -> String? {
+    func applyingTransform(
+        from sourceScript: Script,
+        to targetScript: Script,
+        withTable scriptTable: ScriptTable,
+        withEscapeSequence escapeSequence: String
+    ) -> String? {
         
-        guard scriptTable.scripts.contains(sourceScript) && scriptTable.scripts.contains(targetScript) else {
+        guard scriptTable.scripts.contains(sourceScript), scriptTable.scripts.contains(targetScript) else {
             return nil
         }
         
-        return self.components(separatedBy: escapeSequence + escapeSequence).map({ (segment) -> String in
-            
-            return segment.components(separatedBy: escapeSequence).enumerated().map ({ (offset, element) -> String in
-                
-                let escapedLetters = offset == 0 ? .init() : element.prefix(while: {$0.isLetter} ).description
-                let escapedPrefix = offset == 0 ? .init() : escapedLetters.isEmpty ? escapeSequence : escapedLetters
-                return escapedPrefix + element.dropFirst(escapedLetters.count).applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable)!
-                
-            }).joined()
-        }).joined(separator: escapeSequence)
+        return components(separatedBy: escapeSequence + escapeSequence)
+            .map { (segment) -> String in
+                segment
+                    .components(separatedBy: escapeSequence)
+                    .enumerated()
+                    .map { (offset, element) -> String in
+                        let escapedLetters = offset == 0 ? "" : element.prefix(while: {$0.isLetter} ).description
+                        let escapedPrefix = offset == 0 ? "" : escapedLetters.isEmpty ? escapeSequence : escapedLetters
+                        return escapedPrefix + element.dropFirst(escapedLetters.count)
+                            .applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable)!
+                    }
+                    .joined()
+            }
+            .joined(separator: escapeSequence)
     }
     
     func transformationByTargetScriptCode() -> (sourceString: String, targetString: String)? {
@@ -181,15 +187,14 @@ public extension StringProtocol {
         if let character = self.last, CharacterSet.whitespaces.contains(character.unicodeScalars.first!) {
             constraint = character.description
             constraintSet = .whitespacesAndNewlines
-            string = String(self.dropLast())
-        }
-        else {
+            string = self.dropLast().description
+        } else {
             constraint = ""
             constraintSet = .newlines
-            string = .init(self)
+            string = self.description
         }
         
-        let scriptTransformationTargetCode = string.components(separatedBy: .whitespacesAndNewlines).last ?? .init()
+        let scriptTransformationTargetCode = string.components(separatedBy: .whitespacesAndNewlines).last ?? ""
         
         guard let scriptTransformationTarget = scriptTransformationTargetCodes[scriptTransformationTargetCode] else {
             return nil
@@ -197,10 +202,10 @@ public extension StringProtocol {
         
         string = string.dropLast(scriptTransformationTargetCode.count).description
         
-        let scriptTransformationSeparator = string.components(separatedBy: CharacterSet.whitespacesAndNewlines.inverted).last ?? .init()
+        let scriptTransformationSeparator = string.components(separatedBy: .whitespacesAndNewlines.inverted).last ?? ""
         
         if scriptTransformationSeparator.unicodeScalars.contains(where: {CharacterSet.newlines.contains($0)}) {
-            constraintSet = .init()
+            constraintSet = CharacterSet()
         }
         
         string = string.dropLast(scriptTransformationSeparator.count).description
@@ -212,18 +217,32 @@ public extension StringProtocol {
         var sourceScript: Script? = nil
         
         for character in string.reversed() {
-            if let script = scriptTransformationTarget.scriptTable.scriptLetterSets.filter({$0.value.contains(character.lowercased().decomposedStringWithCanonicalMapping.unicodeScalars.first!) && $0.key != scriptTransformationTarget.targetScript}).first?.key {
+            let script = scriptTransformationTarget.scriptTable.scriptLetterSets
+                .filter {
+                    $0.value.contains(
+                        character.lowercased().decomposedStringWithCanonicalMapping.unicodeScalars.first!
+                    )
+                    && $0.key != scriptTransformationTarget.targetScript
+                }
+                .first?.key
+            
+            if let script = script {
                 sourceScript = script
                 break
             }
         }
         
         if let sourceScript = sourceScript {
-            let targetString = string.applyingTransform(from: sourceScript, to: scriptTransformationTarget.targetScript, withTable: scriptTransformationTarget.scriptTable, withEscapeSequence: "`")!
+            let targetString = string
+                .applyingTransform(
+                    from: sourceScript,
+                    to: scriptTransformationTarget.targetScript,
+                    withTable: scriptTransformationTarget.scriptTable,
+                    withEscapeSequence: "`"
+                )!
             
             return (sourceString, targetString)
-        }
-        else {
+        } else {
             return nil
         }
     }
@@ -233,12 +252,18 @@ public extension StringProtocol {
             return nil
         }
         
-        let sourceText = "\(self.applyingTransform(from: scriptTransformation.targetScript, to: sourceScript, withTable: scriptTransformation.scriptTable)!) \(transformationCode)"
+        let sourceText = applyingTransform(
+            from: scriptTransformation.targetScript,
+            to: sourceScript,
+            withTable: scriptTransformation.scriptTable
+        )!
         
-        guard sourceText.transformationByTargetScriptCode()?.targetString == .init(self) else {
+        let sourceTextWithTransformationCode = "\(sourceText) \(transformationCode)"
+        
+        guard sourceTextWithTransformationCode.transformationByTargetScriptCode()?.targetString == String(self) else {
             return nil
         }
         
-        return sourceText
+        return sourceTextWithTransformationCode
     }
 }
