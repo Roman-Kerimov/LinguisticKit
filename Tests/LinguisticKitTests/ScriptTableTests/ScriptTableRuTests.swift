@@ -10,7 +10,7 @@ import XCTest
 
 class ScriptTableRuTests: XCTestCase {
     
-    func XCTAssertRuScriptTable(_ testCase: [Script: String], file: StaticString = #file, line: UInt = #line) {
+    func XCTAssertRuScriptTable(_ testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
         XCTAssert(scriptTable: .ru, testCase: testCase, file: file, line: line)
     }
 
@@ -19,13 +19,13 @@ class ScriptTableRuTests: XCTestCase {
         XCTAssertRuScriptTable(
             [.Cyrl: "Съешь же ещё этих мягких французских булок, да выпей чаю.",
              .Glag: "Ⱄⱏⰵⱎⱐ ⰶⰵ ⰵⱋⱖ ⱔⱅⰹⱈ ⰿⱑⰳⰽⰹⱈ ⱇⱃⰰⱀⱌⱆⰸⱄⰽⰹⱈ ⰱⱆⰾⱁⰽ, ⰴⰰ ⰲⱏⰹⱂⰵⰻ ⱍⰰⱓ.",
-             .Latn: "Syyeshj zhe yesjhyo etixh myagkixh francuzskixh bulok, da vyipej chayu."]
+             .Latn: "Syyeshj zhe yesjhyo etikh myagkikh francuzskikh bulok, da vyipej chayu."]
         )
         
         XCTAssertRuScriptTable(
             [.Cyrl: "СЪЕШЬ ЖЕ ЕЩЁ ЭТИХ МЯГКИХ ФРАНЦУЗСКИХ БУЛОК, ДА ВЫПЕЙ ЧАЮ.",
              .Glag: "ⰔⰟⰅⰞⰠ ⰆⰅ ⰅⰛⰦ ⰤⰕⰉⰘ ⰏⰡⰃⰍⰉⰘ ⰗⰓⰀⰐⰜⰖⰈⰔⰍⰉⰘ ⰁⰖⰎⰑⰍ, ⰄⰀ ⰂⰟⰉⰒⰅⰋ ⰝⰀⰣ.",
-             .Latn: "SYYESHJ ZHE YESJHYO ETIXH MYAGKIXH FRANCUZSKIXH BULOK, DA VYIPEJ CHAYU.",]
+             .Latn: "SYYESHJ ZHE YESJHYO ETIKH MYAGKIKH FRANCUZSKIKH BULOK, DA VYIPEJ CHAYU.",]
         )
         
         XCTAssertRuScriptTable([
@@ -154,7 +154,7 @@ class ScriptTableRuTests: XCTestCase {
         XCTAssertRuScriptTable(
             [.Cyrl: "ЖКХ",
              .Glag: "ⰆⰍⰘ",
-             .Latn: "ZHKXH"]
+             .Latn: "ZHKKH"]
         )
         
         XCTAssertRuScriptTable(
@@ -190,7 +190,7 @@ class ScriptTableRuTests: XCTestCase {
         XCTAssertRuScriptTable(
             [.Cyrl: "в МХАТе",
              .Glag: "ⰲ ⰏⰘⰀⰕⰵ",
-             .Latn: "v MXHATe"]
+             .Latn: "v MKHATe"]
         )
         
         XCTAssertRuScriptTable(

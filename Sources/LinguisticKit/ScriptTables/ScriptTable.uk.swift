@@ -6,50 +6,49 @@
 //
 
 public extension ScriptTable {
-    
-    static let uk: ScriptTable = .init(languageCode: "uk", defaultScript: .Cyrl) {[
-        .a,
-        .b,
-        .v,
-        .g,
-        .init([.Cyrl: "ґ", .Latn: "gh"], type: .consonant),
-        .d,
-        .e,
-        .init([.Cyrl: "є", .Latn: "je"]),
-        .zh,
-        .z,
-        .init([.Cyrl: "и", .Latn: "y"]),
-        .init([.Cyrl: "і", .Latn: "i"]),
-        .init([.Cyrl: "ї", .Latn: "ji"]),
-        .init([.Cyrl: "й", .Latn: "j"], prefixContext: .nonConsonant, postfixContext: .nonVowel),
-        .init([.Cyrl: "й", .Latn: "jh"], prefixContext: .nonConsonant, postfixContext: .vowel),
-        .init([.Cyrl: "й", .Latn: "'j"], prefixContext: .consonant, postfixContext: .nonVowel),
-        .init([.Cyrl: "й", .Latn: "'jh"], prefixContext: .consonant, postfixContext: .vowel),
-        .init([.Cyrl: "йо", .Latn: "jo"], prefixContext: .nonConsonant),
-        .init([.Cyrl: "йо", .Latn: "'jo"], prefixContext: .consonant),
-        .k,
-        .l,
-        .m,
-        .n,
-        .o,
-        .p,
-        .r,
-        .s,
-        .t,
-        .u,
-        .f,
-        .xh,
-        .c,
-        .ch,
-        .sh,
-        .init([.Latn: "shh", .Cyrl: "щ"], type: .consonant),
-        .init([.Cyrl: "ь", .Latn: "j"], prefixContext: .consonant, postfixContext: .nonVowel),
-        .init([.Cyrl: "ь", .Latn: "hj"], prefixContext: .nonConsonant, postfixContext: .nonVowel),
-        .init([.Cyrl: "ь", .Latn: "jh"], prefixContext: .consonant, postfixContext: .vowel),
-        .init([.Cyrl: "ь", .Latn: "hjh"], prefixContext: .nonConsonant, postfixContext: .vowel),
-        .init([.Cyrl: "ьо", .Latn: "jo"], prefixContext: .consonant),
-        .init([.Cyrl: "ьо", .Latn: "hjo"], prefixContext: .nonConsonant),
-        .init([.Cyrl: "ю", .Latn: "ju"]),
-        .init([.Cyrl: "я", .Latn: "ja"]),
-    ]}
+    static let uk = ScriptTable(languageCode: "uk", defaultScript: .Cyrl) {
+        .a
+        .b
+        .v
+        .g
+        .cell([.Cyrl: "ґ", .Latn: "gh"], type: .consonant)
+        .d
+        .e
+        .cell([.Cyrl: "є", .Latn: "je"])
+        .zh
+        .z
+        .cell([.Cyrl: "и", .Latn: "y"])
+        .cell([.Cyrl: "і", .Latn: "i"])
+        .cell([.Cyrl: "ї", .Latn: "ji"])
+        .cell([.Cyrl: "й", .Latn: "j"], prefixContext: .nonConsonant, postfixContext: .nonVowel)
+        .cell([.Cyrl: "й", .Latn: "jh"], prefixContext: .nonConsonant, postfixContext: .vowel)
+        .cell([.Cyrl: "й", .Latn: "'j"], prefixContext: .consonant, postfixContext: .nonVowel)
+        .cell([.Cyrl: "й", .Latn: "'jh"], prefixContext: .consonant, postfixContext: .vowel)
+        .cell([.Cyrl: "йо", .Latn: "jo"], prefixContext: .nonConsonant)
+        .cell([.Cyrl: "йо", .Latn: "'jo"], prefixContext: .consonant)
+        .k
+        .l
+        .m
+        .n
+        .o
+        .p
+        .r
+        .s
+        .t
+        .u
+        .f
+        .kh
+        .c
+        .ch
+        .sh
+        .cell([.Latn: "shh", .Cyrl: "щ"], type: .consonant)
+        .cell([.Cyrl: "ь", .Latn: "j"], prefixContext: .consonant, postfixContext: .nonVowel)
+        .cell([.Cyrl: "ь", .Latn: "hj"], prefixContext: .nonConsonant, postfixContext: .nonVowel)
+        .cell([.Cyrl: "ь", .Latn: "jh"], prefixContext: .consonant, postfixContext: .vowel)
+        .cell([.Cyrl: "ь", .Latn: "hjh"], prefixContext: .nonConsonant, postfixContext: .vowel)
+        .cell([.Cyrl: "ьо", .Latn: "jo"], prefixContext: .consonant)
+        .cell([.Cyrl: "ьо", .Latn: "hjo"], prefixContext: .nonConsonant)
+        .cell([.Cyrl: "ю", .Latn: "ju"])
+        .cell([.Cyrl: "я", .Latn: "ja"])
+    }
 }

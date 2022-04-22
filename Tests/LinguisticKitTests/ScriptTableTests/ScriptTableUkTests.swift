@@ -10,14 +10,14 @@ import XCTest
 
 class ScriptTableUkTests: XCTestCase {
 
-    func XCTAssertUkScriptTable(_ testCase: [Script: String], file: StaticString = #file, line: UInt = #line) {
+    func XCTAssertUkScriptTable(_ testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
         XCTAssert(scriptTable: .uk, testCase: testCase, file: file, line: line)
     }
     
     func testUkScriptTable() {
         XCTAssertUkScriptTable([
             .Cyrl: "Гей, хлопці, не вспію — на ґанку ваша файна їжа знищується бурундучком.",
-            .Latn: "Gej, xhlopci, ne vspiju — na ghanku vasha fajna jizha znyshhujetjsja burunduchkom.",
+            .Latn: "Gej, khlopci, ne vspiju — na ghanku vasha fajna jizha znyshhujetjsja burunduchkom.",
         ])
         
         XCTAssertUkScriptTable([
@@ -42,12 +42,12 @@ class ScriptTableUkTests: XCTestCase {
         
         XCTAssertUkScriptTable([
             .Cyrl: "трьоххлорістий",
-            .Latn: "trjoxhxhloristyj",
+            .Latn: "trjokhkhloristyj",
         ])
         
         XCTAssertUkScriptTable([
             .Cyrl: "хліб",
-            .Latn: "xhlib",
+            .Latn: "khlib",
         ])
         
         XCTAssertUkScriptTable([

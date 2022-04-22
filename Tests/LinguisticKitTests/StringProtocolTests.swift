@@ -23,7 +23,7 @@ class StringProtocolTests: XCTestCase {
         let escapeSequence = "`"
         
         XCTAssertEqual(
-            "`Y‐xhromosoma".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
+            "`Y‐khromosoma".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru, withEscapeSequence: escapeSequence),
             "Y‐хромосома"
         )
         
@@ -36,6 +36,29 @@ class StringProtocolTests: XCTestCase {
     func testApplyingTransform() {
         XCTAssertNil("".applyingTransform(from: .Latn, to: .Glag, withTable: .az))
         XCTAssertNil("".applyingTransform(from: .Glag, to: .Cyrl, withTable: .az, withEscapeSequence: "`"))
+    }
+    
+    func testApplyingTransformPrecomposition() {
+        XCTAssertEqual(
+            "у́".applyingTransform(from: .Cyrl, to: .Latn, withTable: .ru)?.unicodeScalars.count,
+            "ú".unicodeScalars.count
+        )
+    }
+    
+    func testApplyingTransformForPrecomposedString() {
+        let precomposedString = "ё"
+        XCTAssertEqual(
+            precomposedString.applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru)?.unicodeScalars.count,
+            precomposedString.unicodeScalars.count
+        )
+    }
+    
+    func testApplyingTransformForDecomposedString() {
+        let decomposedString = "ё"
+        XCTAssertNotEqual(
+            decomposedString.applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru)?.unicodeScalars.count,
+            decomposedString.unicodeScalars.count
+        )
     }
     
     func testApplyingTransformByTargetScriptCode() {
