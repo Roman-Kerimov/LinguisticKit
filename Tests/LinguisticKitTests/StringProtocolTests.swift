@@ -61,6 +61,10 @@ class StringProtocolTests: XCTestCase {
         )
     }
     
+    func testApplyingTransformForStringsWithMixedScripts() {
+        XCTAssertEqual("молj".applyingTransform(from: .Latn, to: .Cyrl, withTable: .ru ), "моль")
+    }
+    
     func testApplyingTransformByTargetScriptCode() {
         
         XCTAssertEqual("stroka ru".transformationByTargetScriptCode()?.targetString, "строка")
