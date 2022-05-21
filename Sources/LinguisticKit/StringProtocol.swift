@@ -283,18 +283,22 @@ public extension StringProtocol {
                     withEscapeSequence: "`"
                 )!
             
-            let words = targetString
-                .components(separatedBy: .letters.inverted)
-                .filter {$0.isEmpty == false}
+            var randomWord: String?
             
-            let randomWord = words.randomElement()
-            
-            words
-                .forEach { word in
-                    if TransformationByTargetScriptCodeResult.wordSet.contains(word) || word == randomWord {
-                        targetString = targetString.replacingOccurrences(of: word, with: word.applyingTransform(from: scriptTransformationTarget.targetScript, to: sourceScript, withTable: scriptTransformationTarget.scriptTable)!)
+            if isEducationMode {
+                let words = targetString
+                    .components(separatedBy: .letters.inverted)
+                    .filter {$0.isEmpty == false}
+                
+                 randomWord = words.randomElement()
+                
+                words
+                    .forEach { word in
+                        if TransformationByTargetScriptCodeResult.wordSet.contains(word) || word == randomWord {
+                            targetString = targetString.replacingOccurrences(of: word, with: word.applyingTransform(from: scriptTransformationTarget.targetScript, to: sourceScript, withTable: scriptTransformationTarget.scriptTable)!)
+                        }
                     }
-                }
+            }
             
             return .init(sourceString: sourceString, targetString: targetString, isEducationTransformation: isEducationMode, randomWord: randomWord ?? "")
         } else {
