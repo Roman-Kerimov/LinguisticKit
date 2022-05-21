@@ -254,7 +254,7 @@ public extension StringProtocol {
         
         string = string.components(separatedBy: constraintSet).last?.trimmingCharacters(in: .whitespaces) ?? .init()
         
-        let sourceString = string + scriptTransformationSeparator + scriptTransformationTargetCode + constraint
+        let sourceString = string + scriptTransformationSeparator + (isEducationMode ? "." : "") + scriptTransformationTargetCode + constraint
         
         var sourceScript: Script? = nil
         
