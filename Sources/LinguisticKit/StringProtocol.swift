@@ -11,6 +11,38 @@ private enum Case {
     case lowercased, uppercased, capitalized, uppercasedOrCapitalized, uncased
 }
 
+public struct TransformationByTargetScriptCodeResult {
+    public let sourceString: String
+    public let targetString: String
+    
+    let isEducationTransformation: Bool
+    let randomWord: String
+    
+    public func storeWordSetIfNeeded() {
+        guard isEducationTransformation else {
+            return
+        }
+        
+        Self.wordSet.insert(randomWord)
+        try! FileManager.default.createDirectory(at: Self.wordSetURL.deletingLastPathComponent(), withIntermediateDirectories: true)
+        try! JSONEncoder().encode(Self.wordSet).write(to: Self.wordSetURL, options: .atomic)
+    }
+    
+    fileprivate static let wordSetURL = try! FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        .appendingPathComponent("LinguisticKit")
+        .appendingPathComponent("educatedWordSet")
+    
+    fileprivate static var wordSet: Set<String> = {
+        if let data = try? Data(contentsOf: wordSetURL) {
+            return try! JSONDecoder().decode(Set<String>.self, from: data)
+        } else {
+            return []
+        }
+    }()
+}
+
+
+
 public extension StringProtocol {
     
     private var `case`: Case {
@@ -177,7 +209,7 @@ public extension StringProtocol {
             .joined(separator: escapeSequence)
     }
     
-    func transformationByTargetScriptCode() -> (sourceString: String, targetString: String)? {
+    func transformationByTargetScriptCode() -> TransformationByTargetScriptCodeResult? {
         
         var string: String
         
@@ -194,13 +226,23 @@ public extension StringProtocol {
             string = self.description
         }
         
-        let scriptTransformationTargetCode = string.components(separatedBy: .whitespacesAndNewlines).last ?? ""
+        var scriptTransformationTargetCode = string.components(separatedBy: .whitespacesAndNewlines).last ?? ""
+        
+        let isEducationMode = scriptTransformationTargetCode.hasPrefix(".")
+        
+        if isEducationMode {
+            scriptTransformationTargetCode.removeFirst()
+        }
         
         guard let scriptTransformationTarget = scriptTransformationTargetCodes[scriptTransformationTargetCode] else {
             return nil
         }
         
         string = string.dropLast(scriptTransformationTargetCode.count).description
+        
+        if isEducationMode {
+            string.removeLast()
+        }
         
         let scriptTransformationSeparator = string.components(separatedBy: .whitespacesAndNewlines.inverted).last ?? ""
         
@@ -233,7 +275,7 @@ public extension StringProtocol {
         }
         
         if let sourceScript = sourceScript {
-            let targetString = string
+            var targetString = string
                 .applyingTransform(
                     from: sourceScript,
                     to: scriptTransformationTarget.targetScript,
@@ -241,7 +283,20 @@ public extension StringProtocol {
                     withEscapeSequence: "`"
                 )!
             
-            return (sourceString, targetString)
+            let words = targetString
+                .components(separatedBy: .letters.inverted)
+                .filter {$0.isEmpty == false}
+            
+            let randomWord = words.randomElement()
+            
+            words
+                .forEach { word in
+                    if TransformationByTargetScriptCodeResult.wordSet.contains(word) || word == randomWord {
+                        targetString = targetString.replacingOccurrences(of: word, with: word.applyingTransform(from: scriptTransformationTarget.targetScript, to: sourceScript, withTable: scriptTransformationTarget.scriptTable)!)
+                    }
+                }
+            
+            return .init(sourceString: sourceString, targetString: targetString, isEducationTransformation: isEducationMode, randomWord: randomWord ?? "")
         } else {
             return nil
         }
