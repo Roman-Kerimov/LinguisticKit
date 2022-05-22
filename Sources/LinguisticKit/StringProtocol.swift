@@ -295,7 +295,18 @@ public extension StringProtocol {
                 words
                     .forEach { word in
                         if TransformationByTargetScriptCodeResult.wordSet.contains(word) || word == randomWord {
-                            targetString = targetString.replacingOccurrences(of: word, with: word.applyingTransform(from: scriptTransformationTarget.targetScript, to: sourceScript, withTable: scriptTransformationTarget.scriptTable)!)
+                            let wordRegularExpression = try! NSRegularExpression(pattern: "\\b\(word)\\b")
+                            targetString = wordRegularExpression
+                                .stringByReplacingMatches(
+                                    in: targetString,
+                                    range: NSRange(location: 0, length: targetString.count),
+                                    withTemplate: word
+                                        .applyingTransform(
+                                            from: scriptTransformationTarget.targetScript,
+                                            to: sourceScript,
+                                            withTable: scriptTransformationTarget.scriptTable
+                                        )!
+                                )
                         }
                     }
             }
