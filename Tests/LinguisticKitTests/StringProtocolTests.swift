@@ -78,6 +78,8 @@ class StringProtocolTests: XCTestCase {
         XCTAssertNil("строка ru".transformationByTargetScriptCode())
         XCTAssertNil("\nru".transformationByTargetScriptCode())
         XCTAssertNil(" ru".transformationByTargetScriptCode())
+        
+        XCTAssertEqual("Fraktur frakturB".transformationByTargetScriptCode()?.targetString, "𝕱𝖗𝖆𝖐𝖙𝖚𝖗")
     }
     
     func testApplyingTransformByTargetScriptCodeForWord() {

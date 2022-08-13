@@ -13,7 +13,7 @@ public class ScriptTable: Equatable {
     }
     
     public static func by(identifier: String) -> ScriptTable? {
-        scriptTransformationTargetCodes[identifier]?.scriptTable
+        scriptTransformationCodes[identifier]?.scriptTableTransformation?.scriptTable
     }
     
     public let defaultScript: Script
