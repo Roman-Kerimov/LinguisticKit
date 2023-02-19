@@ -52,35 +52,33 @@ public extension StringProtocol {
         let maxElementLength = scriptTable.maxElementLength(forScript: sourceScript)
         
         while tail.isEmpty == false {
-            autoreleasepool {
-                var sourceElementLength = maxElementLength
+            var sourceElementLength = maxElementLength
+            
+            while true {
                 
-                while true {
-                    
-                    let sourceElement: String = tail.prefix(sourceElementLength).map(\.description).joined()
-                    
-                    if let targetElement = scriptTable.element(
-                        of: targetScript,
-                        from: sourceElement.lowercased(with: sourceLocale),
-                        of: sourceScript,
-                        prefixElement: elements.last?.source ?? "",
-                        postfixString: tail.dropFirst(sourceElementLength).prefix(maxElementLength)
-                            .map(\.description)
-                            .joined()
-                    ) {
-                        elements.append((source: sourceElement, target: targetElement))
-                        break
-                    }
-                    else if sourceElementLength == 1 {
-                        elements.append((source: sourceElement, target: sourceElement))
-                        break
-                    }
-                    
-                    sourceElementLength -= 1
+                let sourceElement: String = tail.prefix(sourceElementLength).map(\.description).joined()
+                
+                if let targetElement = scriptTable.element(
+                    of: targetScript,
+                    from: sourceElement.lowercased(with: sourceLocale),
+                    of: sourceScript,
+                    prefixElement: elements.last?.source ?? "",
+                    postfixString: tail.dropFirst(sourceElementLength).prefix(maxElementLength)
+                        .map(\.description)
+                        .joined()
+                ) {
+                    elements.append((source: sourceElement, target: targetElement))
+                    break
+                }
+                else if sourceElementLength == 1 {
+                    elements.append((source: sourceElement, target: sourceElement))
+                    break
                 }
                 
-                tail = tail.dropFirst(sourceElementLength)
+                sourceElementLength -= 1
             }
+            
+            tail = tail.dropFirst(sourceElementLength)
         }
         
         var elementCases: [Case] = elements.map(\.source.case)
