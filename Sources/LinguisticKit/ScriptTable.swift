@@ -13,7 +13,7 @@ public class ScriptTable: Equatable {
     }
     
     public static func by(identifier: String) -> ScriptTable? {
-        scriptTransformationTargetCodes[identifier]?.scriptTable
+        scriptTransformationCodes[identifier]?.scriptTableTransformation?.scriptTable
     }
     
     public let defaultScript: Script
@@ -119,6 +119,8 @@ public class ScriptTable: Equatable {
         }
     )
     
+    private lazy var allScriptTable = Dictionary(indexedScriptTables.values.flatMap({$0}), uniquingKeysWith: {(lhs, _) in lhs})
+    
     init(languageCode: String, defaultScript: Script, makeScriptTable: () -> RAWScriptTable) {
         self.languageCode = languageCode
         self.defaultScript = defaultScript
@@ -181,7 +183,7 @@ public class ScriptTable: Equatable {
         
         func contextType(of element: String) -> ContextType? {
             func optionalContextType(element: String) -> ContextType? {
-                indexedScriptTables[sourceScript]?[element.lowercased(with: locale(script: sourceScript))]?.first?.type
+                allScriptTable[element.lowercased(with: locale(script: sourceScript))]?.first?.type
             }
             
             return optionalContextType(element: element)
