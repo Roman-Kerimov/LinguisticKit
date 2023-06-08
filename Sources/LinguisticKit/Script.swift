@@ -6,6 +6,8 @@
 //
 
 public enum Script: String, CaseIterable {
+    static let caseSensitiveScripts: Set<Self> = [.Cyrl, .Glag, .Grek, .Latn]
+    
     case Cyrl
     case Glag
     case Grek
@@ -14,4 +16,5 @@ public enum Script: String, CaseIterable {
     case Jpan
     case Kana
     case Latn
+    case Runr
 }

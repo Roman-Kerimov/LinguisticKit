@@ -14,6 +14,7 @@ extension ScriptTable.RAWScriptTable {
                 .Cyrl: "ф",
                 .Glag: "ⱇ",
                 .Grek: "φ",
+                .Runr: "ᛈᚺ",
             ]
         )
     }
