@@ -14,4 +14,5 @@ public enum Script: String, CaseIterable {
     case Jpan
     case Kana
     case Latn
+    case Runr
 }
