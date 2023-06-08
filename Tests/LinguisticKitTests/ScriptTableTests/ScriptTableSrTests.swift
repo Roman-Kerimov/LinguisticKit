@@ -9,7 +9,7 @@ import XCTest
 @testable import LinguisticKit
 
 class ScriptTableSrTests: XCTestCase {
-
+    
     func XCTAssertSrScriptTable(_ testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
         XCTAssert(scriptTable: .sr, testCase: testCase, file: file, line: line)
     }
@@ -30,5 +30,4 @@ class ScriptTableSrTests: XCTestCase {
             .Latn: "ǄARED",
         ])
     }
-
 }

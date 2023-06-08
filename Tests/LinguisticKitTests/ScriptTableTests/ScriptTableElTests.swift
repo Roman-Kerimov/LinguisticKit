@@ -9,7 +9,7 @@ import XCTest
 @testable import LinguisticKit
 
 class ScriptTableElTests: XCTestCase {
-
+    
     func XCTAssertElScriptTable(_ testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
         XCTAssert(scriptTable: .el, testCase: testCase, file: file, line: line)
     }
