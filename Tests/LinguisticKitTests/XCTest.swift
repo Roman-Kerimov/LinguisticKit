@@ -11,6 +11,8 @@ import XCTest
 extension XCTest {
     
     func XCTAssert(scriptTable: ScriptTable, testCase: [Script: String], file: StaticString = #filePath, line: UInt = #line) {
+        let locale = Locale(identifier: scriptTable.languageCode)
+        
         let transformations = testCase.keys.flatMap { (sourceScript) -> [(Script, Script)] in
             return testCase.keys.compactMap { (targetScript) -> (Script, Script)? in
                 if sourceScript == targetScript {
@@ -23,10 +25,22 @@ extension XCTest {
         }
         
         for (sourceScript, targetScript) in transformations {
-            let sourceString = testCase[sourceScript]!
-            let targetString = testCase[targetScript]!
+            var sourceString = testCase[sourceScript]!
+            var targetString = testCase[targetScript]!
             
-            XCTAssertEqual(sourceString.applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable), targetString, file: file, line: line)
+            if Script.caseSensitiveScripts.contains(sourceScript) == false
+                || Script.caseSensitiveScripts.contains(targetScript) == false {
+                
+                sourceString = sourceString.lowercased(with: locale)
+                targetString = targetString.lowercased(with: locale)
+            }
+            
+            XCTAssertEqual(
+                sourceString.applyingTransform(from: sourceScript, to: targetScript, withTable: scriptTable),
+                targetString,
+                file: file,
+                line: line
+            )
         }
     }
 }
