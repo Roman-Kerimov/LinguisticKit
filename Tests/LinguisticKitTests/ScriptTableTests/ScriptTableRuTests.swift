@@ -20,6 +20,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Съешь же ещё этих мягких французских булок, да выпей чаю.",
             .Glag: "Ⱄⱏⰵⱎⱐ ⰶⰵ ⰵⱋⱖ ⱔⱅⰹⱈ ⰿⱑⰳⰽⰹⱈ ⱇⱃⰰⱀⱌⱆⰸⱄⰽⰹⱈ ⰱⱆⰾⱁⰽ, ⰴⰰ ⰲⱏⰹⱂⰵⰻ ⱍⰰⱓ.",
             .Latn: "Syyeshj zhe yesjhyo etikh myagkikh francuzskikh bulok, da vyipej chayu.",
+            .Perm: "𐍡𐍯𐍔𐍥𐍰 𐍕𐍔 𐍔𐍦𐍩 𐍱𐍢𐍙𐍬 𐍜𐍴𐍒𐍚𐍙𐍬 𐍫𐍠𐍐𐍝𐍭𐍣𐍗𐍡𐍚𐍙𐍬 𐍑𐍣𐍛𐍞𐍚, 𐍓𐍐 𐍮𐍨𐍟𐍔𐍧 𐍤𐍐𐍳.",
             .Runr: "ᛊᚤᚤᛖᛊᚺᛃ ᛉᚺᛖ ᚤᛖᛊᛃᚺᚤᛟ ᛖᛏᛁᚲᚺ ᛗᚤᚨᚷᚲᛁᚲᚺ ᚠᚱᚨᚾᚳᚢᛉᛊᚲᛁᚲᚺ ᛒᚢᛚᛟᚲ, ᛞᚨ ᚡᚤᛁᛈᛖᛃ ᚳᚺᚨᚤᚢ.",
         ])
         
@@ -27,6 +28,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "СЪЕШЬ ЖЕ ЕЩЁ ЭТИХ МЯГКИХ ФРАНЦУЗСКИХ БУЛОК, ДА ВЫПЕЙ ЧАЮ.",
             .Glag: "ⰔⰟⰅⰞⰠ ⰆⰅ ⰅⰛⰦ ⰤⰕⰉⰘ ⰏⰡⰃⰍⰉⰘ ⰗⰓⰀⰐⰜⰖⰈⰔⰍⰉⰘ ⰁⰖⰎⰑⰍ, ⰄⰀ ⰂⰟⰉⰒⰅⰋ ⰝⰀⰣ.",
             .Latn: "SYYESHJ ZHE YESJHYO ETIKH MYAGKIKH FRANCUZSKIKH BULOK, DA VYIPEJ CHAYU.",
+            .Perm: "𐍡𐍯𐍔𐍥𐍰 𐍕𐍔 𐍔𐍦𐍩 𐍱𐍢𐍙𐍬 𐍜𐍴𐍒𐍚𐍙𐍬 𐍫𐍠𐍐𐍝𐍭𐍣𐍗𐍡𐍚𐍙𐍬 𐍑𐍣𐍛𐍞𐍚, 𐍓𐍐 𐍮𐍨𐍟𐍔𐍧 𐍤𐍐𐍳.",
             .Runr: "ᛊᚤᚤᛖᛊᚺᛃ ᛉᚺᛖ ᚤᛖᛊᛃᚺᚤᛟ ᛖᛏᛁᚲᚺ ᛗᚤᚨᚷᚲᛁᚲᚺ ᚠᚱᚨᚾᚳᚢᛉᛊᚲᛁᚲᚺ ᛒᚢᛚᛟᚲ, ᛞᚨ ᚡᚤᛁᛈᛖᛃ ᚳᚺᚨᚤᚢ.",
         ])
         
@@ -34,6 +36,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ъэ",
             .Glag: "ⱏⱜⱔ",
             .Latn: "hyhe",
+            .Perm: "𐍯𐍱",
             .Runr: "ᚺᚤᚺᛖ",
         ])
         
@@ -41,6 +44,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "дъэ",
             .Glag: "ⰴⱏⱜⱔ",
             .Latn: "dyhe",
+            .Perm: "𐍓𐍯𐍱",
             .Runr: "ᛞᚤᚺᛖ",
         ])
         
@@ -48,6 +52,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ъй",
             .Glag: "ⱏⱜⰻ",
             .Latn: "hyhj",
+            .Perm: "𐍯𐍧",
             .Runr: "ᚺᚤᚺᛃ",
         ])
         
@@ -55,6 +60,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "дъй",
             .Glag: "ⰴⱏⱜⰻ",
             .Latn: "dyhj",
+            .Perm: "𐍓𐍯𐍧",
             .Runr: "ᛞᚤᚺᛃ",
         ])
         
@@ -62,6 +68,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "дъь",
             .Glag: "ⰴⱏⱜⱐ",
             .Latn: "dyhhj",
+            .Perm: "𐍓𐍯𐍰",
             .Runr: "ᛞᚤᚺᚺᛃ",
         ])
         
@@ -69,6 +76,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ъъ",
             .Glag: "ⱏⱏ",
             .Latn: "hyhy",
+            .Perm: "𐍯𐍯",
             .Runr: "ᚺᚤᚺᚤ",
         ])
         
@@ -76,6 +84,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "интервьюер",
             .Glag: "ⰹⱀⱅⰵⱃⰲⱐⱓⰵⱃ",
             .Latn: "intervjyuyer",
+            .Perm: "𐍙𐍝𐍢𐍔𐍠𐍮𐍰𐍳𐍔𐍠",
             .Runr: "ᛁᚾᛏᛖᚱᚡᛃᚤᚢᚤᛖᚱ",
         ])
         
@@ -83,6 +92,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Забжэ",
             .Glag: "Ⰸⰰⰱⰶⱔ",
             .Latn: "Zabzhye",
+            .Perm: "𐍗𐍐𐍑𐍕𐍱",
             .Runr: "ᛉᚨᛒᛉᚺᚤᛖ",
         ])
         
@@ -90,6 +100,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Чанъань",
             .Glag: "Ⱍⰰⱀⱏⱜⰰⱀⱐ",
             .Latn: "Chanyhanj",
+            .Perm: "𐍤𐍐𐍝𐍯𐍐𐍝𐍰",
             .Runr: "ᚳᚺᚨᚾᚤᚺᚨᚾᛃ",
         ])
         
@@ -97,6 +108,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "пэнъю",
             .Glag: "ⱂⱔⱀⱏⱓ",
             .Latn: "pyenyyu",
+            .Perm: "𐍟𐍱𐍝𐍯𐍳",
             .Runr: "ᛈᚤᛖᚾᚤᚤᚢ",
         ])
         
@@ -104,6 +116,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "секвойе",
             .Glag: "ⱄⰵⰽⰲⱁⰻⰵ",
             .Latn: "sekvojye",
+            .Perm: "𐍡𐍔𐍚𐍮𐍞𐍧𐍔",
             .Runr: "ᛊᛖᚲᚡᛟᛃᚤᛖ",
         ])
         
@@ -111,6 +124,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Йемен",
             .Glag: "Ⰻⰵⰿⰵⱀ",
             .Latn: "Jyemen",
+            .Perm: "𐍧𐍔𐍜𐍔𐍝",
             .Runr: "ᛃᚤᛖᛗᛖᚾ",
         ])
         
@@ -118,6 +132,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "трансйеменский",
             .Glag: "ⱅⱃⰰⱀⱄⰻⰵⰿⰵⱀⱄⰽⰹⰻ",
             .Latn: "transyjyemenskij",
+            .Perm: "𐍢𐍠𐍐𐍝𐍡𐍧𐍔𐍜𐍔𐍝𐍡𐍚𐍙𐍧",
             .Runr: "ᛏᚱᚨᚾᛊᚤᛃᚤᛖᛗᛖᚾᛊᚲᛁᛃ",
         ])
         
@@ -125,6 +140,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "безйодовый",
             .Glag: "ⰱⰵⰸⰻⱁⰴⱁⰲⱏⰹⰻ",
             .Latn: "bezyjodovyij",
+            .Perm: "𐍑𐍔𐍗𐍧𐍞𐍓𐍞𐍮𐍨𐍧",
             .Runr: "ᛒᛖᛉᚤᛃᛟᛞᛟᚡᚤᛁᛃ",
         ])
         
@@ -133,6 +149,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "МКС",
             .Glag: "ⰏⰍⰔ",
             .Latn: "MKS",
+            .Perm: "𐍜𐍚𐍡",
             .Runr: "ᛗᚲᛊ",
         ])
         
@@ -140,6 +157,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "КС",
             .Glag: "ⰍⰔ",
             .Latn: "KS",
+            .Perm: "𐍚𐍡",
             .Runr: "ᚲᛊ",
         ])
         
@@ -147,6 +165,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "АКС",
             .Glag: "ⰀⰍⰔ",
             .Latn: "AKS",
+            .Perm: "𐍐𐍚𐍡",
             .Runr: "ᚨᚲᛊ",
         ])
         
@@ -154,6 +173,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ЮСЭКС",
             .Glag: "ⰣⰔⰤⰍⰔ",
             .Latn: "YUSYEKS",
+            .Perm: "𐍳𐍡𐍱𐍚𐍡",
             .Runr: "ᚤᚢᛊᚤᛖᚲᛊ",
         ])
         
@@ -161,6 +181,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ЮНЕСКО",
             .Glag: "ⰣⰐⰅⰔⰍⰑ",
             .Latn: "YUNESKO",
+            .Perm: "𐍳𐍝𐍔𐍡𐍚𐍞",
             .Runr: "ᚤᚢᚾᛖᛊᚲᛟ",
         ])
         
@@ -168,6 +189,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ТЭН",
             .Glag: "ⰕⰤⰐ",
             .Latn: "TYEN",
+            .Perm: "𐍢𐍱𐍝",
             .Runr: "ᛏᚤᛖᚾ",
         ])
         
@@ -175,6 +197,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "тэны",
             .Glag: "ⱅⱔⱀⱏⰹ",
             .Latn: "tyenyi",
+            .Perm: "𐍢𐍱𐍝𐍨",
             .Runr: "ᛏᚤᛖᚾᚤᛁ",
         ])
         
@@ -182,6 +205,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ЖКХ",
             .Glag: "ⰆⰍⰘ",
             .Latn: "ZHKKH",
+            .Perm: "𐍕𐍚𐍬",
             .Runr: "ᛉᚺᚲᚲᚺ",
         ])
         
@@ -189,6 +213,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ЕГЭ",
             .Glag: "ⰅⰃⰤ",
             .Latn: "YEGYE",
+            .Perm: "𐍔𐍒𐍱",
             .Runr: "ᚤᛖᚷᚤᛖ",
         ])
         
@@ -196,6 +221,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ЭВМ",
             .Glag: "ⰤⰂⰏ",
             .Latn: "EVM",
+            .Perm: "𐍱𐍮𐍜",
             .Runr: "ᛖᚡᛗ",
         ])
         
@@ -203,6 +229,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ИРЯ",
             .Glag: "ⰉⰓⰡ",
             .Latn: "IRYA",
+            .Perm: "𐍙𐍠𐍴",
             .Runr: "ᛁᚱᚤᚨ",
         ])
         
@@ -210,6 +237,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ФИДЕ",
             .Glag: "ⰗⰉⰄⰅ",
             .Latn: "FIDE",
+            .Perm: "𐍫𐍙𐍓𐍔",
             .Runr: "ᚠᛁᛞᛖ",
         ])
         
@@ -217,6 +245,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ЦЕРН",
             .Glag: "ⰜⰅⰓⰐ",
             .Latn: "CERN",
+            .Perm: "𐍭𐍔𐍠𐍝",
             .Runr: "ᚳᛖᚱᚾ",
         ])
         
@@ -224,6 +253,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "в МХАТе",
             .Glag: "ⰲ ⰏⰘⰀⰕⰵ",
             .Latn: "v MKHATe",
+            .Perm: "𐍮 𐍜𐍬𐍐𐍢𐍔",
             .Runr: "ᚡ ᛗᚲᚺᚨᛏᛖ",
         ])
         
@@ -231,6 +261,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ТЮЗ",
             .Glag: "ⰕⰣⰈ",
             .Latn: "TYUZ",
+            .Perm: "𐍢𐍳𐍗",
             .Runr: "ᛏᚤᚢᛉ",
         ])
         
@@ -238,6 +269,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "МАГАТЭ",
             .Glag: "ⰏⰀⰃⰀⰕⰤ",
             .Latn: "MAGATYE",
+            .Perm: "𐍜𐍐𐍒𐍐𐍢𐍱",
             .Runr: "ᛗᚨᚷᚨᛏᚤᛖ",
         ])
         
@@ -245,6 +277,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ОБСЕ",
             .Glag: "ⰑⰁⰔⰅ",
             .Latn: "OBSE",
+            .Perm: "𐍞𐍑𐍡𐍔",
             .Runr: "ᛟᛒᛊᛖ",
         ])
         
@@ -252,6 +285,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ТЭС",
             .Glag: "ⰕⰤⰔ",
             .Latn: "TYES",
+            .Perm: "𐍢𐍱𐍡",
             .Runr: "ᛏᚤᛖᛊ",
         ])
         
@@ -259,6 +293,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ОБЖ",
             .Glag: "ⰑⰁⰆ",
             .Latn: "OBZH",
+            .Perm: "𐍞𐍑𐍕",
             .Runr: "ᛟᛒᛉᚺ",
         ])
         
@@ -266,6 +301,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "КамАЗ",
             .Glag: "ⰍⰰⰿⰀⰈ",
             .Latn: "KamAZ",
+            .Perm: "𐍚𐍐𐍜𐍐𐍗",
             .Runr: "ᚲᚨᛗᚨᛉ",
         ])
         
@@ -273,6 +309,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Петров Ю. Я.",
             .Glag: "Ⱂⰵⱅⱃⱁⰲ Ⱓ. Ⱑ.",
             .Latn: "Petrov Yu. Ya.",
+            .Perm: "𐍟𐍔𐍢𐍠𐍞𐍮 𐍳. 𐍴.",
             .Runr: "ᛈᛖᛏᚱᛟᚡ ᚤᚢ. ᚤᚨ.",
         ])
         
@@ -280,6 +317,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Ю. Я. Петров",
             .Glag: "Ⱓ. Ⱑ. Ⱂⰵⱅⱃⱁⰲ",
             .Latn: "Yu. Ya. Petrov",
+            .Perm: "𐍳. 𐍴. 𐍟𐍔𐍢𐍠𐍞𐍮",
             .Runr: "ᚤᚢ. ᚤᚨ. ᛈᛖᛏᚱᛟᚡ",
         ])
         
@@ -287,6 +325,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ПЕТРОВ Ю. Я.",
             .Glag: "ⰒⰅⰕⰓⰑⰂ Ⱓ. Ⱑ.",
             .Latn: "PETROV YU. YA.",
+            .Perm: "𐍟𐍔𐍢𐍠𐍞𐍮 𐍳. 𐍴.",
             .Runr: "ᛈᛖᛏᚱᛟᚡ ᚤᚢ. ᚤᚨ.",
         ])
         
@@ -294,6 +333,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "Ю. Я. ПЕТРОВ",
             .Glag: "Ⱓ. Ⱑ. ⰒⰅⰕⰓⰑⰂ",
             .Latn: "YU. YA. PETROV",
+            .Perm: "𐍳. 𐍴. 𐍟𐍔𐍢𐍠𐍞𐍮",
             .Runr: "ᚤᚢ. ᚤᚨ. ᛈᛖᛏᚱᛟᚡ",
         ])
         
@@ -301,6 +341,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ОБЖ — основы безопасности жизнедеятельности",
             .Glag: "ⰑⰁⰆ — ⱁⱄⱀⱁⰲⱏⰹ ⰱⰵⰸⱁⱂⰰⱄⱀⱁⱄⱅⰹ ⰶⰹⰸⱀⰵⰴⰵⱑⱅⰵⰾⱐⱀⱁⱄⱅⰹ",
             .Latn: "OBZH — osnovyi bezopasnosti zhiznedeyateljnosti",
+            .Perm: "𐍞𐍑𐍕 — 𐍞𐍡𐍝𐍞𐍮𐍨 𐍑𐍔𐍗𐍞𐍟𐍐𐍡𐍝𐍞𐍡𐍢𐍙 𐍕𐍙𐍗𐍝𐍔𐍓𐍔𐍴𐍢𐍔𐍛𐍰𐍝𐍞𐍡𐍢𐍙",
             .Runr: "ᛟᛒᛉᚺ — ᛟᛊᚾᛟᚡᚤᛁ ᛒᛖᛉᛟᛈᚨᛊᚾᛟᛊᛏᛁ ᛉᚺᛁᛉᚾᛖᛞᛖᚤᚨᛏᛖᛚᛃᚾᛟᛊᛏᛁ",
         ])
         
@@ -308,6 +349,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "о̀колозе́мный",
             .Glag: "ⱁ̀ⰽⱁⰾⱁⰸⰵ́ⰿⱀⱏⰹⰻ",
             .Latn: "òkolozémnyij",
+            .Perm: "𐍞̀𐍚𐍞𐍛𐍞𐍗𐍔́𐍜𐍝𐍨𐍧",
             .Runr: "ᛟ̀ᚲᛟᛚᛟᛉᛖ́ᛗᚾᚤᛁᛃ",
         ])
         
@@ -315,6 +357,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "у̀зкоспециализи́рованный",
             .Glag: "ⱆ̀ⰸⰽⱁⱄⱂⰵⱌⰹⰰⰾⰹⰸⰹ́ⱃⱁⰲⰰⱀⱀⱏⰹⰻ",
             .Latn: "ùzkospecializírovannyij",
+            .Perm: "𐍣̀𐍗𐍚𐍞𐍡𐍟𐍔𐍭𐍙𐍐𐍛𐍙𐍗𐍙́𐍠𐍞𐍮𐍐𐍝𐍝𐍨𐍧",
             .Runr: "ᚢ̀ᛉᚲᛟᛊᛈᛖᚳᛁᚨᛚᛁᛉᛁ́ᚱᛟᚡᚨᚾᚾᚤᛁᛃ",
         ])
         
@@ -322,6 +365,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ю̀жнославя́нский",
             .Glag: "ⱓ̀ⰶⱀⱁⱄⰾⰰⰲⱑ́ⱀⱄⰽⰹⰻ",
             .Latn: "yùzhnoslavyánskij",
+            .Perm: "𐍳̀𐍕𐍝𐍞𐍡𐍛𐍐𐍮𐍴́𐍝𐍡𐍚𐍙𐍧",
             .Runr: "ᚤᚢ̀ᛉᚺᚾᛟᛊᛚᚨᚡᚤᚨ́ᚾᛊᚲᛁᛃ",
         ])
         
@@ -329,6 +373,7 @@ class ScriptTableRuTests: XCTestCase {
             .Cyrl: "ь ъ ѵ",
             .Glag: "ⱐ ⱏ ⱛ",
             .Latn: "hj hy y",
+            .Perm: "𐍰 𐍯 𐍧𐍶",
             .Runr: "ᚺᛃ ᚺᚤ ᚤ",
         ])
     }
