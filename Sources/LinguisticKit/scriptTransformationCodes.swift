@@ -28,6 +28,7 @@ let scriptTransformationCodes: [String: ScriptTransformation] = [
     "ru": ScriptTransformation(scriptTable: .ru, targetScript: .Cyrl),
     "ruG": ScriptTransformation(scriptTable: .ru, targetScript: .Glag),
     "ruL": ScriptTransformation(scriptTable: .ru, targetScript: .Latn),
+    "ruP": ScriptTransformation(scriptTable: .ru, targetScript: .Perm),
     "ruR": ScriptTransformation(scriptTable: .ru, targetScript: .Runr),
     "sr": ScriptTransformation(scriptTable: .sr, targetScript: .Cyrl),
     "srL": ScriptTransformation(scriptTable: .sr, targetScript: .Latn),
