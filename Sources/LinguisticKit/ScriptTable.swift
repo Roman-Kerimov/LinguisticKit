@@ -7,10 +7,19 @@
 
 import Foundation
 
-public class ScriptTable: Equatable {
+public class ScriptTable: Equatable, Hashable {
     public static func == (lhs: ScriptTable, rhs: ScriptTable) -> Bool {
         lhs === rhs
     }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+    
+    public static let allTables: Set<ScriptTable> = Set(
+        scriptTransformationCodes
+            .compactMap(\.value.scriptTableTransformation?.scriptTable)
+    )
     
     public static func by(identifier: String) -> ScriptTable? {
         scriptTransformationCodes[identifier]?.scriptTableTransformation?.scriptTable
@@ -20,32 +29,97 @@ public class ScriptTable: Equatable {
     
     public var scripts: Set<Script> {scriptSet}
     
-    struct ContextType: OptionSet {
-        let rawValue: Int
-        
-        static let consonant = ContextType(rawValue: 1 << 0)
-        static let vowel = ContextType(rawValue: 1 << 1)
-        static let other = ContextType(rawValue: 1 << 2)
-        static let nonLetter = ContextType(rawValue: 1 << 3)
-        
-        static let any: ContextType = [.consonant, .vowel, .other, nonLetter]
-        
-        static let nonConsonant = ContextType.any.subtracting(.consonant)
-        static let nonVowel = ContextType.any.subtracting(.vowel)
-        static let nonOther = ContextType.any.subtracting(.other)
-        static let letter = ContextType.any.subtracting(.nonLetter)
-    }
-    
-    struct Cell {
+    struct Cell: Encodable {
         let scriptElements: [Script: String]
         
-        let type: ContextType
+        enum ElementType: String, Encodable, CaseIterable, Comparable {
+            static func < (lhs: ScriptTable.Cell.ElementType, rhs: ScriptTable.Cell.ElementType) -> Bool {
+                lhs.rawValue < rhs.rawValue
+            }
+            
+            case consonant
+            case vowel
+            case other
+            case nonLetter
+        }
+        
+        let type: ElementType
+        
+        enum ContextType: String, Encodable, CaseIterable {
+            case consonant
+            case vowel
+            case other
+            case nonLetter
+            
+            case any
+            
+            case nonConsonant
+            case nonVowel
+            case nonOther
+            case letter
+            
+            var components: Set<ElementType> {
+                switch self {
+                case .consonant:
+                    [.consonant]
+                    
+                case .vowel:
+                    [.vowel]
+                    
+                case .other:
+                    [.other]
+                    
+                case .nonLetter:
+                    [.nonLetter]
+                    
+                case .any:
+                    Set(ElementType.allCases)
+                    
+                case .nonConsonant:
+                    Set(ElementType.allCases).subtracting([.consonant])
+                    
+                case .nonVowel:
+                    Set(ElementType.allCases).subtracting([.vowel])
+                    
+                case .nonOther:
+                    Set(ElementType.allCases).subtracting([.other])
+                    
+                case .letter:
+                    Set(ElementType.allCases).subtracting([.nonLetter])
+                }
+            }
+            
+            func contains(_ elementType: ElementType) -> Bool {
+                components.contains(elementType)
+            }
+        }
+        
         let prefixContext: ContextType
         let postfixContext: ContextType
         
+        enum CodingKeys: CodingKey {
+            case scriptElements
+            case type
+            case prefixContext
+            case postfixContext
+        }
+        
+        public func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            
+            try container.encode(
+                Dictionary<String, String>(uniqueKeysWithValues: scriptElements.map {($0.key.rawValue, $0.value)}),
+                forKey: .scriptElements
+            )
+            
+            try container.encode(type, forKey: .type)
+            try container.encode(prefixContext, forKey: .prefixContext)
+            try container.encode(postfixContext, forKey: .postfixContext)
+        }
+        
         init(
             _ scriptElements: [Script: String],
-            type: ContextType = .other,
+            type: ElementType = .other,
             prefixContext: ContextType = .any,
             postfixContext: ContextType = .any
         ) {
@@ -56,7 +130,7 @@ public class ScriptTable: Equatable {
             self.postfixContext = postfixContext
         }
         
-        init(type: ContextType = .other, _ scriptElements: [Script: String]) {
+        init(type: ElementType = .other, _ scriptElements: [Script: String]) {
             self.scriptElements = scriptElements
             
             self.type = type
@@ -80,15 +154,13 @@ public class ScriptTable: Equatable {
     internal typealias RAWScriptTable = [Cell]
     internal typealias IndexedScriptTable = [String: [Cell]]
     
+    public let name: String
+    
     let languageCode: String
     
     private let table: RAWScriptTable
     
-    private lazy var scriptSet = table
-        .map(\.scriptElements.keys)
-        .reduce(Set(Script.allCases)) {
-            $0.intersection($1)
-        }
+    private let scriptSet: Set<Script>
     
     lazy var scriptLetterSets: [Script: CharacterSet] = indexedScriptTables
         .mapValues {
@@ -121,10 +193,30 @@ public class ScriptTable: Equatable {
     
     private lazy var allScriptTable = Dictionary(indexedScriptTables.values.flatMap({$0}), uniquingKeysWith: {(lhs, _) in lhs})
     
-    init(languageCode: String, defaultScript: Script, makeScriptTable: () -> RAWScriptTable) {
+    init(languageCode: String, defaultScript: Script, file: String = #file, makeScriptTable: () -> RAWScriptTable) {
         self.languageCode = languageCode
         self.defaultScript = defaultScript
-        table = makeScriptTable()
+        
+        self.name = URL(string: file)!.deletingPathExtension().pathExtension
+        
+        let cells = makeScriptTable()
+        
+        let scriptSet = cells
+            .map(\.scriptElements.keys)
+            .reduce(Set(Script.allCases)) {
+                $0.intersection($1)
+            }
+        
+        self.table = cells.map { cell in
+            Cell(
+                Dictionary(uniqueKeysWithValues: scriptSet.map({($0, cell.scriptElements[$0]!)})),
+                type: cell.type,
+                prefixContext: cell.prefixContext,
+                postfixContext: cell.postfixContext
+            )
+        }
+        
+        self.scriptSet = scriptSet
     }
     
     internal func maxElementLength(forScript script: Script) -> Int {
@@ -181,8 +273,8 @@ public class ScriptTable: Equatable {
             targetScriptCells = cells
         }
         
-        func contextType(of element: String) -> ContextType? {
-            func optionalContextType(element: String) -> ContextType? {
+        func elementType(of element: String) -> Cell.ElementType? {
+            func optionalContextType(element: String) -> Cell.ElementType? {
                 allScriptTable[element.lowercased(with: locale(script: sourceScript))]?.first?.type
             }
             
@@ -194,11 +286,11 @@ public class ScriptTable: Equatable {
             )
         }
         
-        func contextTypeOfFirstElement(in string: String) -> ContextType {
+        func elementTypeOfFirstElement(in string: String) -> Cell.ElementType {
             var maxLength = maxElementLength(forScript: sourceScript)
             
             while maxLength > 0 {
-                if let contextType = contextType(of: String(string.prefix(maxLength))) {
+                if let contextType = elementType(of: String(string.prefix(maxLength))) {
                     return contextType
                 } else {
                     maxLength -= 1
@@ -210,8 +302,8 @@ public class ScriptTable: Equatable {
         
         let target = targetScriptCells
             .filter {
-                $0.prefixContext.contains(contextType(of: prefixElement) ?? .nonLetter)
-                && $0.postfixContext.contains(contextTypeOfFirstElement(in: postfixString))
+                $0.prefixContext.contains(elementType(of: prefixElement) ?? .nonLetter)
+                && $0.postfixContext.contains(elementTypeOfFirstElement(in: postfixString))
             }
             .first?
             .scriptElements[targetScript]
@@ -238,5 +330,23 @@ public class ScriptTable: Equatable {
 extension ScriptTable: CustomStringConvertible {
     public var description: String {
         languageCode
+    }
+}
+
+extension ScriptTable: Encodable {
+    
+    enum CodingKeys: CodingKey {
+        case name
+        case languageCode
+        case defaultScript
+        case table
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(name, forKey: .name)
+        try container.encode(languageCode, forKey: .languageCode)
+        try container.encode(defaultScript, forKey: .defaultScript)
+        try container.encode(table, forKey: .table)
     }
 }

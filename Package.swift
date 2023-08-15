@@ -4,6 +4,12 @@ import PackageDescription
 let package = Package(
     name: "LinguisticKit",
     products: [
+        .executable(
+            name: "LinguisticKitBuildTool",
+            targets: [
+                "LinguisticKitBuildTool",
+            ]
+        ),
         .library(
             name: "LinguisticKit",
             type: .dynamic,
@@ -20,6 +26,12 @@ let package = Package(
         ),
     ],
     targets: [
+        .executableTarget(
+            name: "LinguisticKitBuildTool",
+            dependencies: [
+                "LinguisticKit",
+            ]
+        ),
         .target(
             name: "LinguisticKit"
         ),

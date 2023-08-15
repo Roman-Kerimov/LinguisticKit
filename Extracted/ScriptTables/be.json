@@ -1,0 +1,529 @@
+{
+  "defaultScript" : "Cyrl",
+  "languageCode" : "be",
+  "name" : "be",
+  "table" : [
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "а",
+        "Latn" : "a"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "б",
+        "Latn" : "b"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "в",
+        "Latn" : "v"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "г",
+        "Latn" : "h"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ґ",
+        "Latn" : "g"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "д",
+        "Latn" : "d"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "nonConsonant",
+      "scriptElements" : {
+        "Cyrl" : "е",
+        "Latn" : "je"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "'е",
+        "Latn" : "je"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "е",
+        "Latn" : "ie"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "иэ",
+        "Latn" : "ië"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "nonConsonant",
+      "scriptElements" : {
+        "Cyrl" : "ё",
+        "Latn" : "jo"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "'ё",
+        "Latn" : "jo"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "ё",
+        "Latn" : "io"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "ио",
+        "Latn" : "iö"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ж",
+        "Latn" : "ž"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "з",
+        "Latn" : "z"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "і",
+        "Latn" : "i"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "й",
+        "Latn" : "j"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "к",
+        "Latn" : "k"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "л",
+        "Latn" : "ł"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ль",
+        "Latn" : "l"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ля",
+        "Latn" : "la"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "льа",
+        "Latn" : "l'a"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ле",
+        "Latn" : "le"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "льэ",
+        "Latn" : "l'e"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "лі",
+        "Latn" : "li"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "льі",
+        "Latn" : "l'i"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "льы",
+        "Latn" : "l'y"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "лё",
+        "Latn" : "lo"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "льо",
+        "Latn" : "l'o"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "лю",
+        "Latn" : "lu"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "льу",
+        "Latn" : "l'u"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "м",
+        "Latn" : "m"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "н",
+        "Latn" : "n"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "о",
+        "Latn" : "o"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "п",
+        "Latn" : "p"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "р",
+        "Latn" : "r"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "с",
+        "Latn" : "s"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "т",
+        "Latn" : "t"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "у",
+        "Latn" : "u"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ў",
+        "Latn" : "ŭ"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ф",
+        "Latn" : "f"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "х",
+        "Latn" : "ch"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ц",
+        "Latn" : "c"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ч",
+        "Latn" : "č"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ш",
+        "Latn" : "š"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "ы",
+        "Latn" : "y"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "ь",
+        "Latn" : "́"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "nonConsonant",
+      "scriptElements" : {
+        "Cyrl" : "ь",
+        "Latn" : "x́"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Cyrl" : "э",
+        "Latn" : "e"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "nonConsonant",
+      "scriptElements" : {
+        "Cyrl" : "ю",
+        "Latn" : "ju"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "'ю",
+        "Latn" : "ju"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "ю",
+        "Latn" : "iu"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "иу",
+        "Latn" : "iü"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "nonConsonant",
+      "scriptElements" : {
+        "Cyrl" : "я",
+        "Latn" : "ja"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "'я",
+        "Latn" : "ja"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "я",
+        "Latn" : "ia"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "consonant",
+      "scriptElements" : {
+        "Cyrl" : "иа",
+        "Latn" : "iä"
+      },
+      "type" : "vowel"
+    }
+  ]
+}

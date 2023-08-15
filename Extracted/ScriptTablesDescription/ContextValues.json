@@ -1,0 +1,40 @@
+{
+  "any" : [
+    "consonant",
+    "nonLetter",
+    "other",
+    "vowel"
+  ],
+  "consonant" : [
+    "consonant"
+  ],
+  "letter" : [
+    "consonant",
+    "other",
+    "vowel"
+  ],
+  "nonConsonant" : [
+    "nonLetter",
+    "other",
+    "vowel"
+  ],
+  "nonLetter" : [
+    "nonLetter"
+  ],
+  "nonOther" : [
+    "consonant",
+    "nonLetter",
+    "vowel"
+  ],
+  "nonVowel" : [
+    "consonant",
+    "nonLetter",
+    "other"
+  ],
+  "other" : [
+    "other"
+  ],
+  "vowel" : [
+    "vowel"
+  ]
+}

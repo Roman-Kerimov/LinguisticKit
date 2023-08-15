@@ -1,0 +1,295 @@
+{
+  "defaultScript" : "Grek",
+  "languageCode" : "el",
+  "name" : "gr",
+  "table" : [
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "α",
+        "Latn" : "a"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "γ",
+        "Latn" : "g"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "δ",
+        "Latn" : "d"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ε",
+        "Latn" : "e"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ζ",
+        "Latn" : "z"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "θ",
+        "Latn" : "th"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ι",
+        "Latn" : "i"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "κ",
+        "Latn" : "k"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "λ",
+        "Latn" : "l"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "μ",
+        "Latn" : "m"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ν",
+        "Latn" : "n"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ξ",
+        "Latn" : "x"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ο",
+        "Latn" : "o"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "π",
+        "Latn" : "p"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ρ",
+        "Latn" : "r"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "letter",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "σ",
+        "Latn" : "s"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "nonLetter",
+      "prefixContext" : "nonLetter",
+      "scriptElements" : {
+        "Grek" : "σ",
+        "Latn" : "s"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "nonLetter",
+      "prefixContext" : "letter",
+      "scriptElements" : {
+        "Grek" : "ς",
+        "Latn" : "s"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "nonLetter",
+      "prefixContext" : "nonLetter",
+      "scriptElements" : {
+        "Grek" : "ς",
+        "Latn" : "hs"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "τ",
+        "Latn" : "t"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "υ",
+        "Latn" : "y"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "χ",
+        "Latn" : "ch"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ψ",
+        "Latn" : "ps"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "letter",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "πσ",
+        "Latn" : "p's"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "nonLetter",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "πς",
+        "Latn" : "p's"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ω",
+        "Latn" : "oh"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ͱ",
+        "Latn" : "h"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ϟ",
+        "Latn" : "q"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "ϝ",
+        "Latn" : "w"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "β",
+        "Latn" : "b"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "η",
+        "Latn" : "eh"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Grek" : "φ",
+        "Latn" : "ph"
+      },
+      "type" : "consonant"
+    }
+  ]
+}

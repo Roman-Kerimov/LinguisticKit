@@ -1,0 +1,3817 @@
+{
+  "defaultScript" : "Hrkt",
+  "languageCode" : "ja",
+  "name" : "ja",
+  "table" : [
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "あ",
+        "Kana" : "ア",
+        "Latn" : "a"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "い",
+        "Kana" : "イ",
+        "Latn" : "i"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "う",
+        "Kana" : "ウ",
+        "Latn" : "u"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "え",
+        "Kana" : "エ",
+        "Latn" : "e"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "お",
+        "Kana" : "オ",
+        "Latn" : "o"
+      },
+      "type" : "vowel"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "か",
+        "Kana" : "カ",
+        "Latn" : "ka"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "き",
+        "Kana" : "キ",
+        "Latn" : "ki"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "く",
+        "Kana" : "ク",
+        "Latn" : "ku"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "け",
+        "Kana" : "ケ",
+        "Latn" : "ke"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "こ",
+        "Kana" : "コ",
+        "Latn" : "ko"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "きゃ",
+        "Kana" : "キャ",
+        "Latn" : "kya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "きゅ",
+        "Kana" : "キュ",
+        "Latn" : "kyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "きょ",
+        "Kana" : "キョ",
+        "Latn" : "kyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "さ",
+        "Kana" : "サ",
+        "Latn" : "sa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "し",
+        "Kana" : "シ",
+        "Latn" : "si"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "す",
+        "Kana" : "ス",
+        "Latn" : "su"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "せ",
+        "Kana" : "セ",
+        "Latn" : "se"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "そ",
+        "Kana" : "ソ",
+        "Latn" : "so"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "しゃ",
+        "Kana" : "シャ",
+        "Latn" : "sya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "しゅ",
+        "Kana" : "シュ",
+        "Latn" : "syu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "しょ",
+        "Kana" : "ショ",
+        "Latn" : "syo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "た",
+        "Kana" : "タ",
+        "Latn" : "ta"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ち",
+        "Kana" : "チ",
+        "Latn" : "ti"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "つ",
+        "Kana" : "ツ",
+        "Latn" : "tu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "て",
+        "Kana" : "テ",
+        "Latn" : "te"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "と",
+        "Kana" : "ト",
+        "Latn" : "to"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ちゃ",
+        "Kana" : "チャ",
+        "Latn" : "tya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ちゅ",
+        "Kana" : "チュ",
+        "Latn" : "tyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ちょ",
+        "Kana" : "チョ",
+        "Latn" : "tyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "な",
+        "Kana" : "ナ",
+        "Latn" : "na"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "に",
+        "Kana" : "ニ",
+        "Latn" : "ni"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぬ",
+        "Kana" : "ヌ",
+        "Latn" : "nu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ね",
+        "Kana" : "ネ",
+        "Latn" : "ne"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "の",
+        "Kana" : "ノ",
+        "Latn" : "no"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "にゃ",
+        "Kana" : "ニャ",
+        "Latn" : "nya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "にゅ",
+        "Kana" : "ニュ",
+        "Latn" : "nyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "にょ",
+        "Kana" : "ニョ",
+        "Latn" : "nyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "は",
+        "Kana" : "ハ",
+        "Latn" : "ha"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ひ",
+        "Kana" : "ヒ",
+        "Latn" : "hi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふ",
+        "Kana" : "フ",
+        "Latn" : "hu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "へ",
+        "Kana" : "ヘ",
+        "Latn" : "he"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ほ",
+        "Kana" : "ホ",
+        "Latn" : "ho"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ひゃ",
+        "Kana" : "ヒャ",
+        "Latn" : "hya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ひゅ",
+        "Kana" : "ヒュ",
+        "Latn" : "hyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ひょ",
+        "Kana" : "ヒョ",
+        "Latn" : "hyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ま",
+        "Kana" : "マ",
+        "Latn" : "ma"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "み",
+        "Kana" : "ミ",
+        "Latn" : "mi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "む",
+        "Kana" : "ム",
+        "Latn" : "mu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "め",
+        "Kana" : "メ",
+        "Latn" : "me"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "も",
+        "Kana" : "モ",
+        "Latn" : "mo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "みゃ",
+        "Kana" : "ミャ",
+        "Latn" : "mya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "みゅ",
+        "Kana" : "ミュ",
+        "Latn" : "myu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "みょ",
+        "Kana" : "ミョ",
+        "Latn" : "myo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "や",
+        "Kana" : "ヤ",
+        "Latn" : "ya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゆ",
+        "Kana" : "ユ",
+        "Latn" : "yu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "よ",
+        "Kana" : "ヨ",
+        "Latn" : "yo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ら",
+        "Kana" : "ラ",
+        "Latn" : "ra"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "り",
+        "Kana" : "リ",
+        "Latn" : "ri"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "る",
+        "Kana" : "ル",
+        "Latn" : "ru"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "れ",
+        "Kana" : "レ",
+        "Latn" : "re"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ろ",
+        "Kana" : "ロ",
+        "Latn" : "ro"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "りゃ",
+        "Kana" : "リャ",
+        "Latn" : "rya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "りゅ",
+        "Kana" : "リュ",
+        "Latn" : "ryu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "りょ",
+        "Kana" : "リョ",
+        "Latn" : "ryo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "わ",
+        "Kana" : "ワ",
+        "Latn" : "wa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゐ",
+        "Kana" : "ヰ",
+        "Latn" : "wi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゑ",
+        "Kana" : "ヱ",
+        "Latn" : "we"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "を",
+        "Kana" : "ヲ",
+        "Latn" : "wo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ん",
+        "Kana" : "ン",
+        "Latn" : "n"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "が",
+        "Kana" : "ガ",
+        "Latn" : "ga"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぎ",
+        "Kana" : "ギ",
+        "Latn" : "gi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぐ",
+        "Kana" : "グ",
+        "Latn" : "gu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "げ",
+        "Kana" : "ゲ",
+        "Latn" : "ge"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ご",
+        "Kana" : "ゴ",
+        "Latn" : "go"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぎゃ",
+        "Kana" : "ギャ",
+        "Latn" : "gya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぎゅ",
+        "Kana" : "ギュ",
+        "Latn" : "gyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぎょ",
+        "Kana" : "ギョ",
+        "Latn" : "gyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ざ",
+        "Kana" : "ザ",
+        "Latn" : "za"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "じ",
+        "Kana" : "ジ",
+        "Latn" : "zi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ず",
+        "Kana" : "ズ",
+        "Latn" : "zu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぜ",
+        "Kana" : "ゼ",
+        "Latn" : "ze"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぞ",
+        "Kana" : "ゾ",
+        "Latn" : "zo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "じゃ",
+        "Kana" : "ジャ",
+        "Latn" : "zya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "じゅ",
+        "Kana" : "ジュ",
+        "Latn" : "zyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "じょ",
+        "Kana" : "ジョ",
+        "Latn" : "zyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "だ",
+        "Kana" : "ダ",
+        "Latn" : "da"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぢ",
+        "Kana" : "ヂ",
+        "Latn" : "di"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "づ",
+        "Kana" : "ヅ",
+        "Latn" : "du"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "で",
+        "Kana" : "デ",
+        "Latn" : "de"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ど",
+        "Kana" : "ド",
+        "Latn" : "do"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぢゃ",
+        "Kana" : "ヂャ",
+        "Latn" : "dya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぢゅ",
+        "Kana" : "ヂュ",
+        "Latn" : "dyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぢょ",
+        "Kana" : "ヂョ",
+        "Latn" : "dyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ば",
+        "Kana" : "バ",
+        "Latn" : "ba"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "び",
+        "Kana" : "ビ",
+        "Latn" : "bi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぶ",
+        "Kana" : "ブ",
+        "Latn" : "bu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "べ",
+        "Kana" : "ベ",
+        "Latn" : "be"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぼ",
+        "Kana" : "ボ",
+        "Latn" : "bo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "びゃ",
+        "Kana" : "ビャ",
+        "Latn" : "bya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "びゅ",
+        "Kana" : "ビュ",
+        "Latn" : "byu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "びょ",
+        "Kana" : "ビョ",
+        "Latn" : "byo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぱ",
+        "Kana" : "パ",
+        "Latn" : "pa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぴ",
+        "Kana" : "ピ",
+        "Latn" : "pi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぷ",
+        "Kana" : "プ",
+        "Latn" : "pu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぺ",
+        "Kana" : "ペ",
+        "Latn" : "pe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぽ",
+        "Kana" : "ポ",
+        "Latn" : "po"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぴゃ",
+        "Kana" : "ピャ",
+        "Latn" : "pya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぴゅ",
+        "Kana" : "ピュ",
+        "Latn" : "pyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぴょ",
+        "Kana" : "ピョ",
+        "Latn" : "pyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "きぇ",
+        "Kana" : "キェ",
+        "Latn" : "kye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "くゎ",
+        "Kana" : "クヮ",
+        "Latn" : "kwa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "くぃ",
+        "Kana" : "クィ",
+        "Latn" : "kwi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "くぇ",
+        "Kana" : "クェ",
+        "Latn" : "kwe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "くぉ",
+        "Kana" : "クォ",
+        "Latn" : "kwo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぎぇ",
+        "Kana" : "ギェ",
+        "Latn" : "gye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぐゎ",
+        "Kana" : "グヮ",
+        "Latn" : "gwa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぐぃ",
+        "Kana" : "グィ",
+        "Latn" : "gwi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぐぇ",
+        "Kana" : "グェ",
+        "Latn" : "gwe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぐぉ",
+        "Kana" : "グォ",
+        "Latn" : "gwo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "すぃ",
+        "Kana" : "スィ",
+        "Latn" : "sxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "しぇ",
+        "Kana" : "シェ",
+        "Latn" : "she"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ずぃ",
+        "Kana" : "ズィ",
+        "Latn" : "zxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "じぇ",
+        "Kana" : "ジェ",
+        "Latn" : "je"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "てぃ",
+        "Kana" : "ティ",
+        "Latn" : "txi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "とぅ",
+        "Kana" : "トゥ",
+        "Latn" : "txu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "てゅ",
+        "Kana" : "テュ",
+        "Latn" : "txyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ちぇ",
+        "Kana" : "チェ",
+        "Latn" : "che"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "つぁ",
+        "Kana" : "ツァ",
+        "Latn" : "tsa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "つぃ",
+        "Kana" : "ツィ",
+        "Latn" : "tsi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "つぇ",
+        "Kana" : "ツェ",
+        "Latn" : "tse"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "つぉ",
+        "Kana" : "ツォ",
+        "Latn" : "tso"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "でぃ",
+        "Kana" : "ディ",
+        "Latn" : "dxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "どぅ",
+        "Kana" : "ドゥ",
+        "Latn" : "dxu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "でゅ",
+        "Kana" : "デュ",
+        "Latn" : "dxyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "にぇ",
+        "Kana" : "ニェ",
+        "Latn" : "nye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ほぅ",
+        "Kana" : "ホゥ",
+        "Latn" : "hxu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ヒぇ",
+        "Kana" : "ヒェ",
+        "Latn" : "hye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふぁ",
+        "Kana" : "ファ",
+        "Latn" : "fa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふぃ",
+        "Kana" : "フィ",
+        "Latn" : "fi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふぇ",
+        "Kana" : "フェ",
+        "Latn" : "fe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふぉ",
+        "Kana" : "フォ",
+        "Latn" : "fo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふゃ",
+        "Kana" : "フャ",
+        "Latn" : "fya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふゅ",
+        "Kana" : "フュ",
+        "Latn" : "fyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふぃぇ",
+        "Kana" : "フィェ",
+        "Latn" : "fye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ふょ",
+        "Kana" : "フョ",
+        "Latn" : "fyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "びぇ",
+        "Kana" : "ビェ",
+        "Latn" : "bye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ぴぇ",
+        "Kana" : "ピェ",
+        "Latn" : "pye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "みぇ",
+        "Kana" : "ミェ",
+        "Latn" : "mye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "いぃ",
+        "Kana" : "イィ",
+        "Latn" : "yi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "いぇ",
+        "Kana" : "イェ",
+        "Latn" : "ye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "りぇ",
+        "Kana" : "リェ",
+        "Latn" : "rye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "うぃ",
+        "Kana" : "ウィ",
+        "Latn" : "wxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "うぅ",
+        "Kana" : "ウゥ",
+        "Latn" : "wu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "うぇ",
+        "Kana" : "ウェ",
+        "Latn" : "wxe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "うぉ",
+        "Kana" : "ウォ",
+        "Latn" : "wxo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "うゅ",
+        "Kana" : "ウュ",
+        "Latn" : "wyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔぁ",
+        "Kana" : "ヴァ",
+        "Latn" : "va"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔぃ",
+        "Kana" : "ヴィ",
+        "Latn" : "vi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔ",
+        "Kana" : "ヴ",
+        "Latn" : "vu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔぇ",
+        "Kana" : "ヴェ",
+        "Latn" : "ve"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔぉ",
+        "Kana" : "ヴォ",
+        "Latn" : "vo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔゃ",
+        "Kana" : "ヴャ",
+        "Latn" : "vya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔゅ",
+        "Kana" : "ヴュ",
+        "Latn" : "vyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔぃぇ",
+        "Kana" : "ヴィェ",
+        "Latn" : "vye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ゔょ",
+        "Kana" : "ヴョ",
+        "Latn" : "vyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ー",
+        "Kana" : "ー",
+        "Latn" : "̂"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "other",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っ",
+        "Kana" : "ッ",
+        "Latn" : "t"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "nonOther",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っ",
+        "Kana" : "ッ",
+        "Latn" : "t'"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っか",
+        "Kana" : "ッカ",
+        "Latn" : "kka"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っき",
+        "Kana" : "ッキ",
+        "Latn" : "kki"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っく",
+        "Kana" : "ック",
+        "Latn" : "kku"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っけ",
+        "Kana" : "ッケ",
+        "Latn" : "kke"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っこ",
+        "Kana" : "ッコ",
+        "Latn" : "kko"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っきゃ",
+        "Kana" : "ッキャ",
+        "Latn" : "kkya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っきゅ",
+        "Kana" : "ッキュ",
+        "Latn" : "kkyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っきょ",
+        "Kana" : "ッキョ",
+        "Latn" : "kkyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っさ",
+        "Kana" : "ッサ",
+        "Latn" : "ssa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っし",
+        "Kana" : "ッシ",
+        "Latn" : "ssi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っす",
+        "Kana" : "ッス",
+        "Latn" : "ssu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っせ",
+        "Kana" : "ッセ",
+        "Latn" : "sse"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っそ",
+        "Kana" : "ッソ",
+        "Latn" : "sso"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っしゃ",
+        "Kana" : "ッシャ",
+        "Latn" : "ssya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っしゅ",
+        "Kana" : "ッシュ",
+        "Latn" : "ssyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っしょ",
+        "Kana" : "ッショ",
+        "Latn" : "ssyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "った",
+        "Kana" : "ッタ",
+        "Latn" : "tta"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っち",
+        "Kana" : "ッチ",
+        "Latn" : "tti"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っつ",
+        "Kana" : "ッツ",
+        "Latn" : "ttu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "って",
+        "Kana" : "ッテ",
+        "Latn" : "tte"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っと",
+        "Kana" : "ット",
+        "Latn" : "tto"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っちゃ",
+        "Kana" : "ッチャ",
+        "Latn" : "ttya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っちゅ",
+        "Kana" : "ッチュ",
+        "Latn" : "ttyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っちょ",
+        "Kana" : "ッチョ",
+        "Latn" : "ttyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っな",
+        "Kana" : "ッナ",
+        "Latn" : "nna"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っに",
+        "Kana" : "ッニ",
+        "Latn" : "nni"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぬ",
+        "Kana" : "ッヌ",
+        "Latn" : "nnu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っね",
+        "Kana" : "ッネ",
+        "Latn" : "nne"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っの",
+        "Kana" : "ッノ",
+        "Latn" : "nno"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っにゃ",
+        "Kana" : "ッニャ",
+        "Latn" : "nnya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っにゅ",
+        "Kana" : "ッニュ",
+        "Latn" : "nnyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っにょ",
+        "Kana" : "ッニョ",
+        "Latn" : "nnyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っは",
+        "Kana" : "ッハ",
+        "Latn" : "hha"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っひ",
+        "Kana" : "ッヒ",
+        "Latn" : "hhi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふ",
+        "Kana" : "ッフ",
+        "Latn" : "hhu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っへ",
+        "Kana" : "ッヘ",
+        "Latn" : "hhe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っほ",
+        "Kana" : "ッホ",
+        "Latn" : "hho"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っひゃ",
+        "Kana" : "ッヒャ",
+        "Latn" : "hhya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っひゅ",
+        "Kana" : "ッヒュ",
+        "Latn" : "hhyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っひょ",
+        "Kana" : "ッヒョ",
+        "Latn" : "hhyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っま",
+        "Kana" : "ッマ",
+        "Latn" : "mma"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っみ",
+        "Kana" : "ッミ",
+        "Latn" : "mmi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っむ",
+        "Kana" : "ッム",
+        "Latn" : "mmu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っめ",
+        "Kana" : "ッメ",
+        "Latn" : "mme"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っも",
+        "Kana" : "ッモ",
+        "Latn" : "mmo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っみゃ",
+        "Kana" : "ッミャ",
+        "Latn" : "mmya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っみゅ",
+        "Kana" : "ッミュ",
+        "Latn" : "mmyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っみょ",
+        "Kana" : "ッミョ",
+        "Latn" : "mmyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っや",
+        "Kana" : "ッヤ",
+        "Latn" : "yya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゆ",
+        "Kana" : "ッユ",
+        "Latn" : "yyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っよ",
+        "Kana" : "ッヨ",
+        "Latn" : "yyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っら",
+        "Kana" : "ッラ",
+        "Latn" : "rra"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っり",
+        "Kana" : "ッリ",
+        "Latn" : "rri"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っる",
+        "Kana" : "ッル",
+        "Latn" : "rru"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っれ",
+        "Kana" : "ッレ",
+        "Latn" : "rre"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っろ",
+        "Kana" : "ッロ",
+        "Latn" : "rro"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っりゃ",
+        "Kana" : "ッリャ",
+        "Latn" : "rrya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っりゅ",
+        "Kana" : "ッリュ",
+        "Latn" : "rryu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っりょ",
+        "Kana" : "ッリョ",
+        "Latn" : "rryo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っわ",
+        "Kana" : "ッワ",
+        "Latn" : "wwa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゐ",
+        "Kana" : "ッヰ",
+        "Latn" : "wwi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゑ",
+        "Kana" : "ッヱ",
+        "Latn" : "wwe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っを",
+        "Kana" : "ッヲ",
+        "Latn" : "wwo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っん",
+        "Kana" : "ッン",
+        "Latn" : "nn"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っが",
+        "Kana" : "ッガ",
+        "Latn" : "gga"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぎ",
+        "Kana" : "ッギ",
+        "Latn" : "ggi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぐ",
+        "Kana" : "ッグ",
+        "Latn" : "ggu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っげ",
+        "Kana" : "ッゲ",
+        "Latn" : "gge"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っご",
+        "Kana" : "ッゴ",
+        "Latn" : "ggo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぎゃ",
+        "Kana" : "ッギャ",
+        "Latn" : "ggya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぎゅ",
+        "Kana" : "ッギュ",
+        "Latn" : "ggyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぎょ",
+        "Kana" : "ッギョ",
+        "Latn" : "ggyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っざ",
+        "Kana" : "ッザ",
+        "Latn" : "zza"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っじ",
+        "Kana" : "ッジ",
+        "Latn" : "zzi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っず",
+        "Kana" : "ッズ",
+        "Latn" : "zzu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぜ",
+        "Kana" : "ッゼ",
+        "Latn" : "zze"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぞ",
+        "Kana" : "ッゾ",
+        "Latn" : "zzo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っじゃ",
+        "Kana" : "ッジャ",
+        "Latn" : "zzya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っじゅ",
+        "Kana" : "ッジュ",
+        "Latn" : "zzyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っじょ",
+        "Kana" : "ッジョ",
+        "Latn" : "zzyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っだ",
+        "Kana" : "ッダ",
+        "Latn" : "dda"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぢ",
+        "Kana" : "ッヂ",
+        "Latn" : "ddi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っづ",
+        "Kana" : "ッヅ",
+        "Latn" : "ddu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っで",
+        "Kana" : "ッデ",
+        "Latn" : "dde"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っど",
+        "Kana" : "ッド",
+        "Latn" : "ddo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぢゃ",
+        "Kana" : "ッヂャ",
+        "Latn" : "ddya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぢゅ",
+        "Kana" : "ッヂュ",
+        "Latn" : "ddyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぢょ",
+        "Kana" : "ッヂョ",
+        "Latn" : "ddyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っば",
+        "Kana" : "ッバ",
+        "Latn" : "bba"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っび",
+        "Kana" : "ッビ",
+        "Latn" : "bbi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぶ",
+        "Kana" : "ッブ",
+        "Latn" : "bbu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っべ",
+        "Kana" : "ッベ",
+        "Latn" : "bbe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぼ",
+        "Kana" : "ッボ",
+        "Latn" : "bbo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っびゃ",
+        "Kana" : "ッビャ",
+        "Latn" : "bbya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っびゅ",
+        "Kana" : "ッビュ",
+        "Latn" : "bbyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っびょ",
+        "Kana" : "ッビョ",
+        "Latn" : "bbyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぱ",
+        "Kana" : "ッパ",
+        "Latn" : "ppa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぴ",
+        "Kana" : "ッピ",
+        "Latn" : "ppi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぷ",
+        "Kana" : "ップ",
+        "Latn" : "ppu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぺ",
+        "Kana" : "ッペ",
+        "Latn" : "ppe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぽ",
+        "Kana" : "ッポ",
+        "Latn" : "ppo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぴゃ",
+        "Kana" : "ッピャ",
+        "Latn" : "ppya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぴゅ",
+        "Kana" : "ッピュ",
+        "Latn" : "ppyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぴょ",
+        "Kana" : "ッピョ",
+        "Latn" : "ppyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っきぇ",
+        "Kana" : "ッキェ",
+        "Latn" : "kkye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っくゎ",
+        "Kana" : "ックヮ",
+        "Latn" : "kkwa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っくぃ",
+        "Kana" : "ックィ",
+        "Latn" : "kkwi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っくぇ",
+        "Kana" : "ックェ",
+        "Latn" : "kkwe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っくぉ",
+        "Kana" : "ックォ",
+        "Latn" : "kkwo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぎぇ",
+        "Kana" : "ッギェ",
+        "Latn" : "ggye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぐゎ",
+        "Kana" : "ッグヮ",
+        "Latn" : "ggwa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぐぃ",
+        "Kana" : "ッグィ",
+        "Latn" : "ggwi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぐぇ",
+        "Kana" : "ッグェ",
+        "Latn" : "ggwe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぐぉ",
+        "Kana" : "ッグォ",
+        "Latn" : "ggwo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っすぃ",
+        "Kana" : "ッスィ",
+        "Latn" : "ssxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っしぇ",
+        "Kana" : "ッシェ",
+        "Latn" : "sshe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っずぃ",
+        "Kana" : "ッズィ",
+        "Latn" : "zzxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っじぇ",
+        "Kana" : "ッジェ",
+        "Latn" : "jje"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ってぃ",
+        "Kana" : "ッティ",
+        "Latn" : "ttxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っとぅ",
+        "Kana" : "ットゥ",
+        "Latn" : "ttxu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "ってゅ",
+        "Kana" : "ッテュ",
+        "Latn" : "ttxyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っちぇ",
+        "Kana" : "ッチェ",
+        "Latn" : "cche"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っつぁ",
+        "Kana" : "ッツァ",
+        "Latn" : "ttsa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っつぃ",
+        "Kana" : "ッツィ",
+        "Latn" : "ttsi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っつぇ",
+        "Kana" : "ッツェ",
+        "Latn" : "ttse"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っつぉ",
+        "Kana" : "ッツォ",
+        "Latn" : "ttso"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っでぃ",
+        "Kana" : "ッディ",
+        "Latn" : "ddxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っどぅ",
+        "Kana" : "ッドゥ",
+        "Latn" : "ddxu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っでゅ",
+        "Kana" : "ッデュ",
+        "Latn" : "ddxyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っにぇ",
+        "Kana" : "ッニェ",
+        "Latn" : "nnye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っほぅ",
+        "Kana" : "ッホゥ",
+        "Latn" : "hhxu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っヒぇ",
+        "Kana" : "ッヒェ",
+        "Latn" : "hhye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふぁ",
+        "Kana" : "ッファ",
+        "Latn" : "ffa"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふぃ",
+        "Kana" : "ッフィ",
+        "Latn" : "ffi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふぇ",
+        "Kana" : "ッフェ",
+        "Latn" : "ffe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふぉ",
+        "Kana" : "ッフォ",
+        "Latn" : "ffo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふゃ",
+        "Kana" : "ッフャ",
+        "Latn" : "ffya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふゅ",
+        "Kana" : "ッフュ",
+        "Latn" : "ffyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふぃぇ",
+        "Kana" : "ッフィェ",
+        "Latn" : "ffye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っふょ",
+        "Kana" : "ッフョ",
+        "Latn" : "ffyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っびぇ",
+        "Kana" : "ッビェ",
+        "Latn" : "bbye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っぴぇ",
+        "Kana" : "ッピェ",
+        "Latn" : "ppye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っみぇ",
+        "Kana" : "ッミェ",
+        "Latn" : "mmye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っいぃ",
+        "Kana" : "ッイィ",
+        "Latn" : "yyi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っいぇ",
+        "Kana" : "ッイェ",
+        "Latn" : "yye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っりぇ",
+        "Kana" : "ッリェ",
+        "Latn" : "rrye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っうぃ",
+        "Kana" : "ッウィ",
+        "Latn" : "wwxi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っうぅ",
+        "Kana" : "ッウゥ",
+        "Latn" : "wwu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っうぇ",
+        "Kana" : "ッウェ",
+        "Latn" : "wwxe"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っうぉ",
+        "Kana" : "ッウォ",
+        "Latn" : "wwxo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っうゅ",
+        "Kana" : "ッウュ",
+        "Latn" : "wwyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔぁ",
+        "Kana" : "ッヴァ",
+        "Latn" : "vva"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔぃ",
+        "Kana" : "ッヴィ",
+        "Latn" : "vvi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔ",
+        "Kana" : "ッヴ",
+        "Latn" : "vvu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔぇ",
+        "Kana" : "ッヴェ",
+        "Latn" : "vve"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔぉ",
+        "Kana" : "ッヴォ",
+        "Latn" : "vvo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔゃ",
+        "Kana" : "ッヴャ",
+        "Latn" : "vvya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔゅ",
+        "Kana" : "ッヴュ",
+        "Latn" : "vvyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔぃぇ",
+        "Kana" : "ッヴィェ",
+        "Latn" : "vvye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "っゔょ",
+        "Kana" : "ッヴョ",
+        "Latn" : "vvyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んあ",
+        "Kana" : "ンア",
+        "Latn" : "n'a"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んい",
+        "Kana" : "ンイ",
+        "Latn" : "n'i"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んう",
+        "Kana" : "ンウ",
+        "Latn" : "n'u"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んえ",
+        "Kana" : "ンエ",
+        "Latn" : "n'e"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んお",
+        "Kana" : "ンオ",
+        "Latn" : "n'o"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んな",
+        "Kana" : "ンナ",
+        "Latn" : "n'na"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んに",
+        "Kana" : "ンニ",
+        "Latn" : "n'ni"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んぬ",
+        "Kana" : "ンヌ",
+        "Latn" : "n'nu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んね",
+        "Kana" : "ンネ",
+        "Latn" : "n'ne"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んの",
+        "Kana" : "ンノ",
+        "Latn" : "n'no"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んにゃ",
+        "Kana" : "ンニャ",
+        "Latn" : "n'nya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んにゅ",
+        "Kana" : "ンニュ",
+        "Latn" : "n'nyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んにょ",
+        "Kana" : "ンニョ",
+        "Latn" : "n'nyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んや",
+        "Kana" : "ンヤ",
+        "Latn" : "n'ya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んゆ",
+        "Kana" : "ンユ",
+        "Latn" : "n'yu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んよ",
+        "Kana" : "ンヨ",
+        "Latn" : "n'yo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んん",
+        "Kana" : "ンン",
+        "Latn" : "n'n"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んにぇ",
+        "Kana" : "ンニェ",
+        "Latn" : "n'nye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んいぃ",
+        "Kana" : "ンイィ",
+        "Latn" : "n'yi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んいぇ",
+        "Kana" : "ンイェ",
+        "Latn" : "n'ye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっな",
+        "Kana" : "ンッナ",
+        "Latn" : "n'nna"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっに",
+        "Kana" : "ンッニ",
+        "Latn" : "n'nni"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっぬ",
+        "Kana" : "ンッヌ",
+        "Latn" : "n'nnu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっね",
+        "Kana" : "ンッネ",
+        "Latn" : "n'nne"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっの",
+        "Kana" : "ンッノ",
+        "Latn" : "n'nno"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっにゃ",
+        "Kana" : "ンッニャ",
+        "Latn" : "n'nnya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっにゅ",
+        "Kana" : "ンッニュ",
+        "Latn" : "n'nnyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっにょ",
+        "Kana" : "ンッニョ",
+        "Latn" : "n'nnyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっや",
+        "Kana" : "ンッヤ",
+        "Latn" : "n'yya"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっゆ",
+        "Kana" : "ンッユ",
+        "Latn" : "n'yyu"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっよ",
+        "Kana" : "ンッヨ",
+        "Latn" : "n'yyo"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっん",
+        "Kana" : "ンッン",
+        "Latn" : "n'nn"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっにぇ",
+        "Kana" : "ンッニェ",
+        "Latn" : "n'nnye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっいぃ",
+        "Kana" : "ンッイィ",
+        "Latn" : "n'yyi"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "んっいぇ",
+        "Kana" : "ンッイェ",
+        "Latn" : "n'yye"
+      },
+      "type" : "consonant"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "｛",
+        "Kana" : "｛",
+        "Latn" : "{"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "｝",
+        "Kana" : "｝",
+        "Latn" : "}"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "（",
+        "Kana" : "（",
+        "Latn" : "("
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "）",
+        "Kana" : "）",
+        "Latn" : ")"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "［",
+        "Kana" : "［",
+        "Latn" : "["
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "］",
+        "Kana" : "］",
+        "Latn" : "]"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "、",
+        "Kana" : "、",
+        "Latn" : ","
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "。",
+        "Kana" : "。",
+        "Latn" : "."
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "・",
+        "Kana" : "・",
+        "Latn" : "·"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "「",
+        "Kana" : "「",
+        "Latn" : "‹"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "」",
+        "Kana" : "」",
+        "Latn" : "›"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "『",
+        "Kana" : "『",
+        "Latn" : "«"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "』",
+        "Kana" : "』",
+        "Latn" : "»"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "　",
+        "Kana" : "　",
+        "Latn" : " "
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "〜",
+        "Kana" : "〜",
+        "Latn" : "~"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "：",
+        "Kana" : "：",
+        "Latn" : ":"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "！",
+        "Kana" : "！",
+        "Latn" : "!"
+      },
+      "type" : "other"
+    },
+    {
+      "postfixContext" : "any",
+      "prefixContext" : "any",
+      "scriptElements" : {
+        "Hira" : "？",
+        "Kana" : "？",
+        "Latn" : "?"
+      },
+      "type" : "other"
+    }
+  ]
+}
