@@ -9,7 +9,7 @@ import XCTest
 @testable import LinguisticKit
 
 final class WordTests: XCTestCase {
-    func testSubstantiveMasculine1_7a() {
+    func testSubstantiveMasculineA() {
         XCTAssert(
             word: "zavód",
             forms: SubstantiveForms(
@@ -179,7 +179,7 @@ final class WordTests: XCTestCase {
         )
     }
     
-    func testSubstantiveMasculine1_7b() {
+    func testSubstantiveMasculineB() {
         XCTAssert(
             word: "topór",
             forms: SubstantiveForms(
