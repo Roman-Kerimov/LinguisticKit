@@ -335,5 +335,17 @@ final class WordTests: XCTestCase {
                 prepositional: ("kiyé", "kiyákh")
             )
         )
+        
+        XCTAssert(
+            word: "putj",
+            forms: SubstantiveForms(
+                nominative: ("putj", "putí"),
+                genitive: ("putí", "putéj"),
+                dative: ("putí", "putyám"),
+                accusative: ("putj", "putí"),
+                instrumental: ("putyom", "putyámi"),
+                prepositional: ("putí", "putyákh")
+            )
+        )
     }
 }
