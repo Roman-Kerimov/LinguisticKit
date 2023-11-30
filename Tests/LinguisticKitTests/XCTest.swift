@@ -43,4 +43,8 @@ extension XCTest {
             )
         }
     }
+    
+    func XCTAssert(word: Word, forms wordForms: WordForms, file: StaticString = #filePath, line: UInt = #line) {
+        XCTAssertEqual(word.forms, wordForms.forms, file: file, line: line)
+    }
 }
