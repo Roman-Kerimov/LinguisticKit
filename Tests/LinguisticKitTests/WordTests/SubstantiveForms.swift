@@ -18,9 +18,12 @@ struct SubstantiveForms: WordForms {
         dative: GrammaticalNumbers,
         accusative: GrammaticalNumbers,
         instrumental: GrammaticalNumbers,
-        prepositional: GrammaticalNumbers
+        prepositional: GrammaticalNumbers,
+        locative: GrammaticalNumbers? = nil
     ) {
-        let grammaticalCases = [nominative, genitive, dative, accusative, instrumental, prepositional]
+        let grammaticalCases = [nominative, genitive, dative, accusative, instrumental, prepositional, locative]
+            .compactMap {$0}
+        
         forms = grammaticalCases.map(\.singular) + grammaticalCases.map(\.plural)
     }
 }
