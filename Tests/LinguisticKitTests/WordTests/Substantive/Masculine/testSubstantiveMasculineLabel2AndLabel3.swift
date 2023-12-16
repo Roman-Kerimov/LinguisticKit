@@ -14,12 +14,13 @@ extension WordTests {
         XCTAssert(
             word: "glaz",
             forms: SubstantiveForms(
-                nominative: ("", ""),
-                genitive: ("", ""),
-                dative: ("", ""),
-                accusative: ("", ""),
-                instrumental: ("", ""),
-                prepositional: ("", "")
+                nominative: ("glaz", "glazá"),
+                genitive: ("gláza", "glaz"),
+                dative: ("glázu", "glazám"),
+                accusative: ("glaz", "glazá"),
+                instrumental: ("glázom", "glazámi"),
+                prepositional: ("gláze", "glazákh"),
+                locative: ("glazú", "glazákh")
             )
         )
     }
