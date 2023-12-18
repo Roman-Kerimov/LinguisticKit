@@ -12,12 +12,12 @@ extension WordTests {
         XCTAssert(
             word: "sapogí",
             forms: SubstantiveForms(
-                nominative: ("", ""),
-                genitive: ("", ""),
-                dative: ("", ""),
-                accusative: ("", ""),
-                instrumental: ("", ""),
-                prepositional: ("", "")
+                nominative: ("sapogí", "sapogí"),
+                genitive: ("sapóg", "sapóg"),
+                dative: ("sapogám", "sapogám"),
+                accusative: ("sapogí", "sapogí"),
+                instrumental: ("sapogámi", "sapogámi"),
+                prepositional: ("sapogákh", "sapogákh")
             )
         )
         
