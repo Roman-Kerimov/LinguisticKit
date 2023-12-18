@@ -14,12 +14,12 @@ extension WordTests {
         XCTAssert(
             word: "annályi",
             forms: SubstantiveForms(
-                nominative: ("", ""),
-                genitive: ("", ""),
-                dative: ("", ""),
-                accusative: ("", ""),
-                instrumental: ("", ""),
-                prepositional: ("", "")
+                nominative: ("annályi", "annályi"),
+                genitive: ("annálov", "annálov"),
+                dative: ("annálam", "annálam"),
+                accusative: ("annályi", "annályi"),
+                instrumental: ("annálami", "annálami"),
+                prepositional: ("annálakh", "annálakh")
             )
         )
         
