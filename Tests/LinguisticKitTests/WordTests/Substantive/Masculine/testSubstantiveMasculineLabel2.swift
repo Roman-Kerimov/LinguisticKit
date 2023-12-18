@@ -14,12 +14,12 @@ extension WordTests {
         XCTAssert(
             word: "gruzín",
             forms: SubstantiveForms(
-                nominative: ("", ""),
-                genitive: ("", ""),
-                dative: ("", ""),
-                accusative: ("", ""),
-                instrumental: ("", ""),
-                prepositional: ("", "")
+                nominative: ("gruzín", "gruzínyi"),
+                genitive: ("gruzína", "gruzín"),
+                dative: ("gruzínu", "gruzínam"),
+                accusative: ("gruzína", "gruzín"),
+                instrumental: ("gruzínom", "gruzínami"),
+                prepositional: ("gruzíne", "gruzínakh")
             )
         )
         
